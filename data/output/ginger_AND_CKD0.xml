@@ -1,0 +1,58 @@
+<searchresult>
+   <query>ginger AND CKD</query>
+   <document id="17462555">
+      <title>Notes from the CKD kitchen: a variety of salt-free seasonings.</title>
+      <snippet>One of the challenges with renal diets is how to make flavorful food while maintaining the low sodium restrictions. I have found three spice companies that have created seasoning mixtures using a mixture of herbs that do not add sodium or potassium chloride in their flavors. The recipe Ginger Roasted Chicken with an Asian Slaw is an example of how you can use three different salt-free seasonings to create a flavorful meal. I know from personal experience that I feel better, have more energy, and sleep better if I restrict my sodium intake. It is easy to stop using the salt shaker and replace the garlic salt and onion salt with garlic powder and onion powder in the kitchen. It takes a dedicated shopper to find the hidden sodium in foods. I find myself reading more and more labels in the aisles of the grocery store before I put any foods in my grocery cart. I also find myself studying the spice selections looking for salt-free seasonings. Mrs. Dash is great and very popular, but there must be more options for us patients with chronic kidney disease. After doing some culinary research, I was pleased to find a much larger section of salt-free seasonings than I expected. I have listed a few of the seasoning combinations below and a table of three major spice companies along with their contact information for purchasing their products.</snippet>
+      <url>http://www.ncbi.nlm.nih.gov/pubmed/17462555</url>
+   </document>
+   <group id="0" size="1" score="0.0">
+      <title>
+         <phrase>Other Topics</phrase>
+      </title>
+      <attribute key="other-topics">
+         <value type="java.lang.Boolean" value="true"/>
+      </attribute>
+      <document refid="17462555"/>
+   </group>
+   <attribute key="MultilingualClustering.languageCounts">
+      <value>
+         <wrapper class="org.carrot2.util.simplexml.MapSimpleXmlWrapper">
+            <map>
+               <entry string="">
+                  <value type="java.lang.Integer" value="1"/>
+               </entry>
+            </map>
+         </wrapper>
+      </value>
+   </attribute>
+   <attribute key="processing-time-algorithm">
+      <value type="java.lang.Long" value="206"/>
+   </attribute>
+   <attribute key="start">
+      <value type="java.lang.Integer" value="0"/>
+   </attribute>
+   <attribute key="SearchEngineBase.compressed">
+      <value type="java.lang.Boolean" value="false"/>
+   </attribute>
+   <attribute key="SearchEngineStats.queries">
+      <value type="java.lang.Integer" value="0"/>
+   </attribute>
+   <attribute key="processing-time-source">
+      <value type="java.lang.Long" value="1451"/>
+   </attribute>
+   <attribute key="SearchEngineStats.pageRequests">
+      <value type="java.lang.Integer" value="0"/>
+   </attribute>
+   <attribute key="MultilingualClustering.majorityLanguage">
+      <value value=""/>
+   </attribute>
+   <attribute key="processing-time-total">
+      <value type="java.lang.Long" value="1657"/>
+   </attribute>
+   <attribute key="results">
+      <value type="java.lang.Integer" value="50"/>
+   </attribute>
+   <attribute key="results-total">
+      <value type="java.lang.Long" value="1"/>
+   </attribute>
+</searchresult>

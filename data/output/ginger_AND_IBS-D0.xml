@@ -1,0 +1,58 @@
+<searchresult>
+   <query>ginger AND IBS-D</query>
+   <document id="32928188">
+      <title>Ginger relieves intestinal hypersensitivity of diarrhea predominant irritable bowel syndrome by inhibiting proinflammatory reaction.</title>
+      <snippet>Ginger or ginger extracts have been used in traditional medicine relieve pain caused by diarrhea predominant irritable bowel syndrome (IBS-D), but few data exists about its effectiveness. This present study was to validate the effect of ginger on visceral pain, and to further explore the possible underlying mechanism by which ginger is used to relieve IBS-D intestinal hypersensitivity.</snippet>
+      <url>http://www.ncbi.nlm.nih.gov/pubmed/32928188</url>
+   </document>
+   <group id="0" size="1" score="0.0">
+      <title>
+         <phrase>Other Topics</phrase>
+      </title>
+      <attribute key="other-topics">
+         <value type="java.lang.Boolean" value="true"/>
+      </attribute>
+      <document refid="32928188"/>
+   </group>
+   <attribute key="MultilingualClustering.languageCounts">
+      <value>
+         <wrapper class="org.carrot2.util.simplexml.MapSimpleXmlWrapper">
+            <map>
+               <entry string="">
+                  <value type="java.lang.Integer" value="1"/>
+               </entry>
+            </map>
+         </wrapper>
+      </value>
+   </attribute>
+   <attribute key="processing-time-algorithm">
+      <value type="java.lang.Long" value="121"/>
+   </attribute>
+   <attribute key="start">
+      <value type="java.lang.Integer" value="0"/>
+   </attribute>
+   <attribute key="SearchEngineBase.compressed">
+      <value type="java.lang.Boolean" value="false"/>
+   </attribute>
+   <attribute key="SearchEngineStats.queries">
+      <value type="java.lang.Integer" value="0"/>
+   </attribute>
+   <attribute key="processing-time-source">
+      <value type="java.lang.Long" value="1597"/>
+   </attribute>
+   <attribute key="SearchEngineStats.pageRequests">
+      <value type="java.lang.Integer" value="0"/>
+   </attribute>
+   <attribute key="MultilingualClustering.majorityLanguage">
+      <value value=""/>
+   </attribute>
+   <attribute key="processing-time-total">
+      <value type="java.lang.Long" value="1718"/>
+   </attribute>
+   <attribute key="results">
+      <value type="java.lang.Integer" value="50"/>
+   </attribute>
+   <attribute key="results-total">
+      <value type="java.lang.Long" value="1"/>
+   </attribute>
+</searchresult>
