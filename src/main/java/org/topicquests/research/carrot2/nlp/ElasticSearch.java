@@ -27,7 +27,7 @@ import net.minidev.json.JSONObject;
  */
 public class ElasticSearch {
 	private Environment environment;
-	private SpaCyThread nlp;
+	//private SpaCyThread nlp;
 	private ProviderEnvironment esEnvironment;
     private IClient provider;
     private TextQueryUtil textQueryUtil;
@@ -40,7 +40,7 @@ public class ElasticSearch {
 	 */
 	public ElasticSearch(Environment env) {
 		environment = env;
-		nlp = new SpaCyThread(environment);
+		//nlp = new SpaCyThread(environment);
 		esEnvironment = environment.getElasticSearchEnvironment();
 		provider = esEnvironment.getProvider();
 		textQueryUtil = esEnvironment.getTextQueryUtil();
@@ -160,7 +160,7 @@ public class ElasticSearch {
 					if (!y.isEmpty()) {
 						environment.logDebug("ES-X");
 						//send it off to SpaCy
-						nlp.addDoc(id, (String)y.get(0));
+						//nlp.addDoc(id, (String)y.get(0));
 						//index this
 						put(id, null, (String)y.get(0));
 					}
