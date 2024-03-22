@@ -263,6 +263,7 @@
         </plugins>
     </build>
     <dependencies>
+		
 <!-- https://mvnrepository.com/artifact/com.carrotsearch/hppc -->
 <dependency>
     <groupId>com.carrotsearch</groupId>
@@ -405,16 +406,6 @@
 		<groupId>org.topicquests</groupId>
 		<artifactId>tqks-elastic6-provider</artifactId>
 		<version>0.5.0-SNAPSHOT</version>
-	</dependency>
-	<dependency>
-		<groupId>org.topicquests</groupId>
-		<artifactId>tqos-asr-spacy-driver</artifactId>
-		<version>0.2.0-SNAPSHOT</version>
-	</dependency>
-	<dependency>
-		<groupId>org.topicquests</groupId>
-		<artifactId>tqos-asr-ocean-agent</artifactId>
-		<version>0.1.0-SNAPSHOT</version>
 	</dependency>
     </dependencies>
     <reporting>

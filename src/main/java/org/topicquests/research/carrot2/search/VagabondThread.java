@@ -7,8 +7,8 @@ package org.topicquests.research.carrot2.search;
 
 import java.util.*;
 
-import org.topicquests.os.asr.info.InformationEnvironment;
-import org.topicquests.os.asr.info.api.IInfoOcean;
+//import org.topicquests.os.asr.info.InformationEnvironment;
+//import org.topicquests.os.asr.info.api.IInfoOcean;
 import org.topicquests.pg.PostgresConnectionFactory;
 import org.topicquests.pg.api.IPostgresConnection;
 import org.topicquests.research.carrot2.Environment;
@@ -26,10 +26,10 @@ import net.minidev.json.JSONObject;
  */
 public class VagabondThread {
 	private Environment environment;
-	private InformationEnvironment oceanEnvironment;
+//	private InformationEnvironment oceanEnvironment;
 	private PostgresConnectionFactory database = null;
 
-	private IInfoOcean dsl;
+//	private IInfoOcean dsl;
 	private ElasticSearch es;
 	private List<String> queries;
 	private boolean isRunning = true;
@@ -41,9 +41,9 @@ public class VagabondThread {
 	public VagabondThread(Environment env) {
 		environment = env;
 		
-		oceanEnvironment = new InformationEnvironment();
-		database = oceanEnvironment.getWordGramEnvironment().getSqlGraph().getProvider();
-		dsl = oceanEnvironment.getDSL();
+//		oceanEnvironment = new InformationEnvironment();
+//		database = oceanEnvironment.getWordGramEnvironment().getSqlGraph().getProvider();
+//		dsl = oceanEnvironment.getDSL();
 		es = environment.getElasticSearch();
 		queries = new ArrayList<String>();
 	}
@@ -116,14 +116,14 @@ public class VagabondThread {
 	        	conn = database.getConnection();
 	           	conn.setProxyRole(r);
 	            conn.beginTransaction(r);
-	            IResult x = dsl.processString(query, "SystemUser", null);
+/*	            IResult x = dsl.processString(query, "SystemUser", null);
 				String gramId = (String)x.getResultObject();
 				environment.logDebug("VagabondThread.ph-1 "+query+" | "+gramId);
 				// get the wordGramId
 				String docId = doc.getAsString("id");
 				Edge d = dsl.connectKeyWordGramToDocument(conn, gramId, docId, r);
 				environment.logDebug("VagabondThread.ph+ "+docId+" | "+d);
-				//NOTE: d will == null if edge already exists
+				//NOTE: d will == null if edge already exists*/
 	            conn.endTransaction(r);
 	        } catch (Exception e) {
 	        	e.printStackTrace();
