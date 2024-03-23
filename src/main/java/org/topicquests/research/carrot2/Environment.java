@@ -46,7 +46,8 @@ public class Environment extends RootEnvironment {
 	private JSONObject nlpInstrumentation;
 	private Set<String> keywordInstrumentation;
 	private final String STATS_PATH;
-	
+	private TCPListener listener;
+
 	/**
 	 * 
 	 */
@@ -54,6 +55,8 @@ public class Environment extends RootEnvironment {
 		super("config-props.xml", "logger.properties");
 		logDebug("Environment ");
 		buf = new StringBuilder();
+		listener = new TCPListener(this);
+
 		accountant = new Accountant(this);
 		fileManager = new FileManager(this);
 		engine = new QueryEngine(this);
