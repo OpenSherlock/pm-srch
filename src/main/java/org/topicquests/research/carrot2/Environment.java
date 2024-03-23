@@ -120,6 +120,11 @@ public class Environment extends RootEnvironment {
 	// Support
 	/////////////////////
 	
+	public void armTimer() {
+		HarvestTimer t = new HarvestTimer(this);
+	}
+
+	
 	public void startHarvest() {
 		batcher.startHarvest();
 		System.out.println("Starting Harvest");		
