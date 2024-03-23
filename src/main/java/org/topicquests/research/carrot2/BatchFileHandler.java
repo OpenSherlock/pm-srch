@@ -26,6 +26,8 @@ public class BatchFileHandler {
 	private Set<String> simplesources;
 	private TextFileHandler handler;
 	private StringBuilder buf;
+	//default to false so can startHarvest
+	private boolean isRunning = false;
 	/**
 	 * 
 	 */
@@ -37,6 +39,23 @@ public class BatchFileHandler {
 		buf = new StringBuilder();
 	}
 	
+	public void startHarvest() {
+		synchronized(buf) {
+			engine.startHarvest();
+			isRunning = true;
+			buf.notify();
+			runBatchQueries();
+		}
+	}
+	
+	public void pauseHarvest() {
+		synchronized(buf) {
+			engine.pauseHarvest();
+			isRunning = false;
+			buf.notify();
+			
+		}
+	}
 	/**
 	 * Run queries against the combination of sources and queries
 	 */

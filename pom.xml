@@ -263,7 +263,14 @@
         </plugins>
     </build>
     <dependencies>
-		
+		<!-- https://mvnrepository.com/artifact/org.carrot2/carrot2-core -->
+<dependency>
+    <groupId>org.carrot2</groupId>
+    <artifactId>carrot2-core</artifactId>
+    <version>3.10.1</version>
+    <scope>runtime</scope>
+</dependency>
+
 <!-- https://mvnrepository.com/artifact/com.carrotsearch/hppc -->
 <dependency>
     <groupId>com.carrotsearch</groupId>

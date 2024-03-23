@@ -5,7 +5,9 @@
  */
 package org.topicquests.research.carrot2;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.io.*;
 
@@ -28,6 +30,14 @@ public class QueryEngine {
 	private StringBuilder buf;
 	private Accountant accountant;
 	private final int HOW_MANY, COUNT;
+	
+	private List<String> queries;
+
+	private boolean isRunning = false;
+	private boolean isWaiting = false;
+
+	private Worker worker;
+
 	/**
 	 * 
 	 */
@@ -40,6 +50,30 @@ public class QueryEngine {
 		HOW_MANY = Integer.parseInt(x);
 		x = environment.getStringProperty("COUNT");
 		COUNT = Integer.parseInt(x);
+		queries = new ArrayList<String>();
+		worker = new Worker();
+		worker.start();
+
+	}
+	public void startHarvest() {
+		synchronized(queries) {
+			isRunning = true;
+			queries.notify();
+			System.out.println("Harvester Started");
+		}
+	}
+	
+	public void pauseHarvest() {
+		synchronized(queries) {
+			isRunning = false;
+			queries.notify();
+		}
+	}
+	public void addQuery(String query) {
+		synchronized(queries) {
+			queries.add(query);
+			queries.notify();
+		}
 	}
 
 	public void runQuery(String query) {
@@ -127,7 +161,34 @@ public class QueryEngine {
         return result;
 	}
 	
+	public class Worker extends Thread {
+		
+		public Worker() {};
+		
+		public void run() {
+			String theQuery = null;
+			while (isRunning) {
+				synchronized(queries) {
+					if (queries.isEmpty()) {
+						Thread.yield();
+						try {
+							queries.wait();
+						} catch (Exception e) {}
+					} else {
+						theQuery = queries.remove(0);
+					}
+				}
+				if (isRunning && theQuery != null) {
+					runQuery(theQuery);
+					theQuery = null;
+				}
+			}
+		}
+	}
+	
 }
+	
+
 
 /** Example of a cluster file with no data
 <searchresult>

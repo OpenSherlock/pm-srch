@@ -120,6 +120,16 @@ public class Environment extends RootEnvironment {
 	// Support
 	/////////////////////
 	
+	public void startHarvest() {
+		batcher.startHarvest();
+		System.out.println("Starting Harvest");		
+	}
+	public void pauseHarvest() {
+		batcher.pauseHarvest();
+		//saver will keep going till it has flushed all files
+		System.out.println("Pausing Harvest");		
+	}
+	
 	public VagabondThread getVagabondThread() {
 		return vagabondThread;
 	}
