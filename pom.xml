@@ -264,162 +264,153 @@
     </build>
     <dependencies>
 		<!-- https://mvnrepository.com/artifact/org.carrot2/carrot2-core -->
-<dependency>
-    <groupId>org.carrot2</groupId>
-    <artifactId>carrot2-core</artifactId>
-    <version>3.10.1</version>
-    <scope>runtime</scope>
-</dependency>
-
-<!-- https://mvnrepository.com/artifact/com.carrotsearch/hppc -->
-<dependency>
-    <groupId>com.carrotsearch</groupId>
-    <artifactId>hppc</artifactId>
-    <version>0.7.1</version>
-</dependency>
-<!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-core -->
-<dependency>
-    <groupId>org.apache.logging.log4j</groupId>
-    <artifactId>log4j-core</artifactId>
-    <version>2.8.2</version>
-</dependency>
-   
-<!-- https://mvnrepository.com/artifact/commons-lang/commons-lang -->
-<dependency>
-    <groupId>commons-lang</groupId>
-    <artifactId>commons-lang</artifactId>
-    <version>2.6</version>
-</dependency>
-<!-- https://mvnrepository.com/artifact/org.apache.lucene/lucene-analyzers-common -->
-<dependency>
-    <groupId>org.apache.lucene</groupId>
-    <artifactId>lucene-analyzers-common</artifactId>
-    <version>8.7.0</version>
-</dependency>
-<!-- https://mvnrepository.com/artifact/org.apache.lucene/lucene-analyzers-smartcn -->
-<dependency>
-    <groupId>org.apache.lucene</groupId>
-    <artifactId>lucene-analyzers-smartcn</artifactId>
-    <version>8.7.0</version>
-</dependency>
-<!-- https://mvnrepository.com/artifact/org.apache.mahout/mahout-math -->
-<dependency>
-    <groupId>org.apache.mahout</groupId>
-    <artifactId>mahout-math</artifactId>
-    <version>0.6</version>
-</dependency>
-<!-- https://mvnrepository.com/artifact/org.apache.mahout/mahout-collections -->
-<dependency>
-    <groupId>org.apache.mahout</groupId>
-    <artifactId>mahout-collections</artifactId>
-    <version>1.0</version>
-</dependency>
-<!-- https://mvnrepository.com/artifact/commons-logging/commons-logging -->
-<dependency>
-    <groupId>commons-logging</groupId>
-    <artifactId>commons-logging</artifactId>
-    <version>1.2</version>
-</dependency>
-<!-- https://mvnrepository.com/artifact/com.google.guava/guava -->
-<dependency>
-    <groupId>com.google.guava</groupId>
-    <artifactId>guava</artifactId>
-    <version>18.0</version>
-</dependency>
-<!-- https://mvnrepository.com/artifact/org.carrot2.attributes/attributes-binder -->
-<dependency>
-    <groupId>org.carrot2.attributes</groupId>
-    <artifactId>attributes-binder</artifactId>
-    <version>1.3.4</version>
-</dependency>
-<!-- https://mvnrepository.com/artifact/org.apache.mahout/mahout-core -->
-<dependency>
-    <groupId>org.apache.mahout</groupId>
-    <artifactId>mahout-core</artifactId>
-    <version>0.9</version>
-</dependency>
-
-<!-- https://mvnrepository.com/artifact/commons-codec/commons-codec -->
-<dependency>
-    <groupId>commons-codec</groupId>
-    <artifactId>commons-codec</artifactId>
-    <version>1.15</version>
-</dependency>
-
-
-	<dependency>
-		<groupId>org.apache.httpcomponents</groupId>
-		<artifactId>httpclient</artifactId>
-		<version>4.5.5</version>
-	</dependency>
-	<dependency>
-		<groupId>org.apache.httpcomponents</groupId>
-		<artifactId>httpcore</artifactId>
-		<version>4.4.9</version>
-	</dependency>
-	<dependency>
-		<groupId>org.apache.httpcomponents</groupId>
-		<artifactId>httpmime</artifactId>
-		<version>4.4.1</version>
-	</dependency>
-	<dependency>
-		<groupId>org.carrot2</groupId>
-		<artifactId>carrot2-core</artifactId>
-		<version>3.10.1</version>
-	</dependency>
-	
-	<dependency>
-		<groupId>com.fasterxml.jackson.core</groupId>
-		<artifactId>jackson-core</artifactId>
-		<version>2.9.5</version>
-	</dependency>
-	<dependency>
-		<groupId>com.fasterxml.jackson.core</groupId>
-		<artifactId>jackson-annotations</artifactId>
-		<version>2.9.5</version>
-	</dependency>
-	<dependency>
-		<groupId>com.fasterxml.jackson.core</groupId>
-		<artifactId>jackson-databind</artifactId>
-		<version>2.9.5</version>
-	</dependency>
-	<dependency>
-		<groupId>org.simpleframework</groupId>
-		<artifactId>simple-xml</artifactId>
-		<version>2.7.1</version>
-	</dependency>
-	<dependency>
-		<groupId>org.slf4j</groupId>
-		<artifactId>slf4j-api</artifactId>
-		<version>1.7.13</version>
-	</dependency>
-	<dependency>
-		<groupId>org.slf4j</groupId>
-		<artifactId>slf4j-log4j12</artifactId>
-		<version>1.7.25</version>
-	</dependency>
-	
-	<dependency>
-		<groupId>org.topicquests</groupId>
-		<artifactId>tqks-common</artifactId>
-		<version>1.5.0-SNAPSHOT</version>
-	</dependency>
-	<dependency>
-		<groupId>org.topicquests</groupId>
-		<artifactId>tqos-general-database</artifactId>
-		<version>0.5.0-SNAPSHOT</version>
-	</dependency>
-	<dependency>
-		<groupId>org.topicquests</groupId>
-		<artifactId>tqks-elastic6-provider</artifactId>
-		<version>0.5.0-SNAPSHOT</version>
-	</dependency>
-<!--	<dependency>
-		<groupId>org.topicquests</groupId>
-		<artifactId>Carrot2PubMedStudyEngine</artifactId>
-		<version>0.1.0-SNAPSHOT</version>
-	</dependency> -->
-    </dependencies> 
+		<dependency>
+		    <groupId>org.carrot2</groupId>
+		    <artifactId>carrot2-core</artifactId>
+		    <version>3.10.1</version>
+		    <scope>runtime</scope>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/com.carrotsearch/hppc -->
+		<dependency>
+		    <groupId>com.carrotsearch</groupId>
+		    <artifactId>hppc</artifactId>
+		    <version>0.7.1</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-core -->
+		<dependency>
+		    <groupId>org.apache.logging.log4j</groupId>
+		    <artifactId>log4j-core</artifactId>
+		    <version>2.8.2</version>
+		</dependency>
+		   
+		<!-- https://mvnrepository.com/artifact/commons-lang/commons-lang -->
+		<dependency>
+		    <groupId>commons-lang</groupId>
+		    <artifactId>commons-lang</artifactId>
+		    <version>2.6</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.apache.lucene/lucene-analyzers-common -->
+		<dependency>
+		    <groupId>org.apache.lucene</groupId>
+		    <artifactId>lucene-analyzers-common</artifactId>
+		    <version>8.7.0</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.apache.lucene/lucene-analyzers-smartcn -->
+		<dependency>
+		    <groupId>org.apache.lucene</groupId>
+		    <artifactId>lucene-analyzers-smartcn</artifactId>
+		    <version>8.7.0</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.apache.mahout/mahout-math -->
+		<dependency>
+		    <groupId>org.apache.mahout</groupId>
+		    <artifactId>mahout-math</artifactId>
+		    <version>0.6</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.apache.mahout/mahout-collections -->
+		<dependency>
+		    <groupId>org.apache.mahout</groupId>
+		    <artifactId>mahout-collections</artifactId>
+		    <version>1.0</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/commons-logging/commons-logging -->
+		<dependency>
+		    <groupId>commons-logging</groupId>
+		    <artifactId>commons-logging</artifactId>
+		    <version>1.2</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/com.google.guava/guava -->
+		<dependency>
+		    <groupId>com.google.guava</groupId>
+		    <artifactId>guava</artifactId>
+		    <version>18.0</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.carrot2.attributes/attributes-binder -->
+		<dependency>
+		    <groupId>org.carrot2.attributes</groupId>
+		    <artifactId>attributes-binder</artifactId>
+		    <version>1.3.4</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.apache.mahout/mahout-core -->
+		<dependency>
+		    <groupId>org.apache.mahout</groupId>
+		    <artifactId>mahout-core</artifactId>
+		    <version>0.9</version>
+		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/commons-codec/commons-codec -->
+		<dependency>
+		    <groupId>commons-codec</groupId>
+		    <artifactId>commons-codec</artifactId>
+		    <version>1.15</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpclient</artifactId>
+			<version>4.5.5</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpcore</artifactId>
+			<version>4.4.9</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpmime</artifactId>
+			<version>4.4.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.carrot2</groupId>
+			<artifactId>carrot2-core</artifactId>
+			<version>3.10.1</version>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-core</artifactId>
+			<version>2.9.5</version>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-annotations</artifactId>
+			<version>2.9.5</version>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>2.9.5</version>
+		</dependency>
+		<dependency>
+			<groupId>org.simpleframework</groupId>
+			<artifactId>simple-xml</artifactId>
+			<version>2.7.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>1.7.13</version>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+			<version>1.7.25</version>
+		</dependency>
+		<dependency>
+			<groupId>org.topicquests</groupId>
+			<artifactId>tqks-common</artifactId>
+			<version>1.5.0-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>org.topicquests</groupId>
+			<artifactId>tqos-general-database</artifactId>
+			<version>0.5.0-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>org.topicquests</groupId>
+			<artifactId>tqks-elastic6-provider</artifactId>
+			<version>0.5.0-SNAPSHOT</version>
+		</dependency>
+    </dependencies>
+    
     <reporting>
         <plugins>
             <plugin>

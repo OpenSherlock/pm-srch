@@ -1,21 +1,95 @@
 {
-	"properties": {
-		"id": {
-			"index": "true",
-			"type": "keyword",
-			"store": true
-		},
-		"label": {
-			"index": "true",
-			"type": "text",
-			"analyzer": "english",
-			"store": false
-		},
-		"abstract": {
-			"index": "true",
-			"type": "text",
-			"analyzer": "english",
-			"store": false
-		}
-	}
+   "properties": {
+       "abstract": {
+           "type": "text",
+           "fields": {
+               "english": {
+                   "type": "text",
+                   "analyzer": "english"
+                   }
+               },
+           "copy_to": [
+               "abstract_and_title"
+               ]
+           },
+       "abstract_and_title": {
+           "type": "text",
+           "fields": {
+               "english": {
+                   "type": "text",
+                   "analyzer": "english"
+                   }
+               }
+           },
+       "abstract_long_form": {
+           "type": "text",
+           "fields": {
+               "english": {
+                   "type": "text",
+                   "analyzer": "english"
+                   }
+               }
+           },
+       "chemicalname": {
+           "type": "text"
+           },
+       "chemicalui": {
+           "type": "text"
+           },
+       "content_url": {
+           "type": "text"
+           },
+       "coverDate": {
+               "type": "text",
+               },
+       "coverdate": {
+               "type": "alias",
+               "path" : "coverDate"
+               },
+       "issue": {
+           "type": "text"
+           },
+       "meshdescriptorname": {
+           "type": "text"
+           },
+       "meshdescriptorui": {
+           "type": "text"
+           },
+       "meshqualifiername": {
+           "type": "text"
+           },
+       "meshqualifierui": {
+               "type": "text"
+               },
+       "PMID" : {
+               "type" : "text"
+               },
+       "pmid": {
+               "type": "alias",
+               "path" : "PMID"
+               },
+       "publication_date": {
+               "properties": {
+                   "month": {
+                       "type": "long"
+                       },
+                   "year": {
+                       "type": "long"
+                       }
+                   }
+               },
+       "time": {
+               "type": "date",
+               "format": "strict_date_optional_time||epoch_millis"
+               },
+       "title": {
+               "type": "text",
+               "copy_to": [
+                   "abstract_and_title"
+                   ]
+               },
+       "vol": {
+               "type": "text"
+               }
+       }
 }
