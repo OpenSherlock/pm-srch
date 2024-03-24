@@ -5,8 +5,8 @@
  */
 package test;
 
-import org.topicquests.research.carrot2.BatchQueryFileHandler;
 import org.topicquests.research.carrot2.Environment;
+import org.topicquests.research.carrot2.query.BatchQueryFileHandler;
 
 /**
  * @author jackpark

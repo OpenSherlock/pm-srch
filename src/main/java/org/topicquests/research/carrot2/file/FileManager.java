@@ -3,7 +3,7 @@
  *  This source code is available under the terms of the Affero General Public License v3.
  *  Please see LICENSE.txt for full license terms, including the availability of proprietary exceptions.
  */
-package org.topicquests.research.carrot2;
+package org.topicquests.research.carrot2.file;
 
 import java.io.*;
 import java.nio.charset.StandardCharsets;
@@ -11,6 +11,8 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import java.util.zip.GZIPOutputStream;
+
+import org.topicquests.research.carrot2.Environment;
 /**
  * @author jackpark
  *

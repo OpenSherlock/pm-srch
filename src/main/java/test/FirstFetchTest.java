@@ -7,7 +7,7 @@ package test;
 
 
 import org.topicquests.research.carrot2.Environment;
-import org.topicquests.research.carrot2.QueryEngine;
+import org.topicquests.research.carrot2.query.QueryEngine;
 
 /**
  * @author park

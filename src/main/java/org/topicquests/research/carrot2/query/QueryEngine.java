@@ -3,7 +3,7 @@
  *  This source code is available under the terms of the Affero General Public License v3.
  *  Please see LICENSE.txt for full license terms, including the availability of proprietary exceptions.
  */
-package org.topicquests.research.carrot2;
+package org.topicquests.research.carrot2.query;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -15,6 +15,8 @@ import org.carrot2.clustering.lingo.LingoClusteringAlgorithm;
 import org.carrot2.source.SearchEngineResponse;
 //import org.carrot2.core.ProcessingResult;
 import org.carrot2.core.attribute.CommonAttributesDescriptor;
+import org.topicquests.research.carrot2.Accountant;
+import org.topicquests.research.carrot2.Environment;
 import org.topicquests.research.carrot2.impl.PubMedDocumentSource;
 
 

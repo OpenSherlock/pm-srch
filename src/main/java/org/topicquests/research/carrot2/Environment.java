@@ -15,8 +15,11 @@ import org.topicquests.asr.general.GeneralDatabaseEnvironment;
 import org.topicquests.asr.general.document.api.IDocumentClient;
 import org.topicquests.es.ProviderEnvironment;
 import org.topicquests.research.carrot2.api.IDocumentProvider;
+import org.topicquests.research.carrot2.file.FileManager;
 import org.topicquests.research.carrot2.nlp.ElasticSearch;
 import org.topicquests.research.carrot2.pubmed.ParserThread;
+import org.topicquests.research.carrot2.query.BatchQueryFileHandler;
+import org.topicquests.research.carrot2.query.QueryEngine;
 import org.topicquests.research.carrot2.search.VagabondThread;
 import org.topicquests.support.RootEnvironment;
 
