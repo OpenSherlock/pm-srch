@@ -102,6 +102,20 @@ public class PubMedDocumentSource extends SimpleSearchEngine
     @Internal
     public HttpRedirectStrategy redirectStrategy = HttpRedirectStrategy.NO_REDIRECTS; 
 
+    /**
+     * Entry for search without clustering
+     * @param query
+     * @param count
+     * @param offset
+     * @return
+     * @throws Exception
+     */
+    public SearchEngineResponse startSearch(String query, int count, int offset) throws Exception {
+    	this.start = offset;
+    	this.results = count;
+    	this.query = query;
+    	return fetchSearchResponse();
+    }
     @Override
     protected SearchEngineResponse fetchSearchResponse() throws Exception
     {
@@ -180,7 +194,11 @@ public class PubMedDocumentSource extends SimpleSearchEngine
     	}
     	return result;
     }
-    
+    /**
+     * Isolate individual docs
+     * @param docs
+     * @return
+     */
     List<String> splitDocs(String docs) {
     	
     	List<String>result = new ArrayList<String>();
@@ -226,8 +244,8 @@ public class PubMedDocumentSource extends SimpleSearchEngine
     	String pmid = getPMID(xml);
     	if (pmid.equals("")) return; // no content
     	environment.addPubMedAbstract(pmid, xml);
-    	StringBuilder buf = new StringBuilder(path).append(pmid).append(".xml");
-/*
+    /*    	StringBuilder buf = new StringBuilder(path).append(pmid).append(".xml");
+
     	
     	String filePath = buf.toString();
     	File f = new File(filePath);
@@ -255,7 +273,7 @@ public class PubMedDocumentSource extends SimpleSearchEngine
     private void captureDocument(InputStream is) throws Exception {
     	StringBuilder buf = new StringBuilder();
     	int c;
-    	String pmid;
+ //   	String pmid;
     	while ((c = is.read()) > -1) {
     		buf.append((char)c);
     		

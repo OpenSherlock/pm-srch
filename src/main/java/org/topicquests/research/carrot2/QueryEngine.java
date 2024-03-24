@@ -12,9 +12,8 @@ import java.util.Map;
 import java.io.*;
 
 import org.carrot2.clustering.lingo.LingoClusteringAlgorithm;
-import org.carrot2.core.Controller;
-import org.carrot2.core.ControllerFactory;
-import org.carrot2.core.ProcessingResult;
+import org.carrot2.source.SearchEngineResponse;
+//import org.carrot2.core.ProcessingResult;
 import org.carrot2.core.attribute.CommonAttributesDescriptor;
 import org.topicquests.research.carrot2.impl.PubMedDocumentSource;
 
@@ -26,7 +25,10 @@ import org.topicquests.research.carrot2.impl.PubMedDocumentSource;
 public class QueryEngine {
 	private Environment environment;
 	private final String outputPath;
-	private Controller controller;
+	//direect path to search without clustering
+	private PubMedDocumentSource srch;
+	// by dropping Controller, avoid clustering
+	//private Controller controller;
 	private StringBuilder buf;
 	private Accountant accountant;
 	private final int HOW_MANY, COUNT;
@@ -43,6 +45,7 @@ public class QueryEngine {
 	 */
 	public QueryEngine(Environment env) {
 		environment = env;
+		srch = new PubMedDocumentSource();
 		outputPath = environment.getStringProperty("ClusterDataPath");
 		accountant = environment.getAccountant();
 		buf = new StringBuilder();
@@ -76,35 +79,26 @@ public class QueryEngine {
 		}
 	}
 
-	public void runQuery(String query) {
+	public void runQuery(String query){
 		environment.logDebug("QE "+query);
 		environment.getAccountant().newQuery(query);
 		if (query.equals(""))
 			return;
-		controller = ControllerFactory.createSimple();
+		//controller = ControllerFactory.createSimple();
 		Map<String, Object> attributes = new HashMap<String, Object>();
 		int total = COUNT;
 		int start = 0;
-		int count = 0;
+		long count = 0;
 		long howMany = 0;
 		int i = 0;
         while (true) {
-        	//create some attributes
-            CommonAttributesDescriptor
-            .attributeBuilder(attributes)
-            .query(query)
-            .results(total)
-            .start(start);
-            buf.setLength(0);
-    		buf = buf.append(query).append(i);
-    		File f = new File(environment.queryToFileName(outputPath, buf.toString()));
-    		System.out.println(f.getAbsolutePath());
-    		if (!f.exists()) {
-	        	ProcessingResult result = runProcess(attributes, query, f);
+        	
+    		try {
+    			SearchEngineResponse result = srch.startSearch(query, total, start);
 	        	if (result == null) // try one more time
-	        		result = runProcess(attributes, query, f);
+	        		result = srch.startSearch(query, total, start);
 	        	i++;
-	        	count = result.getDocuments().size();
+	        	count = result.getResultsTotal();
 	        	//update start
 	        	start += count;
 	        	howMany += (long)count;
@@ -118,17 +112,18 @@ public class QueryEngine {
 		        		buf.wait(4000); // 4 second delay
 		        	} catch (Exception e) {}
 	        	}
-    		} else {
-    			f = null;
-    			break;
-    		}
-    		f = null;
+    		} catch (Exception x) {
+	        	environment.logError(x.getMessage(), x);
+	        	x.printStackTrace();
+	        	break;
+	        }
+    		
         }
 		environment.getAccountant().endQuery(query);
 
 	}
 	
-	private ProcessingResult runProcess(Map<String, Object> attributes, String query, File f) {
+/*	private ProcessingResult runProcess(Map<String, Object> attributes, String query, File f) {
 		System.out.println(attributes);
 		ProcessingResult result = null;
 		try {
@@ -159,7 +154,7 @@ public class QueryEngine {
 		}
 		System.gc();
         return result;
-	}
+	}*/
 	
 	public class Worker extends Thread {
 		
