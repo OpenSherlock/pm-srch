@@ -3,7 +3,7 @@
  */
 package test;
 
-import org.topicquests.research.carrot2.BatchFileHandler;
+import org.topicquests.research.carrot2.BatchQueryFileHandler;
 import org.topicquests.research.carrot2.Environment;
 
 /**
@@ -17,7 +17,7 @@ public class Starter {
 	 */
 	public Starter() {
 		environment = new Environment();
-		BatchFileHandler h = environment.getBatchFileHandler();
+		BatchQueryFileHandler h = environment.getBatchFileHandler();
 		h.runBatchQueries();
 	}
 

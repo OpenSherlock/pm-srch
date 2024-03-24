@@ -15,7 +15,7 @@ import java.io.*;
  * @author park
  *
  */
-public class BatchFileHandler {
+public class BatchQueryFileHandler {
 	private Environment environment;
 	private QueryEngine engine;
 	private final String QUERY_DIR_PATH = "data/query/";
@@ -31,7 +31,7 @@ public class BatchFileHandler {
 	/**
 	 * 
 	 */
-	public BatchFileHandler(Environment env) {
+	public BatchQueryFileHandler(Environment env) {
 		environment = env;
 		engine = environment.getQueryEngine();
 		queries = new HashSet<String>();

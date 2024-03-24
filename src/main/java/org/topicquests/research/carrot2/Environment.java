@@ -32,7 +32,7 @@ public class Environment extends RootEnvironment {
 	//NOT thread safe
 	private StringBuilder buf;
 	private QueryEngine engine;
-	private BatchFileHandler batcher;
+	private BatchQueryFileHandler batcher;
 	private ParserThread parserThread;
 	private GeneralDatabaseEnvironment generalEnvironment;
 	private IDocumentProvider documentProvider;
@@ -65,7 +65,7 @@ public class Environment extends RootEnvironment {
 		STATS_PATH = getStringProperty("StatsPath");
 		logDebug("Environment- "+engine);
 		System.out.println("E1");
-		batcher = new BatchFileHandler(this);
+		batcher = new BatchQueryFileHandler(this);
 		String schemaName = getStringProperty("DatabaseSchema");
 		System.out.println("E2 "+schemaName);
 		logDebug("Environment-1 "+schemaName);
@@ -160,7 +160,7 @@ public class Environment extends RootEnvironment {
 		return instance;
 	}
 
-	public BatchFileHandler getBatchFileHandler() {
+	public BatchQueryFileHandler getBatchFileHandler() {
 		return batcher;
 	}
 	public QueryEngine getQueryEngine() {
