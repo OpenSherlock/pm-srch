@@ -110,12 +110,27 @@ public class PubMedDocumentSource extends SimpleSearchEngine
      * @return
      * @throws Exception
      */
-    public SearchEngineResponse startSearch(String query, int count, int offset) throws Exception {
+    public List<String> startSearch(String query, int count, int offset) throws Exception {
     	this.start = offset;
     	this.results = count;
     	this.query = query;
-    	return fetchSearchResponse();
+    	return _fetchSearchResponse();
     }
+    
+    protected List<String> _fetchSearchResponse() throws Exception
+    {
+    	if (environment == null)
+    		environment = Environment.getInstance();
+    	environment.logDebug("PMDS.fetch");
+    	System.out.println("FF "+start+" "+environment);
+        PubMedIdSearchHandler idResponse = getPubMedIds(query, results, start);
+    	System.out.println("FF-1 "+idResponse.getMatchCount());
+        List<String> response = getPubMedAbstracts(idResponse.getPubMedPrimaryIds());
+    	//System.out.println("FF-2 "+response.getResultsTotal());
+        //response.metadata.put(SearchEngineResponse.RESULTS_TOTAL_KEY, idResponse.getMatchCount());
+        return response;
+    }
+
     @Override
     protected SearchEngineResponse fetchSearchResponse() throws Exception
     {
@@ -125,7 +140,7 @@ public class PubMedDocumentSource extends SimpleSearchEngine
     	System.out.println("FF "+start+" "+environment);
         PubMedIdSearchHandler idResponse = getPubMedIds(query, results, start);
     	System.out.println("FF-1 "+idResponse.getMatchCount());
-        SearchEngineResponse response = getPubMedAbstracts(idResponse.getPubMedPrimaryIds());
+    	SearchEngineResponse response = null; //getPubMedAbstracts(idResponse.getPubMedPrimaryIds());
     	System.out.println("FF-2 "+response.getResultsTotal());
         response.metadata.put(SearchEngineResponse.RESULTS_TOTAL_KEY, idResponse.getMatchCount());
         return response;
@@ -270,7 +285,7 @@ public class PubMedDocumentSource extends SimpleSearchEngine
     	*/
     }
     
-    private void captureDocument(InputStream is) throws Exception {
+    private List<String>  captureDocument(InputStream is) throws Exception {
     	StringBuilder buf = new StringBuilder();
     	int c;
  //   	String pmid;
@@ -280,20 +295,22 @@ public class PubMedDocumentSource extends SimpleSearchEngine
     	}
     	String xml = buf.toString();
     	List<String> docs = splitDocs(xml);
-    	int len = docs.size();
-    	for (int i=0;i<len;i++) {
-    		processDocument(docs.get(i));
-    	}
+    	return docs;
+    	//int len = docs.size();
+    	//for (int i=0;i<len;i++) {
+    	//	processDocument(docs.get(i));
+    	//}
     }
     /**
      * Gets PubMed abstracts corresponding to the provided ids.
      */
-    private SearchEngineResponse getPubMedAbstracts(List<String> ids) throws Exception
+    private List<String> getPubMedAbstracts(List<String> ids) throws Exception
     {
     	System.out.println("SER "+ids);
-        if (ids.isEmpty()) 
+    	List<String> docs=null;
+    	if (ids.isEmpty()) 
         {
-            return new SearchEngineResponse();
+            return docs;
         }
         
         final XMLReader reader = newXmlReader();
@@ -315,21 +332,21 @@ public class PubMedDocumentSource extends SimpleSearchEngine
             PUBMED_TIMEOUT,
             redirectStrategy.value());
     	System.out.println("SER-2 "+response.status);
-
+    	
         // Get document contents
         // No URL logging here, as the url can get really long
         if (response.status == HttpStatus.SC_OK)
         {
         	InputStream is = response.getPayloadAsStream();
-        	captureDocument(is);
-            reader.parse(new InputSource(response.getPayloadAsStream()));
+        	docs = captureDocument(is);
+            //reader.parse(new InputSource(response.getPayloadAsStream()));
         }
         else
         {
             throw new IOException("PubMed returned HTTP Error: " + response.status
                 + ", HTTP payload: " + new String(response.payload, "iso8859-1"));
         }
-        return fetchHandler.getResponse();
+        return docs;
     }
 
     static XMLReader newXmlReader()

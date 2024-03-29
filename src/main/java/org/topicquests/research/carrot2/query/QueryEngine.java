@@ -83,24 +83,25 @@ public class QueryEngine {
 
 	public void runQuery(String query){
 		environment.logDebug("QE "+query);
-		environment.getAccountant().newQuery(query);
 		if (query.equals(""))
 			return;
+		environment.getAccountant().newQuery(query);
 		//controller = ControllerFactory.createSimple();
-		Map<String, Object> attributes = new HashMap<String, Object>();
+//		Map<String, Object> attributes = new HashMap<String, Object>();
 		int total = COUNT;
 		int start = 0;
 		long count = 0;
 		long howMany = 0;
-		int i = 0;
+//		int i = 0;
         while (true) {
         	
     		try {
-    			SearchEngineResponse result = srch.startSearch(query, total, start);
+    			List<String> result = srch.startSearch(query, total, start);
 	        	if (result == null) // try one more time
 	        		result = srch.startSearch(query, total, start);
-	        	i++;
-	        	count = result.getResultsTotal();
+//	        	i++;
+	        	//TODO now process hits
+	        	count = result.size();
 	        	//update start
 	        	start += count;
 	        	howMany += (long)count;
