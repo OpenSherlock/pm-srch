@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Iterator;
 import java.io.*;
 
 import org.carrot2.clustering.lingo.LingoClusteringAlgorithm;
@@ -18,6 +19,7 @@ import org.carrot2.core.attribute.CommonAttributesDescriptor;
 import org.topicquests.research.carrot2.Accountant;
 import org.topicquests.research.carrot2.Environment;
 import org.topicquests.research.carrot2.impl.PubMedDocumentSource;
+import org.topicquests.research.carrot2.pubmed.ParserThread;
 
 
 /**
@@ -29,6 +31,7 @@ public class QueryEngine {
 	private final String outputPath;
 	//direect path to search without clustering
 	private PubMedDocumentSource srch;
+	private ParserThread xmlThread;
 	// by dropping Controller, avoid clustering
 	//private Controller controller;
 	private StringBuilder buf;
@@ -100,8 +103,21 @@ public class QueryEngine {
 	        	if (result == null) // try one more time
 	        		result = srch.startSearch(query, total, start);
 //	        	i++;
-	        	//TODO now process hits
+	        	//now process hits
+	        	//////////////////////
+	        	// Convert to IDocument
+	        	// Ship abstract to ElasticSearch
+	        	// Ship IDpcument to asr-v-document or asr-v-ingest
+	        	//////////////////////
 	        	count = result.size();
+	        	Iterator<String> itr = result.iterator();
+	        	String xml;
+	        	while(itr.hasNext()) {
+	        		xml = itr.next().trim();
+	        		xmlThread.addDoc(xml);
+	        	}
+	        	
+	        	
 	        	//update start
 	        	start += count;
 	        	howMany += (long)count;
