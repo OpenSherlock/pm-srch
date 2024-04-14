@@ -263,6 +263,12 @@
         </plugins>
     </build>
     <dependencies>
+		<!-- redis -->
+		<dependency>
+		    <groupId>redis.clients</groupId>
+		    <artifactId>jedis</artifactId>
+		    <version>5.0.0</version>
+		</dependency>
 		<!-- https://mvnrepository.com/artifact/org.carrot2/carrot2-core -->
 		<dependency>
 		    <groupId>org.carrot2</groupId>

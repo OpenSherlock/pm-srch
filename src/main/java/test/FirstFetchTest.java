@@ -8,6 +8,7 @@ package test;
 
 import org.topicquests.research.carrot2.Environment;
 import org.topicquests.research.carrot2.query.QueryEngine;
+import org.topicquests.research.carrot2.redis.RedisClient;
 
 /**
  * @author park
@@ -15,6 +16,9 @@ import org.topicquests.research.carrot2.query.QueryEngine;
  */
 public class FirstFetchTest {
 	private Environment environment;
+	private RedisClient redis;
+	private final String Topic; 
+
 	private final String query = "Anthocyanins";
 
 	/**
@@ -22,8 +26,13 @@ public class FirstFetchTest {
 	 */
 	public FirstFetchTest() {
 		environment = new Environment();
+		Topic = environment.getStringProperty("REDIS_TOPIC");
+		redis = environment.getRedis();
 		QueryEngine qe = environment.getQueryEngine();
 		qe.runQuery(query);
+		
+		//long i = 0;
+		//while  (redis.getNext(Topic) != null)
 	}
 
 }

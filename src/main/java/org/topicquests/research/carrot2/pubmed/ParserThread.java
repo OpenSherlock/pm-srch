@@ -7,6 +7,7 @@ package org.topicquests.research.carrot2.pubmed;
 
 import java.util.*;
 import org.topicquests.research.carrot2.Environment;
+import org.topicquests.research.carrot2.redis.RedisClient;
 import org.topicquests.support.api.IResult;
 
 /**
@@ -21,15 +22,19 @@ public class ParserThread {
 	private boolean isRunning = true;
 	private boolean hasBeenRunning = false;
 	private Worker worker;
+	private RedisClient redis;
+	private final String REDIS_TOPIC;
 
 	/**
 	 * 
 	 */
 	public ParserThread(Environment env) {
 		environment = env;
+		REDIS_TOPIC = environment.getStringProperty("REDIS_TOPIC");
 		parser = new PubMedReportPullParser(environment);
 		docThread = new DocumentThread(environment);
 		docs = new ArrayList<String>();
+		redis = environment.getRedis();
 		isRunning = true;
 		worker = new Worker();
 		worker.start();
@@ -89,9 +94,10 @@ public class ParserThread {
 			hasBeenRunning = true;
 			IResult r = parser.parseXML(xml);
 			JSONDocumentObject j = (JSONDocumentObject)r.getResultObject();
-			environment.logDebug("PT+");
+			//environment.logDebug("PT+");
 			environment.getAccountant().haveSeen(j.getPMID());
-			docThread.addDoc(j);
+			//docThread.addDoc(j);
+			redis.add(REDIS_TOPIC, xml);
 		}
 	}
 }

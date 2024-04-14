@@ -2,6 +2,9 @@
 
 <properties>
 
+	<parameter name="RedisBase" value="tq2.topicquests.net" /> <!-- CHANGEME -->
+	<parameter name="REDIS_TOPIC" value="FreshPmXML" /> 
+	
 	<parameter name="MAX_COUNT" value="150" />
 	<parameter name="COUNT" value="50" />
 

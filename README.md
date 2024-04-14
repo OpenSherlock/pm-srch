@@ -8,5 +8,5 @@
 #### ProcessQuery
 - Query to `QueryEngine`
 - Engine Thread --> `runQuery`
-- `Carrot2` run the query and return collection of PubMed abstracts - no clustering
+- `runQuery` --> `Carrot2` run the query and return collection of PubMed abstracts - no clustering
 -  

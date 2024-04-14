@@ -20,6 +20,7 @@ import org.topicquests.research.carrot2.nlp.ElasticSearch;
 import org.topicquests.research.carrot2.pubmed.ParserThread;
 import org.topicquests.research.carrot2.query.BatchQueryFileHandler;
 import org.topicquests.research.carrot2.query.QueryEngine;
+import org.topicquests.research.carrot2.redis.RedisClient;
 import org.topicquests.research.carrot2.search.VagabondThread;
 import org.topicquests.support.RootEnvironment;
 
@@ -50,6 +51,7 @@ public class Environment extends RootEnvironment {
 	private Set<String> keywordInstrumentation;
 	private final String STATS_PATH;
 	private TCPListener listener;
+	private RedisClient redis;
 
 	/**
 	 * 
@@ -59,9 +61,11 @@ public class Environment extends RootEnvironment {
 		logDebug("Environment ");
 		buf = new StringBuilder();
 		listener = new TCPListener(this);
+		redis = new RedisClient(this);
 
 		accountant = new Accountant(this);
 		fileManager = new FileManager(this);
+		parserThread = new ParserThread(this);
 		engine = new QueryEngine(this);
 	    esEnvironment = new ProviderEnvironment();
 		es = new ElasticSearch(this);
@@ -78,7 +82,6 @@ public class Environment extends RootEnvironment {
 		System.out.println("E4");
 		documentProvider = new DocumentProvider(this);
 		System.out.println("E5");
-		parserThread = new ParserThread(this);
 		vagabondThread = new VagabondThread(this);
 		System.out.println("E6");
 		logDebug("Environment-2 "+parserThread);
@@ -97,6 +100,13 @@ public class Environment extends RootEnvironment {
 		System.out.println("E7");
 	}
 	
+	public RedisClient getRedis() {
+		return redis;
+	}
+	
+	public ParserThread getParserThread() {
+		return parserThread;
+	}
 	/////////////////////
 	// DSL
 	/////////////////////
@@ -107,7 +117,7 @@ public class Environment extends RootEnvironment {
 	 * @param xml
 	 */
 	public void addPubMedAbstract(String pmid, String xml) {
-		logDebug("Env.add");
+		System.out.println("Env.add "+pmid);
 		if (!accountant.seenBefore(pmid))
 			parserThread.addDoc(xml);
 		fileManager.persistAbstract(pmid, xml);

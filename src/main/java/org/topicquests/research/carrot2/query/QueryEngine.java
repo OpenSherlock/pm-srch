@@ -51,6 +51,7 @@ public class QueryEngine {
 	public QueryEngine(Environment env) {
 		environment = env;
 		srch = new PubMedDocumentSource();
+		xmlThread = environment.getParserThread();
 		outputPath = environment.getStringProperty("ClusterDataPath");
 		accountant = environment.getAccountant();
 		buf = new StringBuilder();
