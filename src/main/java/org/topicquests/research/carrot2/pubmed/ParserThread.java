@@ -97,7 +97,7 @@ public class ParserThread {
 			//environment.logDebug("PT+");
 			environment.getAccountant().haveSeen(j.getPMID());
 			//docThread.addDoc(j);
-			redis.add(REDIS_TOPIC, xml);
+			redis.add(REDIS_TOPIC, j.toString());
 		}
 	}
 }
