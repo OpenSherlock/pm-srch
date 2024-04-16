@@ -44,13 +44,16 @@ public class JSONDocumentObject {
 		_CLUSTER_DATA_LIST	= "clusterDataList",
 		_TAG_LIST			= "tagList",
 		_SUBSTANCE_LIST		= "substList",
-		_TFIDF_MAP			= "tfidfMap";
+		_TFIDF_MAP			= "tfidfMap",
+		_DOC_TYPE			= "doctyp",
+		_CHEM_NAME			= "chemn";
 	
 	private JsonObject data;
 	
 	public JSONDocumentObject(JsonObject jo) {
 		data = jo;
 	}
+	
 	/**
 	 * @param userId
 	 * @throws Exception
@@ -62,8 +65,36 @@ public class JSONDocumentObject {
 		data.addProperty(ITQCoreOntology.CREATOR_ID_PROPERTY, userId);
 	}
 	
+	String get(String key) {
+		JsonElement je = data.get(key);
+		if (je != null)  return je.getAsString();
+		return null;
+	}
+	JsonArray getArray(String key) {
+		JsonElement je = data.get(key);
+		if (je != null) return je.getAsJsonArray();
+		return null;
+	}
+	long getLong(String key) {
+		JsonElement je = data.get(key);
+		if (je != null)  return je.getAsLong();
+		return -1;
+	}
+	JsonObject getObj(String key) {
+		JsonElement je = data.get(key);
+		if (je != null) return je.getAsJsonObject();
+		return null;
+	}
+
+	public void setDocType(String t) {
+		data.addProperty(_DOC_TYPE, t);
+	}
+	public String getDocType() {
+		return get(_DOC_TYPE);
+	}
+
 	public String getCreatorId() {
-		return data.get(ITQCoreOntology.CREATOR_ID_PROPERTY).getAsString();
+		return get(ITQCoreOntology.CREATOR_ID_PROPERTY);
 	}
 	/**
 	 * For pubmed docs
@@ -71,7 +102,7 @@ public class JSONDocumentObject {
 	 */
 	public void setPMID(String pmid) {
 		data.addProperty(_PMID, pmid);
-		setLocator(_PUBMED_PREFIX+pmid);
+		//setLocator(_PUBMED_PREFIX+pmid);
 	}
 	
 	/**
@@ -80,7 +111,7 @@ public class JSONDocumentObject {
 	 */
 	public String getPMID() {
 		
-		return data.get(_PMID).getAsString();
+		return get(_PMID);
 	}
 	
 	public void setPMCID(String pmid) {
@@ -88,24 +119,21 @@ public class JSONDocumentObject {
 	}
 	
 	public String getPMCID() {
-		return data.get(_PMCID).getAsString();
+		return get(_PMCID);
 	}
 	/**
 	 * Set the document's topic <em>locator</em>
 	 * @param locator
 	 */
-	public void setLocator(String locator) {
+	public void setLocator(long locator) {
 		data.addProperty(ITQCoreOntology.LOCATOR_PROPERTY, locator);
 	}
 	/**
 	 * Return the document's topic <em>locator</em>
 	 * @return can return <code>null</code>
 	 */
-	public String getLocator() {
-		String result = data.get(ITQCoreOntology.LOCATOR_PROPERTY).getAsString();
-		if (result == null)
-			result = data.get("locator").getAsString(); // old version
-		return result;
+	public long getLocator() {
+		return getLong(ITQCoreOntology.LOCATOR_PROPERTY);
 	}
 	
 	public void setPublicationISOAbbreviation(String a) {
@@ -121,13 +149,21 @@ public class JSONDocumentObject {
 	}
 	
 	public String getCopyright() {
-		return data.get(_COPYRIGHT).getAsString();
+		return get(_COPYRIGHT);
+	}
+	
+	public void addChemName(String name) {
+		data.addProperty(_CHEM_NAME, name);
+	}
+	
+	public JsonArray listChemNames() {
+		return getArray(_CHEM_NAME);
 	}
 	public void setTagList(JsonArray tags) {
 		data.add(_TAG_LIST, tags);
 	}
 	public void addTag(String t) {
-		JsonArray l = data.get(_TAG_LIST).getAsJsonArray();
+		JsonArray l = listTags();
 		if (l == null)
 			l = new JsonArray();
 		if (!l.contains(new JsonPrimitive(t))) {
@@ -151,7 +187,7 @@ public class JSONDocumentObject {
 */
 	public void addSubstance(String t) {
 		
-		JsonArray l = data.get(_SUBSTANCE_LIST).getAsJsonArray();
+		JsonArray l = listSubstances();
 		if (l == null)
 			l = new JsonArray();
 		if (!l.contains(new JsonPrimitive(t))) {
@@ -160,7 +196,7 @@ public class JSONDocumentObject {
 		}
 	}
 	public JsonArray listSubstances() {
-		return data.get(_SUBSTANCE_LIST).getAsJsonArray();
+		return getArray(_SUBSTANCE_LIST);
 	}
 
 	/**
@@ -168,14 +204,14 @@ public class JSONDocumentObject {
 	 * @return
 	 */
 	public JsonArray listTags() {
-		return data.get(_TAG_LIST).getAsJsonArray();
+		return getArray(_TAG_LIST);
 	}
 	/**
 	 * Return userId
 	 * @return
 	 */
 	public String getUserId() {
-		return data.get(ITQCoreOntology.CREATOR_ID_PROPERTY).getAsString();
+		return get(ITQCoreOntology.CREATOR_ID_PROPERTY);
 	}
 	
 	/**
@@ -187,7 +223,7 @@ public class JSONDocumentObject {
 	}
 	
 	public String getClusterTitle() {
-		return data.get(_CLUSTER_TITLE).getAsString();
+		return get(_CLUSTER_TITLE);
 	}
 	
 	/**
@@ -237,7 +273,7 @@ public class JSONDocumentObject {
 	}
 	
 	public String getTitle() {
-		return data.get(_TITLE).getAsString();
+		return get(_TITLE);
 	}
 	/**
 	 * Text of a document's abstract
@@ -265,9 +301,7 @@ public class JSONDocumentObject {
 	 * @return
 	 */
 	public JsonArray listAbstract() {
-		if (data.get(_ABSTRACT) != null)
-			return data.get(_ABSTRACT).getAsJsonArray();
-		return null;
+		return getArray(_ABSTRACT);
 	}
 	/*public String getAbstract() {
 		return data.get(_ABSTRACT);
@@ -309,7 +343,7 @@ public class JSONDocumentObject {
 	 * @return
 	 */
 	public String getContent() {
-		return data.get(_CONTENT).getAsString();
+		return get(_CONTENT);
 	}
 	
 	public void setURL(String url) {
@@ -321,7 +355,7 @@ public class JSONDocumentObject {
 	 * @return
 	 */
 	public String getURL() {
-		String result = data.get(_URL).getAsString();
+		String result = get(_URL);
 		if (result == null)
 			result = "";
 		return result;
@@ -360,16 +394,13 @@ public class JSONDocumentObject {
 	}
 	
 	public void setPublication(IPublication p) {
-		String s = p.toString();
-		data.addProperty(_PUBLICATION, s);
+		data.add(_PUBLICATION, p.getData());
 	}
 	
 	public IPublication getPublication() {
-		String p  = data.get(_PUBLICATION).getAsString();
+		JsonObject p = getObj(_PUBLICATION);
 		if (p != null) {
-			JsonElement jsonElement = JsonParser.parseString(p);         
-			JsonObject json = jsonElement.getAsJsonObject();
-			return new PublicationPojo(json);
+			return new PublicationPojo(p);
 		}
 		return null;
 	}
@@ -387,7 +418,7 @@ public class JSONDocumentObject {
 		JsonObject jo = new JsonObject();
 		jo.addProperty("type", type);
 		jo.addProperty("value", value);
-		JsonArray l = data.get(_CITATIONS).getAsJsonArray();
+		JsonArray l = listCitations();
 		if (l == null)
 			l = new JsonArray();
 		if (!l.contains(jo))
@@ -396,7 +427,7 @@ public class JSONDocumentObject {
 	}
 	
 	public JsonArray listCitations() {
-		return data.get(_CITATIONS).getAsJsonArray();
+		return getArray(_CITATIONS);
 	}
 	
 	/**
@@ -464,12 +495,12 @@ public class JSONDocumentObject {
 		
 	}
 	public void addAuthor(IAuthor author) {
-		String as = author.toString();
+		JsonObject ja = author.getData();
 		JsonArray a = this.listAuthors();
 		if (a == null)
 			a = new JsonArray();
-		if (!a.contains(new JsonPrimitive(as)))
-			a.add(as);
+		if (!a.contains(ja))
+			a.add(ja);
 		this.setAuthorList(a);
 	}
 
@@ -481,11 +512,16 @@ public class JSONDocumentObject {
 	 * @return can return <code>null</code>
 	 */
 	public JsonArray listAuthors() {
-		return data.get(_AUTHORS).getAsJsonArray();
+		return getArray(_AUTHORS);
 	}	
 
 	@Override
 	public String toString() {
 		return data.getAsString();
 	}
+	
+	public JsonObject getData() {
+		return data;
+	}
+	
 }
