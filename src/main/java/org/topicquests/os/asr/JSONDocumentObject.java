@@ -43,7 +43,8 @@ public class JSONDocumentObject {
 		_SUBSTANCE_LIST		= "substList",
 		_TFIDF_MAP			= "tfidfMap",
 		_DOC_TYPE			= "doctyp",
-		_CHEM_NAME			= "chemn";
+		_CHEM_NAME			= "chemn",
+		_SYNONYMS			= "syns";
 	
 	private JsonObject data;
 	
@@ -156,6 +157,15 @@ public class JSONDocumentObject {
 	public JsonArray listChemNames() {
 		return getArray(_CHEM_NAME);
 	}
+	
+	public void addSynonym(String name) {
+		data.addProperty(_SYNONYMS, name);
+	}
+	
+	public JsonArray listSynonyms() {
+		return getArray(_SYNONYMS);
+	}
+
 	public void setTagList(JsonArray tags) {
 		data.add(_TAG_LIST, tags);
 	}

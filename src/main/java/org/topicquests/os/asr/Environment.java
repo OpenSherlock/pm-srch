@@ -11,7 +11,8 @@ import java.io.IOException;
 import java.io.ObjectOutputStream;
 import java.io.PrintWriter;
 import java.util.*;
-import org.topicquests.os.asr.dbp.DBpediaEngine;
+
+import org.topicquests.os.asr.enigines.DBpediaEngine;
 import org.topicquests.research.carrot2.Accountant;
 import org.topicquests.research.carrot2.HarvestTimer;
 import org.topicquests.research.carrot2.TCPListener;
