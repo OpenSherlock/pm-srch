@@ -6,7 +6,7 @@
 	<!-- Out to tqos-ingester -->
 	<parameter name="REDIS_TOPIC" value="FreshHarvest" /> 
 	<!-- In from asr-v-core dbpedia reference-->
-	<parameter name="REDIS_DBPED" value="dbpJson" /> 
+	<parameter name="REDIS_DBPED" value="pmQuery" /> 
 	<!-- IN from asr-v-core pubmed query -->
 	<parameter name="REDIS_QUERY" value="dbpJson" /> 
 	
