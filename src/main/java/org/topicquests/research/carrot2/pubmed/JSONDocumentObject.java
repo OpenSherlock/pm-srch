@@ -13,7 +13,6 @@ import org.topicquests.os.asr.api.IPublication;
 import org.topicquests.os.asr.api.ITQCoreOntology;
 
 import com.google.gson.JsonObject;
-import com.google.gson.JsonParser;
 import com.google.gson.JsonPrimitive;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
