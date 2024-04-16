@@ -14,6 +14,7 @@ import org.topicquests.os.asr.api.IGrant;
 import org.topicquests.os.asr.api.IPublication;
 import org.topicquests.os.asr.AuthorPojo;
 import org.topicquests.os.asr.GrantPojo;
+import org.topicquests.os.asr.JSONDocumentObject;
 import org.topicquests.os.asr.CitationPojo;
 import org.topicquests.os.asr.PublicationPojo;
 
