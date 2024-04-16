@@ -5,7 +5,7 @@ package test;
 
 import java.net.Socket;
 
-import org.topicquests.research.carrot2.Environment;
+import org.topicquests.os.asr.Environment;
 
 /**
  * @author park

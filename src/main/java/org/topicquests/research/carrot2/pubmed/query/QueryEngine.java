@@ -16,8 +16,8 @@ import org.carrot2.clustering.lingo.LingoClusteringAlgorithm;
 import org.carrot2.source.SearchEngineResponse;
 //import org.carrot2.core.ProcessingResult;
 import org.carrot2.core.attribute.CommonAttributesDescriptor;
+import org.topicquests.os.asr.Environment;
 import org.topicquests.research.carrot2.Accountant;
-import org.topicquests.research.carrot2.Environment;
 import org.topicquests.research.carrot2.impl.PubMedDocumentSource;
 import org.topicquests.research.carrot2.pubmed.ParserThread;
 

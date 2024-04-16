@@ -3,7 +3,7 @@
 <properties>
 
 	<parameter name="RedisBase" value="tq2.topicquests.net" /> <!-- CHANGEME -->
-	<parameter name="REDIS_TOPIC" value="FreshPmXML" /> 
+	<parameter name="REDIS_TOPIC" value="FreshHarvest" /> 
 	<parameter name="REDIS_DBPED" value="dbpJson" /> 
 	
 	<parameter name="MAX_COUNT" value="150" />

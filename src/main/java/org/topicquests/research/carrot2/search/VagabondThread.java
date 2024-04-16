@@ -7,11 +7,11 @@ package org.topicquests.research.carrot2.search;
 
 import java.util.*;
 
+import org.topicquests.os.asr.Environment;
 //import org.topicquests.os.asr.info.InformationEnvironment;
 //import org.topicquests.os.asr.info.api.IInfoOcean;
 import org.topicquests.pg.PostgresConnectionFactory;
 import org.topicquests.pg.api.IPostgresConnection;
-import org.topicquests.research.carrot2.Environment;
 import org.topicquests.support.ResultPojo;
 import org.topicquests.support.api.IResult;
 

@@ -40,7 +40,7 @@ import org.carrot2.util.attribute.constraint.IntRange;
 import org.carrot2.util.httpclient.HttpClientFactory;
 import org.carrot2.util.httpclient.HttpRedirectStrategy;
 import org.carrot2.util.httpclient.HttpUtils;
-import org.topicquests.research.carrot2.Environment;
+import org.topicquests.os.asr.Environment;
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
 import org.xml.sax.XMLReader;

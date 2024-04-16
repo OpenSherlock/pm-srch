@@ -3,7 +3,7 @@
  */
 package org.topicquests.research.carrot2.redis;
 
-import org.topicquests.research.carrot2.Environment;
+import org.topicquests.os.asr.Environment;
 
 import redis.clients.jedis.JedisPooled;
 

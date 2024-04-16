@@ -3,7 +3,7 @@
  *  This source code is available under the terms of the Affero General Public License v3.
  *  Please see LICENSE.txt for full license terms, including the availability of proprietary exceptions.
  */
-package org.topicquests.research.carrot2;
+package org.topicquests.os.asr;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -11,10 +11,10 @@ import java.io.IOException;
 import java.io.ObjectOutputStream;
 import java.io.PrintWriter;
 import java.util.*;
-import org.topicquests.asr.general.GeneralDatabaseEnvironment;
-import org.topicquests.asr.general.document.api.IDocumentClient;
-import org.topicquests.es.ProviderEnvironment;
-import org.topicquests.research.carrot2.api.IDocumentProvider;
+import org.topicquests.os.asr.dbp.DBpediaEngine;
+import org.topicquests.research.carrot2.Accountant;
+import org.topicquests.research.carrot2.HarvestTimer;
+import org.topicquests.research.carrot2.TCPListener;
 import org.topicquests.research.carrot2.file.FileManager;
 import org.topicquests.research.carrot2.pubmed.ParserThread;
 import org.topicquests.research.carrot2.pubmed.query.BatchQueryFileHandler;
@@ -39,7 +39,7 @@ public class Environment extends RootEnvironment {
 	private Accountant accountant;
 	private FileManager fileManager;
 	private VagabondThread vagabondThread;
-	
+	private DBpediaEngine dbPedia;
 	private JSONObject queryInstrumentation;
 	private JSONObject nlpInstrumentation;
 	private Set<String> keywordInstrumentation;
@@ -60,6 +60,7 @@ public class Environment extends RootEnvironment {
 		accountant = new Accountant(this);
 		fileManager = new FileManager(this);
 		parserThread = new ParserThread(this);
+		dbPedia = new DBpediaEngine(this);
 		engine = new QueryEngine(this);
 
 		STATS_PATH = getStringProperty("StatsPath");
@@ -250,6 +251,7 @@ public class Environment extends RootEnvironment {
 		System.out.println("Environment.shutDown");
 		saveInstrumentation();
 		parserThread.shutDown();
+		dbPedia.shutDown();
 	}
 
 }

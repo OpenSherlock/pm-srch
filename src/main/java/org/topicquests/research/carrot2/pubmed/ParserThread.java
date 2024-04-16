@@ -7,8 +7,8 @@ package org.topicquests.research.carrot2.pubmed;
 
 import java.util.*;
 
+import org.topicquests.os.asr.Environment;
 import org.topicquests.os.asr.JSONDocumentObject;
-import org.topicquests.research.carrot2.Environment;
 import org.topicquests.research.carrot2.redis.RedisClient;
 import org.topicquests.support.api.IResult;
 

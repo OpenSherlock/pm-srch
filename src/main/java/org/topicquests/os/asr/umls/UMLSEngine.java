@@ -3,7 +3,7 @@
  */
 package org.topicquests.os.asr.umls;
 
-import org.topicquests.research.carrot2.Environment;
+import org.topicquests.os.asr.Environment;
 
 /**
  * @author jackpark

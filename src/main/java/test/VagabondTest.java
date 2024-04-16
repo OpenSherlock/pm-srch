@@ -5,7 +5,7 @@
  */
 package test;
 
-import org.topicquests.research.carrot2.Environment;
+import org.topicquests.os.asr.Environment;
 import org.topicquests.research.carrot2.search.VagabondThread;
 import org.topicquests.support.util.TextFileHandler;
 

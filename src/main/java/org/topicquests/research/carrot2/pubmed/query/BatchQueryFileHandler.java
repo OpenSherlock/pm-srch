@@ -7,7 +7,7 @@ package org.topicquests.research.carrot2.pubmed.query;
 
 import java.util.*;
 
-import org.topicquests.research.carrot2.Environment;
+import org.topicquests.os.asr.Environment;
 import org.topicquests.support.util.TextFileHandler;
 
 import java.io.*;

@@ -16,9 +16,8 @@ import org.topicquests.os.asr.AuthorPojo;
 import org.topicquests.os.asr.GrantPojo;
 import org.topicquests.os.asr.JSONDocumentObject;
 import org.topicquests.os.asr.CitationPojo;
+import org.topicquests.os.asr.Environment;
 import org.topicquests.os.asr.PublicationPojo;
-
-import org.topicquests.research.carrot2.Environment;
 import org.topicquests.support.ResultPojo;
 import org.topicquests.support.api.IResult;
 import org.topicquests.support.util.TextFileHandler;
