@@ -7,7 +7,7 @@ package test;
 
 
 import org.topicquests.research.carrot2.Environment;
-import org.topicquests.research.carrot2.query.QueryEngine;
+import org.topicquests.research.carrot2.pubmed.query.QueryEngine;
 import org.topicquests.research.carrot2.redis.RedisClient;
 
 /**

@@ -4,7 +4,7 @@
 package test;
 
 import org.topicquests.research.carrot2.Environment;
-import org.topicquests.research.carrot2.query.BatchQueryFileHandler;
+import org.topicquests.research.carrot2.pubmed.query.BatchQueryFileHandler;
 
 /**
  * 

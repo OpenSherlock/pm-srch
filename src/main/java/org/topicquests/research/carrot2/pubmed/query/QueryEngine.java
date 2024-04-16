@@ -3,7 +3,7 @@
  *  This source code is available under the terms of the Affero General Public License v3.
  *  Please see LICENSE.txt for full license terms, including the availability of proprietary exceptions.
  */
-package org.topicquests.research.carrot2.query;
+package org.topicquests.research.carrot2.pubmed.query;
 
 import java.util.ArrayList;
 import java.util.HashMap;
