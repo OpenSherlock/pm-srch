@@ -12,7 +12,6 @@ import java.util.*;
 import org.topicquests.pg.PostgresConnectionFactory;
 import org.topicquests.pg.api.IPostgresConnection;
 import org.topicquests.research.carrot2.Environment;
-import org.topicquests.research.carrot2.nlp.ElasticSearch;
 import org.topicquests.support.ResultPojo;
 import org.topicquests.support.api.IResult;
 
@@ -30,7 +29,6 @@ public class VagabondThread {
 	private PostgresConnectionFactory database = null;
 
 //	private IInfoOcean dsl;
-	private ElasticSearch es;
 	private List<String> queries;
 	private boolean isRunning = true;
 	private Worker worker = null;
@@ -44,7 +42,6 @@ public class VagabondThread {
 //		oceanEnvironment = new InformationEnvironment();
 //		database = oceanEnvironment.getWordGramEnvironment().getSqlGraph().getProvider();
 //		dsl = oceanEnvironment.getDSL();
-		es = environment.getElasticSearch();
 		queries = new ArrayList<String>();
 	}
 
@@ -96,7 +93,7 @@ public class VagabondThread {
 			// If we want an exhaustic query, might limit to 100 rather than -1
 			// and repeat until it returns less that count
 			////////
-			IResult r  = es.get(query, begin, count);
+/*			IResult r  = es.get(query, begin, count);
 			Object o = r.getResultObject();
 			environment.logDebug("VagabondThread.XX "+o);
 			Set<JSONObject> hits = (Set<JSONObject>)r.getResultObject();
@@ -104,7 +101,7 @@ public class VagabondThread {
 				Iterator<JSONObject> itr = hits.iterator();
 				while (itr.hasNext())
 					processHit(itr.next(), query);
-			}
+			}*/
 		}
 		
 		void processHit(JSONObject doc, String query) {

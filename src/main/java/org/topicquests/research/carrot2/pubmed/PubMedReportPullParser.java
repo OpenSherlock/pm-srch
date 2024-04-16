@@ -8,10 +8,15 @@ package org.topicquests.research.carrot2.pubmed;
 import java.io.*;
 import java.util.HashMap;
 
-import org.topicquests.hyperbrane.AuthorPojo;
-import org.topicquests.hyperbrane.PublicationPojo;
-import org.topicquests.hyperbrane.api.IAuthor;
-import org.topicquests.hyperbrane.api.IPublication;
+import org.topicquests.os.asr.api.IAuthor;
+import org.topicquests.os.asr.api.ICitation;
+import org.topicquests.os.asr.api.IGrant;
+import org.topicquests.os.asr.api.IPublication;
+import org.topicquests.os.asr.AuthorPojo;
+import org.topicquests.os.asr.GrantPojo;
+import org.topicquests.os.asr.CitationPojo;
+import org.topicquests.os.asr.PublicationPojo;
+
 import org.topicquests.research.carrot2.Environment;
 import org.topicquests.support.ResultPojo;
 import org.topicquests.support.api.IResult;

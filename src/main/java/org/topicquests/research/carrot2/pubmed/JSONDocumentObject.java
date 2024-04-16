@@ -4,16 +4,20 @@
  *  Please see LICENSE.txt for full license terms, including the availability of proprietary exceptions.
  */
 package org.topicquests.research.carrot2.pubmed;
-import java.util.*;
 
-import org.topicquests.hyperbrane.AuthorPojo;
-import org.topicquests.hyperbrane.PublicationPojo;
-import org.topicquests.hyperbrane.api.IAuthor;
-import org.topicquests.hyperbrane.api.IPublication;
-//import org.topicquests.hyperbrane.api.IHarvestingOntology;
-import org.topicquests.ks.api.ITQCoreOntology;
 
-import net.minidev.json.JSONObject;
+import org.topicquests.os.asr.AuthorPojo;
+import org.topicquests.os.asr.PublicationPojo;
+import org.topicquests.os.asr.api.IAuthor;
+import org.topicquests.os.asr.api.IPublication;
+import org.topicquests.os.asr.api.ITQCoreOntology;
+
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
+import com.google.gson.JsonPrimitive;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonElement;
+
 
 
 /**
@@ -42,9 +46,9 @@ public class JSONDocumentObject {
 		_SUBSTANCE_LIST		= "substList",
 		_TFIDF_MAP			= "tfidfMap";
 	
-	private JSONObject data;
+	private JsonObject data;
 	
-	public JSONDocumentObject(JSONObject jo) {
+	public JSONDocumentObject(JsonObject jo) {
 		data = jo;
 	}
 	/**
@@ -54,19 +58,19 @@ public class JSONDocumentObject {
 	public JSONDocumentObject(String userId) throws Exception {
 		if (userId == null)
 			throw new Exception("JSONDocumentObject missing userId");
-		data = new JSONObject();
-		data.put(ITQCoreOntology.CREATOR_ID_PROPERTY, userId);
+		data = new JsonObject();
+		data.addProperty(ITQCoreOntology.CREATOR_ID_PROPERTY, userId);
 	}
 	
 	public String getCreatorId() {
-		return data.getAsString(ITQCoreOntology.CREATOR_ID_PROPERTY);
+		return data.get(ITQCoreOntology.CREATOR_ID_PROPERTY).getAsString();
 	}
 	/**
 	 * For pubmed docs
 	 * @param pmid
 	 */
 	public void setPMID(String pmid) {
-		data.put(_PMID, pmid);
+		data.addProperty(_PMID, pmid);
 		setLocator(_PUBMED_PREFIX+pmid);
 	}
 	
@@ -76,59 +80,59 @@ public class JSONDocumentObject {
 	 */
 	public String getPMID() {
 		
-		return data.getAsString(_PMID);
+		return data.get(_PMID).getAsString();
 	}
 	
 	public void setPMCID(String pmid) {
-		data.put(_PMCID, pmid);
+		data.addProperty(_PMCID, pmid);
 	}
 	
 	public String getPMCID() {
-		return data.getAsString(_PMCID);
+		return data.get(_PMCID).getAsString();
 	}
 	/**
 	 * Set the document's topic <em>locator</em>
 	 * @param locator
 	 */
 	public void setLocator(String locator) {
-		data.put(ITQCoreOntology.LOCATOR_PROPERTY, locator);
+		data.addProperty(ITQCoreOntology.LOCATOR_PROPERTY, locator);
 	}
 	/**
 	 * Return the document's topic <em>locator</em>
 	 * @return can return <code>null</code>
 	 */
 	public String getLocator() {
-		String result = data.getAsString(ITQCoreOntology.LOCATOR_PROPERTY);
+		String result = data.get(ITQCoreOntology.LOCATOR_PROPERTY).getAsString();
 		if (result == null)
-			result = data.getAsString("locator"); // old version
+			result = data.get("locator").getAsString(); // old version
 		return result;
 	}
 	
 	public void setPublicationISOAbbreviation(String a) {
-		data.put(_ISO_ABBREV, a);
+		data.addProperty(_ISO_ABBREV, a);
 	}
 	
 	public String getPublicationISOAbbreviation() {
-		return data.getAsString(_ISO_ABBREV);
+		return data.get(_ISO_ABBREV).getAsString();
 	}
 	
 	public void setCopyright(String copyright) {
-		data.put(_COPYRIGHT, copyright);
+		data.addProperty(_COPYRIGHT, copyright);
 	}
 	
 	public String getCopyright() {
-		return data.getAsString(_COPYRIGHT);
+		return data.get(_COPYRIGHT).getAsString();
 	}
-	public void setTagList(List<String> tags) {
-		data.put(_TAG_LIST, tags);
+	public void setTagList(JsonArray tags) {
+		data.add(_TAG_LIST, tags);
 	}
 	public void addTag(String t) {
-		List<String>l = (List<String>)data.get(_TAG_LIST);
+		JsonArray l = data.get(_TAG_LIST).getAsJsonArray();
 		if (l == null)
-			l = new ArrayList<String>();
-		if (!l.contains(t)) {
+			l = new JsonArray();
+		if (!l.contains(new JsonPrimitive(t))) {
 			l.add(t);
-			data.put(_TAG_LIST,l);
+			data.add(_TAG_LIST,l);
 		}
 	}
 /*
@@ -138,7 +142,7 @@ public class JSONDocumentObject {
 			l = new ArrayList<String>();
 		if (!l.contains(t)) {
 			l.add(t);
-			data.put(_KEYWORD_LIST,l);
+			data.addProperty(_KEYWORD_LIST,l);
 		}
 	}
 	public List<String> listKeywords() {
@@ -147,31 +151,31 @@ public class JSONDocumentObject {
 */
 	public void addSubstance(String t) {
 		
-		List<String>l = (List<String>)data.get(_SUBSTANCE_LIST);
+		JsonArray l = data.get(_SUBSTANCE_LIST).getAsJsonArray();
 		if (l == null)
-			l = new ArrayList<String>();
-		if (!l.contains(t)) {
+			l = new JsonArray();
+		if (!l.contains(new JsonPrimitive(t))) {
 			l.add(t);
-			data.put(_SUBSTANCE_LIST,l);
+			data.add(_SUBSTANCE_LIST,l);
 		}
 	}
-	public List<String> listSubstances() {
-		return (List<String>)data.get(_SUBSTANCE_LIST);
+	public JsonArray listSubstances() {
+		return data.get(_SUBSTANCE_LIST).getAsJsonArray();
 	}
 
 	/**
 	 * Can return <code>null</code>
 	 * @return
 	 */
-	public List<String> listTags() {
-		return (List<String>)data.get(_TAG_LIST);
+	public JsonArray listTags() {
+		return data.get(_TAG_LIST).getAsJsonArray();
 	}
 	/**
 	 * Return userId
 	 * @return
 	 */
 	public String getUserId() {
-		return data.getAsString(ITQCoreOntology.CREATOR_ID_PROPERTY);
+		return data.get(ITQCoreOntology.CREATOR_ID_PROPERTY).getAsString();
 	}
 	
 	/**
@@ -179,11 +183,11 @@ public class JSONDocumentObject {
 	 * @param title
 	 */
 	public void setClusterTitle(String title) {
-		data.put(_CLUSTER_TITLE, title);
+		data.addProperty(_CLUSTER_TITLE, title);
 	}
 	
 	public String getClusterTitle() {
-		return data.getAsString(_CLUSTER_TITLE);
+		return data.get(_CLUSTER_TITLE).getAsString();
 	}
 	
 	/**
@@ -191,24 +195,24 @@ public class JSONDocumentObject {
 	 * @param title
 	 */
 	//public void setClusterQuery(String title) {
-	//	data.put(_CLUSTER_QUERY, title);
+	//	data.addProperty(_CLUSTER_QUERY, title);
 	//}
 	
 /*	public void addClusterData(String clusterLocator, String query, String clusterPhrase, String clusterScore) {
 		Map<String,String>m = new HashMap<String,String>();
-		m.put(_CLUSTER_LOCATOR, clusterLocator);
-		m.put(IHarvestingOntology.CLUSTER_QUERY, query);
-		m.put(_CLUSTER_TITLE, clusterPhrase);
-		m.put(IHarvestingOntology.CLUSTER_WEIGHT, clusterScore);
+		m.addProperty(_CLUSTER_LOCATOR, clusterLocator);
+		m.addProperty(IHarvestingOntology.CLUSTER_QUERY, query);
+		m.addProperty(_CLUSTER_TITLE, clusterPhrase);
+		m.addProperty(IHarvestingOntology.CLUSTER_WEIGHT, clusterScore);
 		List<Map<String,String>>l = (List<Map<String,String>>)data.get(_CLUSTER_DATA_LIST);
 		if (l == null)
 			l = new ArrayList<Map<String,String>>();
 		l.add(m);
-		data.put(_CLUSTER_DATA_LIST, l);
+		data.addProperty(_CLUSTER_DATA_LIST, l);
 	}
 	
 	public String getClusterQuery() {
-		return data.getAsString(IHarvestingOntology.CLUSTER_QUERY);
+		return data.get(IHarvestingOntology.CLUSTER_QUERY);
 	}
 	
 	public String getClusterWeight() {
@@ -220,27 +224,27 @@ public class JSONDocumentObject {
 	 * @param language defaults to "en"
 	 */
 	public void setContent(String content, String language) {
-		data.put(_CONTENT, content);
+		data.addProperty(_CONTENT, content);
 		if (language != null)
-			data.put(_LANGUAGE, language);
+			data.addProperty(_LANGUAGE, language);
 		else
-			data.put(_LANGUAGE, "en");
+			data.addProperty(_LANGUAGE, "en");
 
 	}
 	
 	public void setTitle(String title) {
-		data.put(_TITLE, title);
+		data.addProperty(_TITLE, title);
 	}
 	
 	public String getTitle() {
-		return data.getAsString(_TITLE);
+		return data.get(_TITLE).getAsString();
 	}
 	/**
 	 * Text of a document's abstract
 	 * @param abs
 	 */
 	//public void setAbstract(String abs) {
-	//	data.put(_ABSTRACT, abs);
+	//	data.addProperty(_ABSTRACT, abs);
 	//}
 	
 	/**
@@ -248,22 +252,29 @@ public class JSONDocumentObject {
 	 * @param a
 	 */
 	public void addDocAbstract(String a) {
-		List<String> ab = this.listAbstract();
+		JsonArray ab = this.listAbstract();
 		if (ab == null)
-			ab = new ArrayList<String>();
-		ab.add(a);
-		data.put(_ABSTRACT, ab);
+			ab = new JsonArray();
+		if (!ab.contains(new JsonPrimitive(a)))
+			ab.add(a);
+		data.add(_ABSTRACT, ab);
 	}
 
-	public List<String> listAbstract() {
-		return (List<String>)data.get(_ABSTRACT);
+	/**
+	 * Can return {@code null}
+	 * @return
+	 */
+	public JsonArray listAbstract() {
+		if (data.get(_ABSTRACT) != null)
+			return data.get(_ABSTRACT).getAsJsonArray();
+		return null;
 	}
 	/*public String getAbstract() {
-		return data.getAsString(_ABSTRACT);
+		return data.get(_ABSTRACT);
 	}*/
 	
 	public String getLanguage() {
-		return data.getAsString(_LANGUAGE);
+		return data.get(_LANGUAGE).getAsString();
 	}
 	
 	public void setLanguage(String lang) {
@@ -271,14 +282,16 @@ public class JSONDocumentObject {
 		//heuristic punt
 		if (x.equals("eng"))
 			x = "en";
-		data.put(_LANGUAGE, x);
+		data.addProperty(_LANGUAGE, x);
 	}
+	/**
 	public void setTFIDFData(SortedMap<Double,String>d) {
-		data.put(_TFIDF_MAP, d);
+		JsonObject jo = new JsonObject();
+		data.add(_TFIDF_MAP, jo);
 	}
 	
 	public SortedMap<Double,String> getTFIDFData(Comparator c) {
-		JSONObject jo = (JSONObject)data.get(_TFIDF_MAP);
+		JsonObject jo = data.get(_TFIDF_MAP).getAsJsonObject();
 		if (jo == null)
 			return null;
 		SortedMap<Double,String>result = new TreeMap(c);
@@ -286,20 +299,21 @@ public class JSONDocumentObject {
 		String d;
 		while (itr.hasNext()) {
 			d = itr.next();
-			result.put(new Double(d),(String)jo.get(d));
+			result.addProperty(new Double(d),(String)jo.get(d));
 		}
 		return result;
 	}
+	*/
 	/**
 	 * Return the content
 	 * @return
 	 */
 	public String getContent() {
-		return data.getAsString(_CONTENT);
+		return data.get(_CONTENT).getAsString();
 	}
 	
 	public void setURL(String url) {
-		data.put(_URL, url);
+		data.addProperty(_URL, url);
 	}
 	
 	/**
@@ -307,7 +321,7 @@ public class JSONDocumentObject {
 	 * @return
 	 */
 	public String getURL() {
-		String result = data.getAsString(_URL);
+		String result = data.get(_URL).getAsString();
 		if (result == null)
 			result = "";
 		return result;
@@ -346,15 +360,22 @@ public class JSONDocumentObject {
 	}
 	
 	public void setPublication(IPublication p) {
-		data.put(_PUBLICATION, p);
+		String s = p.toString();
+		data.addProperty(_PUBLICATION, s);
 	}
 	
 	public IPublication getPublication() {
-		return (IPublication)data.get(_PUBLICATION);
+		String p  = data.get(_PUBLICATION).getAsString();
+		if (p != null) {
+			JsonElement jsonElement = JsonParser.parseString(p);         
+			JsonObject json = jsonElement.getAsJsonObject();
+			return new PublicationPojo(json);
+		}
+		return null;
 	}
 
 	public String toJSONString() {
-		return data.toJSONString();
+		return data.getAsString();
 	}
 	
 	/**
@@ -363,18 +384,19 @@ public class JSONDocumentObject {
 	 * @param value
 	 */
 	public void addCitation(String type, String value) {
-		JSONObject jo = new JSONObject();
-		jo.put("type", type);
-		jo.put("value", value);
-		List<JSONObject>l = (List<JSONObject>)data.get(_CITATIONS);
+		JsonObject jo = new JsonObject();
+		jo.addProperty("type", type);
+		jo.addProperty("value", value);
+		JsonArray l = data.get(_CITATIONS).getAsJsonArray();
 		if (l == null)
-			l = new ArrayList<JSONObject>();
-		l.add(jo);
-		data.put(_CITATIONS,l);
+			l = new JsonArray();
+		if (!l.contains(jo))
+			l.add(jo);
+		data.add(_CITATIONS,l);
 	}
 	
-	public List<JSONObject> listCitations() {
-		return (List<JSONObject>)data.get(_CITATIONS);
+	public JsonArray listCitations() {
+		return data.get(_CITATIONS).getAsJsonArray();
 	}
 	
 	/**
@@ -399,10 +421,10 @@ public class JSONDocumentObject {
 	 * @param fundingContractId
 	 */
 	public IAuthor addAuthor(String title, String initials, String firstName, String middleName, String lastName,
-						  String suffix, String degree, String fullName, String authorLocator, 
-						  String publicationName, String publicationLocator, 
-						  String publisherName, String publisherLocator, 
-						  String affiliationName, String affiliationLocator) {
+						  String suffix, String degree, String fullName, long authorLocator, 
+						  String publicationName, long publicationLocator, 
+						  String publisherName, long publisherLocator, 
+						  String affiliationName, long affiliationLocator) {
 		IAuthor a = new AuthorPojo();
 		if (title != null && !title.equals(""))
 			a.setAuthorTitle(title);
@@ -420,19 +442,19 @@ public class JSONDocumentObject {
 			a.setAuthorDegree(degree);
 		if (fullName != null && !fullName.equals(""))
 			a.setAuthorFullName(fullName);
-		if (authorLocator != null && !authorLocator.equals(""))
+		if (authorLocator >-1)
 			a.setAuthorLocator(authorLocator);
 		if (publicationName != null && !publicationName.equals(""))
 			a.setPublicationName(publicationName);
-		if (publicationLocator != null && !publicationLocator.equals(""))
+		if (publicationLocator > -1)
 			a.setPublicationLocator(publicationLocator);
 		if (publisherName != null && !publisherName.equals(""))
 			a.setPublisherName(publisherName);
-		if (publisherLocator != null && !publisherLocator.equals(""))
+		if (publisherLocator > -1)
 			a.setPublisherLocator(publisherLocator);
 		if (affiliationName != null && !affiliationName.equals(""))
 			a.addAffiliationName(affiliationName);
-		if (affiliationLocator != null && !affiliationLocator.equals(""))
+		if (affiliationLocator  > -1)
 			a.setAffiliationLocator(affiliationLocator);
 		this.addAuthor(a);
 		return a;
@@ -442,26 +464,28 @@ public class JSONDocumentObject {
 		
 	}
 	public void addAuthor(IAuthor author) {
-		List<IAuthor>a = this.listAuthors();
+		String as = author.toString();
+		JsonArray a = this.listAuthors();
 		if (a == null)
-			a = new ArrayList<IAuthor>();
-		a.add(author);
+			a = new JsonArray();
+		if (!a.contains(new JsonPrimitive(as)))
+			a.add(as);
 		this.setAuthorList(a);
 	}
 
-	public void setAuthorList(List<IAuthor>authors) {
-		data.put(_AUTHORS, authors);
+	public void setAuthorList(JsonArray authors) {
+		data.add(_AUTHORS, authors);
 	}
 	/**
-	 * List authors
+	 * List authors as JSON strings
 	 * @return can return <code>null</code>
 	 */
-	public List<IAuthor> listAuthors() {
-		return (List<IAuthor>)data.get(_AUTHORS);
+	public JsonArray listAuthors() {
+		return data.get(_AUTHORS).getAsJsonArray();
 	}	
 
 	@Override
 	public String toString() {
-		return data.toJSONString();
+		return data.getAsString();
 	}
 }

@@ -16,7 +16,6 @@ import org.topicquests.asr.general.document.api.IDocumentClient;
 import org.topicquests.es.ProviderEnvironment;
 import org.topicquests.research.carrot2.api.IDocumentProvider;
 import org.topicquests.research.carrot2.file.FileManager;
-import org.topicquests.research.carrot2.nlp.ElasticSearch;
 import org.topicquests.research.carrot2.pubmed.ParserThread;
 import org.topicquests.research.carrot2.query.BatchQueryFileHandler;
 import org.topicquests.research.carrot2.query.QueryEngine;
@@ -32,16 +31,11 @@ import net.minidev.json.JSONObject;
  */
 public class Environment extends RootEnvironment {
 	private static Environment instance;
-	private ElasticSearch es;
 	//NOT thread safe
 	private StringBuilder buf;
 	private QueryEngine engine;
 	private BatchQueryFileHandler batcher;
 	private ParserThread parserThread;
-	private GeneralDatabaseEnvironment generalEnvironment;
-	private IDocumentProvider documentProvider;
-	private IDocumentClient documentDatabase;
-	private ProviderEnvironment esEnvironment;
 	private Accountant accountant;
 	private FileManager fileManager;
 	private VagabondThread vagabondThread;
@@ -67,8 +61,7 @@ public class Environment extends RootEnvironment {
 		fileManager = new FileManager(this);
 		parserThread = new ParserThread(this);
 		engine = new QueryEngine(this);
-	    esEnvironment = new ProviderEnvironment();
-		es = new ElasticSearch(this);
+
 		STATS_PATH = getStringProperty("StatsPath");
 		logDebug("Environment- "+engine);
 		System.out.println("E1");
@@ -76,11 +69,7 @@ public class Environment extends RootEnvironment {
 		String schemaName = getStringProperty("DatabaseSchema");
 		System.out.println("E2 "+schemaName);
 		logDebug("Environment-1 "+schemaName);
-		generalEnvironment = new GeneralDatabaseEnvironment(schemaName);
-		System.out.println("E3");
-		documentDatabase = generalEnvironment.getDocumentClient();
 		System.out.println("E4");
-		documentProvider = new DocumentProvider(this);
 		System.out.println("E5");
 		vagabondThread = new VagabondThread(this);
 		System.out.println("E6");
@@ -155,18 +144,12 @@ public class Environment extends RootEnvironment {
 		return vagabondThread;
 	}
 	
-	public ElasticSearch getElasticSearch() {
-		return es;
-	}
 	
 	public FileManager getFileManager() {
 		return fileManager;
 	}
 	public Accountant getAccountant() {
 		return accountant;
-	}
-	public ProviderEnvironment getElasticSearchEnvironment() {
-		return esEnvironment;
 	}
 	
 	public static Environment getInstance() {
@@ -178,17 +161,6 @@ public class Environment extends RootEnvironment {
 	}
 	public QueryEngine getQueryEngine() {
 		return engine;
-	}
-	
-	public GeneralDatabaseEnvironment getGeneralDatabaseEnvironment() {
-		return generalEnvironment;
-	}
-
-	public IDocumentProvider getDocProvider() {
-		return documentProvider;
-	}
-	public IDocumentClient getDocumentDatabase () {
-		return documentDatabase;
 	}
 
 	/**

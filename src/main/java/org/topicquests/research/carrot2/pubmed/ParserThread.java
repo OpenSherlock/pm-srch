@@ -16,7 +16,6 @@ import org.topicquests.support.api.IResult;
  */
 public class ParserThread {
 	private Environment environment;
-	private DocumentThread docThread;
 	private PubMedReportPullParser parser;
 	private List<String> docs;
 	private boolean isRunning = true;
@@ -32,7 +31,6 @@ public class ParserThread {
 		environment = env;
 		REDIS_TOPIC = environment.getStringProperty("REDIS_TOPIC");
 		parser = new PubMedReportPullParser(environment);
-		docThread = new DocumentThread(environment);
 		docs = new ArrayList<String>();
 		redis = environment.getRedis();
 		isRunning = true;
@@ -54,7 +52,6 @@ public class ParserThread {
 			isRunning = false;
 			docs.notify();
 		}
-		docThread.shutDown();
 	}
 	class Worker extends Thread {
 		
@@ -96,7 +93,6 @@ public class ParserThread {
 			JSONDocumentObject j = (JSONDocumentObject)r.getResultObject();
 			//environment.logDebug("PT+");
 			environment.getAccountant().haveSeen(j.getPMID());
-			//docThread.addDoc(j);
 			redis.add(REDIS_TOPIC, j.toString());
 		}
 	}
