@@ -26,7 +26,7 @@ import org.xmlpull.v1.XmlPullParserFactory;
 
 /**
  * @author park
- *
+ * @see https://www.nlm.nih.gov/bsd/licensee/elements_descriptions.html
  */
 public class PubMedReportPullParser {
 	private Environment environment;
@@ -120,11 +120,13 @@ public class PubMedReportPullParser {
 	         String pages=null, pubVolume=null, pubYear=null, pubMonth=null, pubTitle=null;
 	         String pubName=null, pubLoc=null, pubDate=null, pubISSN=null, pubIsoAbbrev=null;
 	         String articleIdType = null;
+	         String substanceUI = null;
 	         boolean isJournal = false;
 	         boolean isValid = false;
 	         boolean isAuthor = false;
 	         boolean isRefType = false;
 	         boolean isGrant = true;
+	         boolean isChemical = false;
 	         HashMap<String,String> props;
 	         int eventType = xpp.getEventType();
 	         boolean isStop = false;
@@ -170,6 +172,10 @@ public class PubMedReportPullParser {
 	                	}
 	                } else if (temp.equalsIgnoreCase("Grant")) {
 	                	isGrant = true;
+	                } else if (temp.equalsIgnoreCase("Chemical")) {
+	                	isChemical = true;
+	                } else if (temp.equalsIgnoreCase("NameOfSubstance")) {
+	                	substanceUI = (String)props.get("D014527");
 	                } else if(temp.equalsIgnoreCase("AbstractText")) {
 	                	// <AbstractText Label="BACKGROUND AND OBJECTIVES" NlmCategory="OBJECTIVE">
 	                	label = (String)props.get("Label");
@@ -297,7 +303,7 @@ public class PubMedReportPullParser {
 	                	theDocument.getPublication().setPublicationType(pt);
 	                } else if (temp.equalsIgnoreCase("NameOfSubstance")) {
 	                	theDocument.addTag(text);
-	                	theDocument.addSubstance(text);
+	                	theDocument.addSubstance(text, substanceUI);
 	                } else if (temp.equalsIgnoreCase("DescriptorName")) {
 	                	theDocument.addTag(text);
 	                } else if (temp.equalsIgnoreCase("QualifierName")) {
@@ -305,6 +311,8 @@ public class PubMedReportPullParser {
 	                } else if (temp.equalsIgnoreCase("Keyword")) {
 	                	environment.logDebug("PMRPP.addTag "+text);
 	                	theDocument.addTag(text);
+	                } else if (temp.equalsIgnoreCase("Chemical")) {
+	                	isChemical = false;
 	                } else if(temp.equalsIgnoreCase("CommentsCorrections")) {
 	                	isRefType = false;
 	                } else if(temp.equalsIgnoreCase("LastName")) { //TODO

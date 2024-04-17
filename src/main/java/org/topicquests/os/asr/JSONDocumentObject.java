@@ -192,8 +192,10 @@ public class JSONDocumentObject {
 		return (List<String>)data.get(_KEYWORD_LIST);
 	}
 */
-	public void addSubstance(String t) {
-		
+	public void addSubstance(String t, String ui) {
+		JsonObject jx = new JsonObject();
+		jx.addProperty("name", t);
+		jx.addProperty("ui", ui);
 		JsonArray l = listSubstances();
 		if (l == null)
 			l = new JsonArray();
