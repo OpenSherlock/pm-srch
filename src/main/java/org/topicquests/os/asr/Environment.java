@@ -13,14 +13,13 @@ import java.io.PrintWriter;
 import java.util.*;
 
 import org.topicquests.os.asr.enigines.DBpediaEngine;
+import org.topicquests.os.asr.enigines.PubMedEngine;
 import org.topicquests.research.carrot2.Accountant;
 import org.topicquests.research.carrot2.HarvestTimer;
 import org.topicquests.research.carrot2.TCPListener;
 import org.topicquests.research.carrot2.file.FileManager;
-import org.topicquests.research.carrot2.pubmed.ParserThread;
 import org.topicquests.research.carrot2.pubmed.query.BatchQueryFileHandler;
 import org.topicquests.research.carrot2.pubmed.query.QueryEngine;
-import org.topicquests.research.carrot2.redis.RedisClient;
 import org.topicquests.research.carrot2.search.VagabondThread;
 import org.topicquests.support.RootEnvironment;
 
@@ -36,7 +35,7 @@ public class Environment extends RootEnvironment {
 	private StringBuilder buf;
 	private QueryEngine engine;
 	private BatchQueryFileHandler batcher;
-	private ParserThread parserThread;
+	private PubMedEngine parserThread;
 	private Accountant accountant;
 	private FileManager fileManager;
 	private VagabondThread vagabondThread;
@@ -60,7 +59,7 @@ public class Environment extends RootEnvironment {
 
 		accountant = new Accountant(this);
 		fileManager = new FileManager(this);
-		parserThread = new ParserThread(this);
+		parserThread = new PubMedEngine(this);
 		dbPedia = new DBpediaEngine(this);
 		engine = new QueryEngine(this);
 
@@ -95,7 +94,7 @@ public class Environment extends RootEnvironment {
 		return redis;
 	}
 	
-	public ParserThread getParserThread() {
+	public PubMedEngine getParserThread() {
 		return parserThread;
 	}
 	/////////////////////
@@ -115,7 +114,7 @@ public class Environment extends RootEnvironment {
 	}
 	
 	/**
-	 * Callback from ParserThread when its
+	 * Callback from PubMedEngine when its
 	 * queue runs empty
 	 */
 	public void queueEmpty() {

@@ -36,7 +36,7 @@ public class Accountant {
 	}
 	
 	/**
-	 * A signal that the ParserThread is empty;
+	 * A signal that the PubMedEngine is empty;
 	 * use that to safe files, etc
 	 */
 	public void bump() {

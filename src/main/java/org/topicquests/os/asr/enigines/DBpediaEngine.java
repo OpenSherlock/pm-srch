@@ -7,12 +7,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.topicquests.os.asr.Environment;
-import org.topicquests.research.carrot2.redis.RedisClient;
+import org.topicquests.os.asr.RedisClient;
 
 /**
  * 
  */
-public class DBpediaEngine {
+public class DBpediaEngine extends AbstractRedisEngine {
 	private Environment environment;
 	private boolean isRunning = true;
 	private boolean hasBeenRunning = true;
@@ -31,53 +31,12 @@ public class DBpediaEngine {
 	 * 
 	 */
 	public DBpediaEngine(Environment env) {
-		environment = env;
+		super(env);
 		REDIS_IN_TOPIC = environment.getStringProperty("REDIS_DBPED");
 		REDIS_OUT_TOPIC = environment.getStringProperty("REDIS_TOPIC");
-		redis = environment.getRedis();
-		docs = new ArrayList<String>();
-		isRunning = true;
-		worker = new Worker();
-		worker.start();
 	}
-
-	class Worker extends Thread {
-		public void run() {
-			environment.logDebug("ParserThread.starting");
-			String doc = null;
-			while (isRunning) {
-				synchronized(docs) {
-					if (docs.isEmpty()) {
-						if (hasBeenRunning) {
-							environment.queueEmpty();
-							hasBeenRunning  = false;
-						}
-						try {
-							docs.wait();
-						} catch (Exception e) {}
-						
-					} else {
-						doc = docs.remove(0);
-					}
-				}
-				if (isRunning && doc != null) {
-					processDoc(doc);
-					doc = null;
-				}
-			}
-		}
-		
-		void processDoc(String json) {
-			//TODO
-		}
-
-	}
-	
-	public void shutDown() {
-		synchronized(docs) {
-			isRunning = false;
-			docs.notify();
-		}
+	public void processDoc(String json) {
+		//TODO
 	}
 
 }

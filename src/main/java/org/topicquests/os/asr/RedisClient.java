@@ -1,9 +1,7 @@
 /**
  * 
  */
-package org.topicquests.research.carrot2.redis;
-
-import org.topicquests.os.asr.Environment;
+package org.topicquests.os.asr;
 
 import redis.clients.jedis.JedisPooled;
 

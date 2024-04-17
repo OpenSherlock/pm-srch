@@ -7,8 +7,8 @@
 	<parameter name="REDIS_TOPIC" value="FreshHarvest" /> 
 	<!-- In from asr-v-core dbpedia reference-->
 	<parameter name="REDIS_DBPED" value="pmQuery" /> 
-	<!-- IN from asr-v-core pubmed query -->
-	<parameter name="REDIS_QUERY" value="dbpJson" /> 
+	<!-- IN from MYSQL -->
+	<parameter name="REDIS_IN_UMLW" value="umlsIn" /> 
 	
 	<parameter name="MAX_COUNT" value="150" />
 	<parameter name="COUNT" value="50" />

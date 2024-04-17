@@ -7,8 +7,8 @@ package test;
 
 
 import org.topicquests.os.asr.Environment;
+import org.topicquests.os.asr.RedisClient;
 import org.topicquests.research.carrot2.pubmed.query.QueryEngine;
-import org.topicquests.research.carrot2.redis.RedisClient;
 
 /**
  * @author park
