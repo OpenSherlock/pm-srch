@@ -53,14 +53,9 @@ public class JSONDocumentObject {
 	}
 	
 	/**
-	 * @param userId
-	 * @throws Exception
 	 */
-	public JSONDocumentObject(String userId) throws Exception {
-		if (userId == null)
-			throw new Exception("JSONDocumentObject missing userId");
+	public JSONDocumentObject() {
 		data = new JsonObject();
-		data.addProperty(ITQCoreOntology.CREATOR_ID_PROPERTY, userId);
 	}
 	
 	String get(String key) {

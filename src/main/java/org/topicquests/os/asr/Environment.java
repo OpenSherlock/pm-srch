@@ -12,7 +12,6 @@ import java.io.ObjectOutputStream;
 import java.io.PrintWriter;
 import java.util.*;
 
-import org.topicquests.os.asr.enigines.DBpediaEngine;
 import org.topicquests.os.asr.enigines.PubMedEngine;
 import org.topicquests.research.carrot2.Accountant;
 import org.topicquests.research.carrot2.HarvestTimer;
@@ -39,7 +38,6 @@ public class Environment extends RootEnvironment {
 	private Accountant accountant;
 	private FileManager fileManager;
 	private VagabondThread vagabondThread;
-	private DBpediaEngine dbPedia;
 	private JSONObject queryInstrumentation;
 	private JSONObject nlpInstrumentation;
 	private Set<String> keywordInstrumentation;
@@ -60,7 +58,6 @@ public class Environment extends RootEnvironment {
 		accountant = new Accountant(this);
 		fileManager = new FileManager(this);
 		parserThread = new PubMedEngine(this);
-		dbPedia = new DBpediaEngine(this);
 		engine = new QueryEngine(this);
 
 		STATS_PATH = getStringProperty("StatsPath");
@@ -251,7 +248,6 @@ public class Environment extends RootEnvironment {
 		System.out.println("Environment.shutDown");
 		saveInstrumentation();
 		parserThread.shutDown();
-		dbPedia.shutDown();
 	}
 
 }
