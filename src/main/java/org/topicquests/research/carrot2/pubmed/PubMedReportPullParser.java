@@ -190,7 +190,7 @@ public class PubMedReportPullParser {
 	                	refType = (String)props.get("RefType");
 	                	isRefType = true;
 	                } else if (temp.equalsIgnoreCase("PubmedArticle")) {
-	                	theDocument = new JSONDocumentObject("SystemUser");
+	                	theDocument = new JSONDocumentObject();
 	                	result.setResultObject(theDocument);
 	                	environment.logDebug("PMRPP.start");
 	                } else if (temp.equalsIgnoreCase("PubmedArticleSet")) {

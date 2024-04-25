@@ -13,6 +13,7 @@ import java.io.PrintWriter;
 import java.util.*;
 
 import org.topicquests.os.asr.enigines.PubMedEngine;
+import org.topicquests.os.asr.file.FileHandler;
 import org.topicquests.research.carrot2.Accountant;
 import org.topicquests.research.carrot2.HarvestTimer;
 import org.topicquests.research.carrot2.TCPListener;
@@ -44,6 +45,7 @@ public class Environment extends RootEnvironment {
 	private final String STATS_PATH;
 	private TCPListener listener;
 	private RedisClient redis;
+	private FileHandler filer;
 
 	/**
 	 * 
@@ -59,7 +61,7 @@ public class Environment extends RootEnvironment {
 		fileManager = new FileManager(this);
 		parserThread = new PubMedEngine(this);
 		engine = new QueryEngine(this);
-
+		
 		STATS_PATH = getStringProperty("StatsPath");
 		logDebug("Environment- "+engine);
 		System.out.println("E1");
@@ -76,6 +78,7 @@ public class Environment extends RootEnvironment {
 		nlpInstrumentation  = new JSONObject();
 		keywordInstrumentation = new HashSet<String>();
 		instance = this;
+		filer = new FileHandler(this);
 		Runtime.getRuntime().addShutdownHook(new Thread() {
 			
 			@Override
@@ -85,6 +88,10 @@ public class Environment extends RootEnvironment {
 		});
 		logDebug("Environment booted");
 		System.out.println("E7");
+	}
+	
+	public FileHandler getFileHandler() {
+		return filer;
 	}
 	
 	public RedisClient getRedis() {
