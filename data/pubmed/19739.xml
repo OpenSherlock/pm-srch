@@ -1,0 +1,162 @@
+<?xml version="1.0"?>
+<!DOCTYPE PubmedArticleSet PUBLIC "-//NLM//DTD PubMedArticle, 1st January 2014//EN" "http://www.ncbi.nlm.nih.gov/corehtml/query/DTD/pubmed_140101.dtd">
+<PubmedArticle>
+    <MedlineCitation Owner="NLM" Status="MEDLINE">
+        <PMID Version="1">19739</PMID>
+        <DateCreated>
+            <Year>1977</Year>
+            <Month>10</Month>
+            <Day>14</Day>
+        </DateCreated>
+        <DateCompleted>
+            <Year>1977</Year>
+            <Month>10</Month>
+            <Day>14</Day>
+        </DateCompleted>
+        <DateRevised>
+            <Year>2013</Year>
+            <Month>11</Month>
+            <Day>21</Day>
+        </DateRevised>
+        <Article PubModel="Print">
+            <Journal>
+                <ISSN IssnType="Print">0027-8424</ISSN>
+                <JournalIssue CitedMedium="Print">
+                    <Volume>74</Volume>
+                    <Issue>7</Issue>
+                    <PubDate>
+                        <Year>1977</Year>
+                        <Month>Jul</Month>
+                    </PubDate>
+                </JournalIssue>
+                <Title>Proceedings of the National Academy of Sciences of the United States of America</Title>
+                <ISOAbbreviation>Proc. Natl. Acad. Sci. U.S.A.</ISOAbbreviation>
+            </Journal>
+            <ArticleTitle>Superiority of interconvertible enzyme cascades in metabolite regulation: analysis of multicyclic systems.</ArticleTitle>
+            <Pagination>
+                <MedlinePgn>2766-70</MedlinePgn>
+            </Pagination>
+            <Abstract>
+                <AbstractText>Escherichia coli glutamine synthetase and glycogen phosphorylase are prototypes for models of &quot;closed&quot; and &quot;opened&quot; bicyclic cascade systems. Steady-state functions relating the fractional activation of interconvertible enzymes to the concentrations of allosteric effectors and to the catalytic constants of the several converter enzymes in such cascades were determined. The study shows that when the active form of an interconvertible enzyme in one cycle catalyzes the covalent modification of the interconvertible enzyme in a second cycle, the two cycles become coupled, such that the fractional activity of the second interconvertible enzyme is a multiplicative function of all parameters in both cycles, i.e., of 14 and 18 parameters for the closed and the opened bicyclic cascade, respectively. Therefore, from the standpoint of cellular regulation, bicyclic cascades are superior to the monocyclic cascades analyzed previously [E. R. Stadtman &amp; P. B. Chock (1977) Proc. Natl. Acad. Sci. USA 74, 2761-2765], because: (i) they can respond to a greater number of allosteric effectors; (ii) they can achieve much greater amplification of responses to primary stimuli (e.g., with only 2-fold changes in each parameter the amplification factors of one-cycle and two-cycle cascades are 320 and 102,400, respectively); (iii) they can generate a sigmoidal response (Hill numbers of &gt;2) of interconvertible enzyme activity to increasing concentrations of an allosteric effector. This is because there are more steps in a bicyclic cascade at which a given effector can interact. A similar analysis of multicyclic cascade systems shows that the capacity for amplification increases exponentially as the number of cycles in the cascade increases. In addition, regulation by cyclic cascades can achieve enormous variability of the fractional activity of the interconvertible enzyme by shifting the steady-state distribution between active and inactive forms. One equivalent of ATP is consumed in each interconversion cycle to provide the energy needed to maintain the steady-state activity of the modified enzyme at a metabolically required level. Therefore, the decomposition of ATP associated with the cyclic cascade is not a wasteful process.</AbstractText>
+            </Abstract>
+            <AuthorList CompleteYN="Y">
+                <Author ValidYN="Y">
+                    <LastName>Chock</LastName>
+                    <ForeName>P B</ForeName>
+                    <Initials>PB</Initials>
+                </Author>
+                <Author ValidYN="Y">
+                    <LastName>Stadtman</LastName>
+                    <ForeName>E R</ForeName>
+                    <Initials>ER</Initials>
+                </Author>
+            </AuthorList>
+            <Language>eng</Language>
+            <PublicationTypeList>
+                <PublicationType UI="D016428">Journal Article</PublicationType>
+            </PublicationTypeList>
+        </Article>
+        <MedlineJournalInfo>
+            <Country>UNITED STATES</Country>
+            <MedlineTA>Proc Natl Acad Sci U S A</MedlineTA>
+            <NlmUniqueID>7505876</NlmUniqueID>
+            <ISSNLinking>0027-8424</ISSNLinking>
+        </MedlineJournalInfo>
+        <ChemicalList>
+            <Chemical>
+                <RegistryNumber>8L70Q75FXE</RegistryNumber>
+                <NameOfSubstance UI="D000255">Adenosine Triphosphate</NameOfSubstance>
+            </Chemical>
+            <Chemical>
+                <RegistryNumber>EC 2.4.1.-</RegistryNumber>
+                <NameOfSubstance UI="D006005">Phosphorylases</NameOfSubstance>
+            </Chemical>
+            <Chemical>
+                <RegistryNumber>EC 6.3.1.2</RegistryNumber>
+                <NameOfSubstance UI="D005974">Glutamate-Ammonia Ligase</NameOfSubstance>
+            </Chemical>
+        </ChemicalList>
+        <CitationSubset>IM</CitationSubset>
+        <CommentsCorrectionsList>
+            <CommentsCorrections RefType="Cites">
+                <RefSource>J Biol Chem. 1975 Mar 25;250(6):2028-35</RefSource>
+                <PMID Version="1">1116996</PMID>
+            </CommentsCorrections>
+            <CommentsCorrections RefType="Cites">
+                <RefSource>Biochem Biophys Res Commun. 1975 Jul 22;65(2):575-82</RefSource>
+                <PMID Version="1">167775</PMID>
+            </CommentsCorrections>
+            <CommentsCorrections RefType="Cites">
+                <RefSource>Proc Natl Acad Sci U S A. 1977 Jul;74(7):2761-5</RefSource>
+                <PMID Version="1">268625</PMID>
+            </CommentsCorrections>
+            <CommentsCorrections RefType="Cites">
+                <RefSource>Eur J Biochem. 1974 Jun 15;45(2):577-88</RefSource>
+                <PMID Version="1">4854074</PMID>
+            </CommentsCorrections>
+            <CommentsCorrections RefType="Cites">
+                <RefSource>Biochem Biophys Res Commun. 1966 Jul 6;24(1):79-84</RefSource>
+                <PMID Version="1">5966397</PMID>
+            </CommentsCorrections>
+        </CommentsCorrectionsList>
+        <MeshHeadingList>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N" UI="D000255">Adenosine Triphosphate</DescriptorName>
+                <QualifierName MajorTopicYN="N" UI="Q000378">metabolism</QualifierName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N" UI="D000494">Allosteric Regulation</DescriptorName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N" UI="D003201">Computers</DescriptorName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N" UI="D004926">Escherichia coli</DescriptorName>
+                <QualifierName MajorTopicYN="N" UI="Q000201">enzymology</QualifierName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N" UI="D005974">Glutamate-Ammonia Ligase</DescriptorName>
+                <QualifierName MajorTopicYN="Y" UI="Q000378">metabolism</QualifierName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N" UI="D007700">Kinetics</DescriptorName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="Y" UI="D008954">Models, Biological</DescriptorName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N" UI="D006005">Phosphorylases</DescriptorName>
+                <QualifierName MajorTopicYN="Y" UI="Q000378">metabolism</QualifierName>
+            </MeshHeading>
+        </MeshHeadingList>
+        <OtherID Source="NLM">PMC431281</OtherID>
+    </MedlineCitation>
+    <PubmedData>
+        <History>
+            <PubMedPubDate PubStatus="pubmed">
+                <Year>1977</Year>
+                <Month>7</Month>
+                <Day>1</Day>
+            </PubMedPubDate>
+            <PubMedPubDate PubStatus="medline">
+                <Year>1977</Year>
+                <Month>7</Month>
+                <Day>1</Day>
+                <Hour>0</Hour>
+                <Minute>1</Minute>
+            </PubMedPubDate>
+            <PubMedPubDate PubStatus="entrez">
+                <Year>1977</Year>
+                <Month>7</Month>
+                <Day>1</Day>
+                <Hour>0</Hour>
+                <Minute>0</Minute>
+            </PubMedPubDate>
+        </History>
+        <PublicationStatus>ppublish</PublicationStatus>
+        <ArticleIdList>
+            <ArticleId IdType="pubmed">19739</ArticleId>
+            <ArticleId IdType="pmc">PMC431281</ArticleId>
+        </ArticleIdList>
+    </PubmedData>
+</PubmedArticle>

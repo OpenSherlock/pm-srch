@@ -1,0 +1,189 @@
+<?xml version="1.0"?>
+<!DOCTYPE PubmedArticleSet PUBLIC "-//NLM//DTD PubMedArticle, 1st January 2014//EN" "http://www.ncbi.nlm.nih.gov/corehtml/query/DTD/pubmed_140101.dtd">
+<PubmedArticle>
+    <MedlineCitation Owner="NLM" Status="MEDLINE">
+        <PMID Version="1">13313</PMID>
+        <DateCreated>
+            <Year>1977</Year>
+            <Month>03</Month>
+            <Day>21</Day>
+        </DateCreated>
+        <DateCompleted>
+            <Year>1977</Year>
+            <Month>03</Month>
+            <Day>21</Day>
+        </DateCompleted>
+        <DateRevised>
+            <Year>2014</Year>
+            <Month>11</Month>
+            <Day>20</Day>
+        </DateRevised>
+        <Article PubModel="Print">
+            <Journal>
+                <ISSN IssnType="Print">0028-1298</ISSN>
+                <JournalIssue CitedMedium="Print">
+                    <Volume>294</Volume>
+                    <Issue>2</Issue>
+                    <PubDate>
+                        <Year>1976</Year>
+                        <Month>Aug</Month>
+                    </PubDate>
+                </JournalIssue>
+                <Title>Naunyn-Schmiedeberg's archives of pharmacology</Title>
+                <ISOAbbreviation>Naunyn Schmiedebergs Arch. Pharmacol.</ISOAbbreviation>
+            </Journal>
+            <ArticleTitle>Effects of cimetidine on adenylate cyclase activity of guinea pig gastric mucosa stimulated by histamine, sodium fluoride and 5'-guanylylimidodiphosphate.</ArticleTitle>
+            <Pagination>
+                <MedlinePgn>209-11</MedlinePgn>
+            </Pagination>
+            <Abstract>
+                <AbstractText>Cimetidine, a recently developed histamine H2-receptor blocking agent has been shown to be a potent inhibitor of histamine-stimulated gastric acid secretion in rat, cat, dog and man. To study the mode of action of cimetidine the modification of stimulatory effects of histamine, sodium flouride and 5'-guanylylimidodiphosphate by cimetidine on the adenylate cyclase activity of guinea pig gastric mucosa was studied. The effect of cimetidine was also compared to that of metiamide, an older histamine H2-receptor antagonist. The effect of cimetidine was qualitatively similar to that of metiamide, i.e. a selective blockade of histamine H2-receptors. Quantitatively cimetidine was about 10-fold more potent than metiamide.</AbstractText>
+            </Abstract>
+            <AuthorList CompleteYN="Y">
+                <Author ValidYN="Y">
+                    <LastName>Anttila</LastName>
+                    <ForeName>P</ForeName>
+                    <Initials>P</Initials>
+                </Author>
+                <Author ValidYN="Y">
+                    <LastName>Westermann</LastName>
+                    <ForeName>E</ForeName>
+                    <Initials>E</Initials>
+                </Author>
+            </AuthorList>
+            <Language>eng</Language>
+            <PublicationTypeList>
+                <PublicationType UI="D016428">Journal Article</PublicationType>
+            </PublicationTypeList>
+        </Article>
+        <MedlineJournalInfo>
+            <Country>GERMANY, WEST</Country>
+            <MedlineTA>Naunyn Schmiedebergs Arch Pharmacol</MedlineTA>
+            <NlmUniqueID>0326264</NlmUniqueID>
+            <ISSNLinking>0028-1298</ISSNLinking>
+        </MedlineJournalInfo>
+        <ChemicalList>
+            <Chemical>
+                <RegistryNumber>0</RegistryNumber>
+                <NameOfSubstance UI="D006146">Guanidines</NameOfSubstance>
+            </Chemical>
+            <Chemical>
+                <RegistryNumber>0</RegistryNumber>
+                <NameOfSubstance UI="D006150">Guanine Nucleotides</NameOfSubstance>
+            </Chemical>
+            <Chemical>
+                <RegistryNumber>0</RegistryNumber>
+                <NameOfSubstance UI="D006635">Histamine H2 Antagonists</NameOfSubstance>
+            </Chemical>
+            <Chemical>
+                <RegistryNumber>0</RegistryNumber>
+                <NameOfSubstance UI="D007093">Imidazoles</NameOfSubstance>
+            </Chemical>
+            <Chemical>
+                <RegistryNumber>3K7670861M</RegistryNumber>
+                <NameOfSubstance UI="D008785">Metiamide</NameOfSubstance>
+            </Chemical>
+            <Chemical>
+                <RegistryNumber>820484N8I3</RegistryNumber>
+                <NameOfSubstance UI="D006632">Histamine</NameOfSubstance>
+            </Chemical>
+            <Chemical>
+                <RegistryNumber>8ZYQ1474W7</RegistryNumber>
+                <NameOfSubstance UI="D012969">Sodium Fluoride</NameOfSubstance>
+            </Chemical>
+            <Chemical>
+                <RegistryNumber>EC 4.6.1.1</RegistryNumber>
+                <NameOfSubstance UI="D000262">Adenylate Cyclase</NameOfSubstance>
+            </Chemical>
+            <Chemical>
+                <RegistryNumber>Q80VPU408O</RegistryNumber>
+                <NameOfSubstance UI="D005459">Fluorides</NameOfSubstance>
+            </Chemical>
+        </ChemicalList>
+        <CitationSubset>IM</CitationSubset>
+        <MeshHeadingList>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N" UI="D000262">Adenylate Cyclase</DescriptorName>
+                <QualifierName MajorTopicYN="Y" UI="Q000378">metabolism</QualifierName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N" UI="D000818">Animals</DescriptorName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N" UI="D002642">Chick Embryo</DescriptorName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N" UI="D004347">Drug Interactions</DescriptorName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N" UI="D005459">Fluorides</DescriptorName>
+                <QualifierName MajorTopicYN="Y" UI="Q000494">pharmacology</QualifierName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N" UI="D005753">Gastric Mucosa</DescriptorName>
+                <QualifierName MajorTopicYN="Y" UI="Q000201">enzymology</QualifierName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N" UI="D006146">Guanidines</DescriptorName>
+                <QualifierName MajorTopicYN="Y" UI="Q000494">pharmacology</QualifierName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N" UI="D006150">Guanine Nucleotides</DescriptorName>
+                <QualifierName MajorTopicYN="Y" UI="Q000494">pharmacology</QualifierName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N" UI="D006168">Guinea Pigs</DescriptorName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N" UI="D006632">Histamine</DescriptorName>
+                <QualifierName MajorTopicYN="Y" UI="Q000494">pharmacology</QualifierName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N" UI="D006635">Histamine H2 Antagonists</DescriptorName>
+                <QualifierName MajorTopicYN="Y" UI="Q000494">pharmacology</QualifierName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N" UI="D007093">Imidazoles</DescriptorName>
+                <QualifierName MajorTopicYN="Y" UI="Q000494">pharmacology</QualifierName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N" UI="D066298">In Vitro Techniques</DescriptorName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N" UI="D008785">Metiamide</DescriptorName>
+                <QualifierName MajorTopicYN="N" UI="Q000494">pharmacology</QualifierName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N" UI="D012969">Sodium Fluoride</DescriptorName>
+                <QualifierName MajorTopicYN="Y" UI="Q000494">pharmacology</QualifierName>
+            </MeshHeading>
+        </MeshHeadingList>
+    </MedlineCitation>
+    <PubmedData>
+        <History>
+            <PubMedPubDate PubStatus="pubmed">
+                <Year>1976</Year>
+                <Month>8</Month>
+                <Day>1</Day>
+            </PubMedPubDate>
+            <PubMedPubDate PubStatus="medline">
+                <Year>1976</Year>
+                <Month>8</Month>
+                <Day>1</Day>
+                <Hour>0</Hour>
+                <Minute>1</Minute>
+            </PubMedPubDate>
+            <PubMedPubDate PubStatus="entrez">
+                <Year>1976</Year>
+                <Month>8</Month>
+                <Day>1</Day>
+                <Hour>0</Hour>
+                <Minute>0</Minute>
+            </PubMedPubDate>
+        </History>
+        <PublicationStatus>ppublish</PublicationStatus>
+        <ArticleIdList>
+            <ArticleId IdType="pubmed">13313</ArticleId>
+        </ArticleIdList>
+    </PubmedData>
+</PubmedArticle>

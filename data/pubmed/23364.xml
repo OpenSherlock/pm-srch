@@ -1,0 +1,138 @@
+<?xml version="1.0"?>
+<!DOCTYPE PubmedArticleSet PUBLIC "-//NLM//DTD PubMedArticle, 1st January 2014//EN" "http://www.ncbi.nlm.nih.gov/corehtml/query/DTD/pubmed_140101.dtd">
+<PubmedArticle>
+    <MedlineCitation Owner="NLM" Status="MEDLINE">
+        <PMID Version="1">23364</PMID>
+        <DateCreated>
+            <Year>1978</Year>
+            <Month>03</Month>
+            <Day>29</Day>
+        </DateCreated>
+        <DateCompleted>
+            <Year>1978</Year>
+            <Month>03</Month>
+            <Day>29</Day>
+        </DateCompleted>
+        <DateRevised>
+            <Year>2006</Year>
+            <Month>11</Month>
+            <Day>15</Day>
+        </DateRevised>
+        <Article PubModel="Print">
+            <Journal>
+                <ISSN IssnType="Print">0301-5564</ISSN>
+                <JournalIssue CitedMedium="Print">
+                    <Volume>54</Volume>
+                    <Issue>4</Issue>
+                    <PubDate>
+                        <Year>1977</Year>
+                        <Month>Dec</Month>
+                        <Day>28</Day>
+                    </PubDate>
+                </JournalIssue>
+                <Title>Histochemistry</Title>
+                <ISOAbbreviation>Histochemistry</ISOAbbreviation>
+            </Journal>
+            <ArticleTitle>[Ultrastructural localization of acid and alkaline phosphatases in sterile septae of the anthozoa Pachycerianthus fimbriatus (author's transl)].</ArticleTitle>
+            <Pagination>
+                <MedlinePgn>289-97</MedlinePgn>
+            </Pagination>
+            <Abstract>
+                <AbstractText>Acid and alkaline phosphatase activity has been localized in the cells of the sterile septae of starved and fed anthozoa. Acid phosphatase is present in lysosomes, in Golgi cisternae and old phagosomes of starved animals. In fed animals, the reaction is more intense and the number of lysosomes is increased. New phagosomes are loaded with lead phosphate. In starved animals, the alkaline phosphatase activity has been observed on the plasma membranes and in the old phagosomes.</AbstractText>
+            </Abstract>
+            <AuthorList CompleteYN="Y">
+                <Author ValidYN="Y">
+                    <LastName>Tiffon</LastName>
+                    <ForeName>Y</ForeName>
+                    <Initials>Y</Initials>
+                </Author>
+                <Author ValidYN="Y">
+                    <LastName>Hugon</LastName>
+                    <ForeName>J S</ForeName>
+                    <Initials>JS</Initials>
+                </Author>
+            </AuthorList>
+            <Language>fre</Language>
+            <PublicationTypeList>
+                <PublicationType UI="D004740">English Abstract</PublicationType>
+                <PublicationType UI="D016428">Journal Article</PublicationType>
+            </PublicationTypeList>
+            <VernacularTitle>Localisation ultrastructurale de la phosphatase acide et de la phosphatase alcaline dans les cloisons septales stÃ©riles de l'anthozoaire Pachycerianthus fimbriatus.</VernacularTitle>
+        </Article>
+        <MedlineJournalInfo>
+            <Country>GERMANY, WEST</Country>
+            <MedlineTA>Histochemistry</MedlineTA>
+            <NlmUniqueID>0411300</NlmUniqueID>
+            <ISSNLinking>0301-5564</ISSNLinking>
+        </MedlineJournalInfo>
+        <ChemicalList>
+            <Chemical>
+                <RegistryNumber>EC 3.1.3.1</RegistryNumber>
+                <NameOfSubstance UI="D000469">Alkaline Phosphatase</NameOfSubstance>
+            </Chemical>
+            <Chemical>
+                <RegistryNumber>EC 3.1.3.2</RegistryNumber>
+                <NameOfSubstance UI="D000135">Acid Phosphatase</NameOfSubstance>
+            </Chemical>
+        </ChemicalList>
+        <CitationSubset>IM</CitationSubset>
+        <MeshHeadingList>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N" UI="D000135">Acid Phosphatase</DescriptorName>
+                <QualifierName MajorTopicYN="Y" UI="Q000032">analysis</QualifierName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N" UI="D000469">Alkaline Phosphatase</DescriptorName>
+                <QualifierName MajorTopicYN="Y" UI="Q000032">analysis</QualifierName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N" UI="D000818">Animals</DescriptorName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N" UI="D003063">Cnidaria</DescriptorName>
+                <QualifierName MajorTopicYN="Y" UI="Q000201">enzymology</QualifierName>
+                <QualifierName MajorTopicYN="N" UI="Q000648">ultrastructure</QualifierName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N" UI="D004707">Endoderm</DescriptorName>
+                <QualifierName MajorTopicYN="N" UI="Q000201">enzymology</QualifierName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N" UI="D005215">Fasting</DescriptorName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N" UI="D006651">Histocytochemistry</DescriptorName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N" UI="D013997">Time Factors</DescriptorName>
+            </MeshHeading>
+        </MeshHeadingList>
+    </MedlineCitation>
+    <PubmedData>
+        <History>
+            <PubMedPubDate PubStatus="pubmed">
+                <Year>1977</Year>
+                <Month>12</Month>
+                <Day>28</Day>
+            </PubMedPubDate>
+            <PubMedPubDate PubStatus="medline">
+                <Year>1977</Year>
+                <Month>12</Month>
+                <Day>28</Day>
+                <Hour>0</Hour>
+                <Minute>1</Minute>
+            </PubMedPubDate>
+            <PubMedPubDate PubStatus="entrez">
+                <Year>1977</Year>
+                <Month>12</Month>
+                <Day>28</Day>
+                <Hour>0</Hour>
+                <Minute>0</Minute>
+            </PubMedPubDate>
+        </History>
+        <PublicationStatus>ppublish</PublicationStatus>
+        <ArticleIdList>
+            <ArticleId IdType="pubmed">23364</ArticleId>
+        </ArticleIdList>
+    </PubmedData>
+</PubmedArticle>

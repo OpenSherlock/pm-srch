@@ -1,0 +1,129 @@
+<?xml version="1.0"?>
+<!DOCTYPE PubmedArticleSet PUBLIC "-//NLM//DTD PubMedArticle, 1st January 2014//EN" "http://www.ncbi.nlm.nih.gov/corehtml/query/DTD/pubmed_140101.dtd">
+<PubmedArticle>
+    <MedlineCitation Owner="NLM" Status="MEDLINE">
+        <PMID Version="1">9876</PMID>
+        <DateCreated>
+            <Year>1976</Year>
+            <Month>11</Month>
+            <Day>21</Day>
+        </DateCreated>
+        <DateCompleted>
+            <Year>1976</Year>
+            <Month>11</Month>
+            <Day>21</Day>
+        </DateCompleted>
+        <DateRevised>
+            <Year>2013</Year>
+            <Month>11</Month>
+            <Day>21</Day>
+        </DateRevised>
+        <Article PubModel="Print">
+            <Journal>
+                <ISSN IssnType="Print">0003-4061</ISSN>
+                <JournalIssue CitedMedium="Print">
+                    <Volume>16 Spec No 2-3</Volume>
+                    <PubDate>
+                        <Year>1975</Year>
+                    </PubDate>
+                </JournalIssue>
+                <Title>Annales de l'anesthÃ©siologie franÃ§aise</Title>
+                <ISOAbbreviation>Ann Anesthesiol Fr</ISOAbbreviation>
+            </Journal>
+            <ArticleTitle>[Oxygen toxicity for pulmonary parenchyma. Ultrastructural study by electron microscopy. Physiopathologic data].</ArticleTitle>
+            <Pagination>
+                <MedlinePgn>85-93</MedlinePgn>
+            </Pagination>
+            <Abstract>
+                <AbstractText>The lungs of rats submitted to 24, 36, 48 and 72 hours of pure normobaric oxygen were examined by means of the scanning microscope. The images obtained give a dynamic aspect of the changes in the lesions with two distinct phases: a phase of reactivity at 48 hours, marked by the development of hyperactivity of the granular pneumocytes, a phase of destruction characterised by considerable changes in the alveolar epithelium and filling in of the alveolar lumen with various debris. From these morphological findings, different physio-pathological factors are discussed: the role of the increase in PaO2, the protection provided by the increase in the gradient (A - a) DO2, cerebral and adrenal medullary involvement especially in hypoxemic subjects.</AbstractText>
+            </Abstract>
+            <AuthorList CompleteYN="Y">
+                <Author ValidYN="Y">
+                    <LastName>Foliguet</LastName>
+                    <ForeName>B</ForeName>
+                    <Initials>B</Initials>
+                </Author>
+                <Author ValidYN="Y">
+                    <LastName>Grignon</LastName>
+                    <ForeName>G</ForeName>
+                    <Initials>G</Initials>
+                </Author>
+                <Author ValidYN="Y">
+                    <LastName>Reichart</LastName>
+                    <ForeName>E</ForeName>
+                    <Initials>E</Initials>
+                </Author>
+            </AuthorList>
+            <Language>fre</Language>
+            <PublicationTypeList>
+                <PublicationType UI="D004740">English Abstract</PublicationType>
+                <PublicationType UI="D016428">Journal Article</PublicationType>
+            </PublicationTypeList>
+        </Article>
+        <MedlineJournalInfo>
+            <Country>FRANCE</Country>
+            <MedlineTA>Ann Anesthesiol Fr</MedlineTA>
+            <NlmUniqueID>0372332</NlmUniqueID>
+            <ISSNLinking>0003-4061</ISSNLinking>
+        </MedlineJournalInfo>
+        <ChemicalList>
+            <Chemical>
+                <RegistryNumber>S88TT14065</RegistryNumber>
+                <NameOfSubstance UI="D010100">Oxygen</NameOfSubstance>
+            </Chemical>
+        </ChemicalList>
+        <CitationSubset>IM</CitationSubset>
+        <MeshHeadingList>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N" UI="D000818">Animals</DescriptorName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N" UI="D008168">Lung</DescriptorName>
+                <QualifierName MajorTopicYN="N" UI="Q000503">physiopathology</QualifierName>
+                <QualifierName MajorTopicYN="Y" UI="Q000648">ultrastructure</QualifierName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N" UI="D008171">Lung Diseases</DescriptorName>
+                <QualifierName MajorTopicYN="Y" UI="Q000139">chemically induced</QualifierName>
+                <QualifierName MajorTopicYN="N" UI="Q000503">physiopathology</QualifierName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N" UI="D010100">Oxygen</DescriptorName>
+                <QualifierName MajorTopicYN="Y" UI="Q000009">adverse effects</QualifierName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N" UI="D010313">Partial Pressure</DescriptorName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N" UI="D051381">Rats</DescriptorName>
+            </MeshHeading>
+        </MeshHeadingList>
+    </MedlineCitation>
+    <PubmedData>
+        <History>
+            <PubMedPubDate PubStatus="pubmed">
+                <Year>1975</Year>
+                <Month>1</Month>
+                <Day>1</Day>
+            </PubMedPubDate>
+            <PubMedPubDate PubStatus="medline">
+                <Year>1975</Year>
+                <Month>1</Month>
+                <Day>1</Day>
+                <Hour>0</Hour>
+                <Minute>1</Minute>
+            </PubMedPubDate>
+            <PubMedPubDate PubStatus="entrez">
+                <Year>1975</Year>
+                <Month>1</Month>
+                <Day>1</Day>
+                <Hour>0</Hour>
+                <Minute>0</Minute>
+            </PubMedPubDate>
+        </History>
+        <PublicationStatus>ppublish</PublicationStatus>
+        <ArticleIdList>
+            <ArticleId IdType="pubmed">9876</ArticleId>
+        </ArticleIdList>
+    </PubmedData>
+</PubmedArticle>

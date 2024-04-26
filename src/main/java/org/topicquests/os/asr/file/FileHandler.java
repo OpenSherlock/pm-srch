@@ -37,11 +37,15 @@ public class FileHandler {
 			f = files[i];
 			if (f.isDirectory())
 				processDirectory(f, isPMID); // recurse
-			else if (isPMID)
+			else if (isXML(f) && isPMID)
 				processPubMedFile(f);
-			else
+			else if (isXML(f))
 				processPMCFile(f);
 		}
+	}
+	
+	boolean isXML(File f) {
+		return f.getName().endsWith(".xml");
 	}
 	
 	void processPubMedFile(File xml) {

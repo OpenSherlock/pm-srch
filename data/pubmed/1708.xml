@@ -1,0 +1,167 @@
+<?xml version="1.0"?>
+<!DOCTYPE PubmedArticleSet PUBLIC "-//NLM//DTD PubMedArticle, 1st January 2014//EN" "http://www.ncbi.nlm.nih.gov/corehtml/query/DTD/pubmed_140101.dtd">
+<PubmedArticle>
+    <MedlineCitation Owner="NLM" Status="MEDLINE">
+        <PMID Version="1">1708</PMID>
+        <DateCreated>
+            <Year>1976</Year>
+            <Month>03</Month>
+            <Day>15</Day>
+        </DateCreated>
+        <DateCompleted>
+            <Year>1976</Year>
+            <Month>03</Month>
+            <Day>15</Day>
+        </DateCompleted>
+        <DateRevised>
+            <Year>2013</Year>
+            <Month>11</Month>
+            <Day>21</Day>
+        </DateRevised>
+        <Article PubModel="Print">
+            <Journal>
+                <ISSN IssnType="Print">0031-6768</ISSN>
+                <JournalIssue CitedMedium="Print">
+                    <Volume>361</Volume>
+                    <Issue>1</Issue>
+                    <PubDate>
+                        <Year>1975</Year>
+                        <Month>Dec</Month>
+                        <Day>19</Day>
+                    </PubDate>
+                </JournalIssue>
+                <Title>PflÃ¼gers Archiv : European journal of physiology</Title>
+                <ISOAbbreviation>Pflugers Arch.</ISOAbbreviation>
+            </Journal>
+            <ArticleTitle>H+ transport and membrane-bound HCO - 3 ATPase in salivary duct epithelium.</ArticleTitle>
+            <Pagination>
+                <MedlinePgn>61-4</MedlinePgn>
+            </Pagination>
+            <Abstract>
+                <AbstractText>An ATPase stimulated by HCO - ions and other oxybases and inhibited by SCN- has been found in main excretory duct of rat submaxillary gland, a tissue, capable of actively secreting HCO - 3 ions. No such ATPase was found in the rabbit duct, which normally does not secrete HCO - 3. The HCO - 3 ATPase was localized in the plasma membrane fraction of the homogenate, as evidenced by the marker 5'-nucleotidase. The activities of the HCO - 3 ATPase increased in metabolic alkalosis and decreased in metabolic acidosis in parallel to secretion of HCO - 3 and K+ ions by the duct epithelium. These findings provide further evidence that the membrane-bound HCO - 3 ATPase is involved in active H+/HCO - 3 transport.</AbstractText>
+            </Abstract>
+            <AuthorList CompleteYN="Y">
+                <Author ValidYN="Y">
+                    <LastName>Wais</LastName>
+                    <ForeName>U</ForeName>
+                    <Initials>U</Initials>
+                </Author>
+                <Author ValidYN="Y">
+                    <LastName>Knauf</LastName>
+                    <ForeName>H</ForeName>
+                    <Initials>H</Initials>
+                </Author>
+            </AuthorList>
+            <Language>eng</Language>
+            <PublicationTypeList>
+                <PublicationType UI="D016428">Journal Article</PublicationType>
+            </PublicationTypeList>
+        </Article>
+        <MedlineJournalInfo>
+            <Country>GERMANY, WEST</Country>
+            <MedlineTA>Pflugers Arch</MedlineTA>
+            <NlmUniqueID>0154720</NlmUniqueID>
+            <ISSNLinking>0031-6768</ISSNLinking>
+        </MedlineJournalInfo>
+        <ChemicalList>
+            <Chemical>
+                <RegistryNumber>0</RegistryNumber>
+                <NameOfSubstance UI="D001639">Bicarbonates</NameOfSubstance>
+            </Chemical>
+            <Chemical>
+                <RegistryNumber>7YNJ3PO35Z</RegistryNumber>
+                <NameOfSubstance UI="D006859">Hydrogen</NameOfSubstance>
+            </Chemical>
+            <Chemical>
+                <RegistryNumber>EC 3.6.1.-</RegistryNumber>
+                <NameOfSubstance UI="D000251">Adenosine Triphosphatases</NameOfSubstance>
+            </Chemical>
+            <Chemical>
+                <RegistryNumber>RWP5GA015D</RegistryNumber>
+                <NameOfSubstance UI="D011188">Potassium</NameOfSubstance>
+            </Chemical>
+        </ChemicalList>
+        <CitationSubset>IM</CitationSubset>
+        <MeshHeadingList>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N" UI="D000251">Adenosine Triphosphatases</DescriptorName>
+                <QualifierName MajorTopicYN="Y" UI="Q000378">metabolism</QualifierName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N" UI="D000818">Animals</DescriptorName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N" UI="D001639">Bicarbonates</DescriptorName>
+                <QualifierName MajorTopicYN="Y" UI="Q000557">secretion</QualifierName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N" UI="D001693">Biological Transport, Active</DescriptorName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N" UI="D002462">Cell Membrane</DescriptorName>
+                <QualifierName MajorTopicYN="N" UI="Q000201">enzymology</QualifierName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N" UI="D004848">Epithelium</DescriptorName>
+                <QualifierName MajorTopicYN="N" UI="Q000378">metabolism</QualifierName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N" UI="D006859">Hydrogen</DescriptorName>
+                <QualifierName MajorTopicYN="Y" UI="Q000378">metabolism</QualifierName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N" UI="D006863">Hydrogen-Ion Concentration</DescriptorName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N" UI="D008861">Microsomes</DescriptorName>
+                <QualifierName MajorTopicYN="N" UI="Q000201">enzymology</QualifierName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N" UI="D008928">Mitochondria</DescriptorName>
+                <QualifierName MajorTopicYN="N" UI="Q000201">enzymology</QualifierName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N" UI="D011188">Potassium</DescriptorName>
+                <QualifierName MajorTopicYN="N" UI="Q000557">secretion</QualifierName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N" UI="D011817">Rabbits</DescriptorName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N" UI="D051381">Rats</DescriptorName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N" UI="D013363">Submandibular Gland</DescriptorName>
+                <QualifierName MajorTopicYN="Y" UI="Q000201">enzymology</QualifierName>
+                <QualifierName MajorTopicYN="N" UI="Q000557">secretion</QualifierName>
+            </MeshHeading>
+        </MeshHeadingList>
+    </MedlineCitation>
+    <PubmedData>
+        <History>
+            <PubMedPubDate PubStatus="pubmed">
+                <Year>1975</Year>
+                <Month>12</Month>
+                <Day>19</Day>
+            </PubMedPubDate>
+            <PubMedPubDate PubStatus="medline">
+                <Year>1975</Year>
+                <Month>12</Month>
+                <Day>19</Day>
+                <Hour>0</Hour>
+                <Minute>1</Minute>
+            </PubMedPubDate>
+            <PubMedPubDate PubStatus="entrez">
+                <Year>1975</Year>
+                <Month>12</Month>
+                <Day>19</Day>
+                <Hour>0</Hour>
+                <Minute>0</Minute>
+            </PubMedPubDate>
+        </History>
+        <PublicationStatus>ppublish</PublicationStatus>
+        <ArticleIdList>
+            <ArticleId IdType="pubmed">1708</ArticleId>
+        </ArticleIdList>
+    </PubmedData>
+</PubmedArticle>

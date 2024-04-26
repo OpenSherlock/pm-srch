@@ -1,0 +1,190 @@
+<?xml version="1.0"?>
+<!DOCTYPE PubmedArticleSet PUBLIC "-//NLM//DTD PubMedArticle, 1st January 2014//EN" "http://www.ncbi.nlm.nih.gov/corehtml/query/DTD/pubmed_140101.dtd">
+<PubmedArticle>
+    <MedlineCitation Owner="NLM" Status="MEDLINE">
+        <PMID Version="1">18463</PMID>
+        <DateCreated>
+            <Year>1977</Year>
+            <Month>09</Month>
+            <Day>22</Day>
+        </DateCreated>
+        <DateCompleted>
+            <Year>1977</Year>
+            <Month>09</Month>
+            <Day>22</Day>
+        </DateCompleted>
+        <DateRevised>
+            <Year>2013</Year>
+            <Month>11</Month>
+            <Day>21</Day>
+        </DateRevised>
+        <Article PubModel="Print">
+            <Journal>
+                <ISSN IssnType="Print">0021-9258</ISSN>
+                <JournalIssue CitedMedium="Print">
+                    <Volume>252</Volume>
+                    <Issue>15</Issue>
+                    <PubDate>
+                        <Year>1977</Year>
+                        <Month>Aug</Month>
+                        <Day>10</Day>
+                    </PubDate>
+                </JournalIssue>
+                <Title>The Journal of biological chemistry</Title>
+                <ISOAbbreviation>J. Biol. Chem.</ISOAbbreviation>
+            </Journal>
+            <ArticleTitle>Characterization of the glutamine site of Escherichia coli guanosine 5'-monophosphate synthetase.</ArticleTitle>
+            <Pagination>
+                <MedlinePgn>5431-6</MedlinePgn>
+            </Pagination>
+            <Abstract>
+                <AbstractText>Alkylation of guanosine 5'-monophosphate (GMP) synthetase with the glutamine analogs L-2-amino-4-oxo-5-chloropentanoic acid (chloroketon) and 6-diazo-5-oxonorleucine (DON) inactivated glutamine- and NH3-dependent GMP synthetase. Inactivation exhibited second order kinetics. Complete inactivation was accompanied by covalent attachment of 0.4 to 0.5 equivalent of chloroketon/subunit. Alkylation of GMP synthetase with iodacetamide selectively inactivated glutamine-dependent activity. The NH3-dependent activity was relatively unaffected. Approximately 1 equivalent of carboxamidomethyl group was incorporated per subunit. Carboxymethylcysteine was the only modified amino acid hydrolysis. Prior treatment with chloroketone decreased the capacity for alkylation by iodacetamide, suggesting that both reagents alkylate the same residue. GMP synthetase exhibits glutaminase activity when ATP is replaced by adenosine plus PPi. Iodoacetamide inactivates glutaminase concomitant with glutamine-dependent GMP synthetase. Analysis of pH versus velocity and Km data indicates that the amide of glutamine remains enzyme bound and does not mix with exogenous NH3 in the synthesis of GMP.</AbstractText>
+            </Abstract>
+            <AuthorList CompleteYN="Y">
+                <Author ValidYN="Y">
+                    <LastName>Zalkin</LastName>
+                    <ForeName>H</ForeName>
+                    <Initials>H</Initials>
+                </Author>
+                <Author ValidYN="Y">
+                    <LastName>Truitt</LastName>
+                    <ForeName>C D</ForeName>
+                    <Initials>CD</Initials>
+                </Author>
+            </AuthorList>
+            <Language>eng</Language>
+            <PublicationTypeList>
+                <PublicationType UI="D016428">Journal Article</PublicationType>
+                <PublicationType UI="D013486">Research Support, U.S. Gov't, Non-P.H.S.</PublicationType>
+                <PublicationType UI="D013487">Research Support, U.S. Gov't, P.H.S.</PublicationType>
+            </PublicationTypeList>
+        </Article>
+        <MedlineJournalInfo>
+            <Country>UNITED STATES</Country>
+            <MedlineTA>J Biol Chem</MedlineTA>
+            <NlmUniqueID>2985121R</NlmUniqueID>
+            <ISSNLinking>0021-9258</ISSNLinking>
+        </MedlineJournalInfo>
+        <ChemicalList>
+            <Chemical>
+                <RegistryNumber>0</RegistryNumber>
+                <NameOfSubstance UI="D000596">Amino Acids</NameOfSubstance>
+            </Chemical>
+            <Chemical>
+                <RegistryNumber>0</RegistryNumber>
+                <NameOfSubstance UI="D006150">Guanine Nucleotides</NameOfSubstance>
+            </Chemical>
+            <Chemical>
+                <RegistryNumber>0</RegistryNumber>
+                <NameOfSubstance UI="D010421">Pentanoic Acids</NameOfSubstance>
+            </Chemical>
+            <Chemical>
+                <RegistryNumber>03J0H273KZ</RegistryNumber>
+                <NameOfSubstance UI="D003980">Diazooxonorleucine</NameOfSubstance>
+            </Chemical>
+            <Chemical>
+                <RegistryNumber>0RH81L854J</RegistryNumber>
+                <NameOfSubstance UI="D005973">Glutamine</NameOfSubstance>
+            </Chemical>
+            <Chemical>
+                <RegistryNumber>7664-41-7</RegistryNumber>
+                <NameOfSubstance UI="D000641">Ammonia</NameOfSubstance>
+            </Chemical>
+            <Chemical>
+                <RegistryNumber>EC 3.5.1.2</RegistryNumber>
+                <NameOfSubstance UI="D005972">Glutaminase</NameOfSubstance>
+            </Chemical>
+            <Chemical>
+                <RegistryNumber>EC 6.-</RegistryNumber>
+                <NameOfSubstance UI="D008025">Ligases</NameOfSubstance>
+            </Chemical>
+            <Chemical>
+                <RegistryNumber>ZRH8M27S79</RegistryNumber>
+                <NameOfSubstance UI="D007460">Iodoacetamide</NameOfSubstance>
+            </Chemical>
+        </ChemicalList>
+        <CitationSubset>IM</CitationSubset>
+        <MeshHeadingList>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N" UI="D000478">Alkylation</DescriptorName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N" UI="D000596">Amino Acids</DescriptorName>
+                <QualifierName MajorTopicYN="N" UI="Q000494">pharmacology</QualifierName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N" UI="D000641">Ammonia</DescriptorName>
+                <QualifierName MajorTopicYN="N" UI="Q000494">pharmacology</QualifierName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N" UI="D003980">Diazooxonorleucine</DescriptorName>
+                <QualifierName MajorTopicYN="N" UI="Q000494">pharmacology</QualifierName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N" UI="D004926">Escherichia coli</DescriptorName>
+                <QualifierName MajorTopicYN="Y" UI="Q000201">enzymology</QualifierName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N" UI="D005972">Glutaminase</DescriptorName>
+                <QualifierName MajorTopicYN="N" UI="Q000037">antagonists &amp; inhibitors</QualifierName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N" UI="D005973">Glutamine</DescriptorName>
+                <QualifierName MajorTopicYN="N" UI="Q000031">analogs &amp; derivatives</QualifierName>
+                <QualifierName MajorTopicYN="Y" UI="Q000494">pharmacology</QualifierName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N" UI="D006150">Guanine Nucleotides</DescriptorName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N" UI="D006863">Hydrogen-Ion Concentration</DescriptorName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N" UI="D007460">Iodoacetamide</DescriptorName>
+                <QualifierName MajorTopicYN="N" UI="Q000494">pharmacology</QualifierName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N" UI="D007700">Kinetics</DescriptorName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="Y" UI="D008025">Ligases</DescriptorName>
+                <QualifierName MajorTopicYN="N" UI="Q000037">antagonists &amp; inhibitors</QualifierName>
+                <QualifierName MajorTopicYN="N" UI="Q000378">metabolism</QualifierName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N" UI="D010421">Pentanoic Acids</DescriptorName>
+                <QualifierName MajorTopicYN="N" UI="Q000494">pharmacology</QualifierName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N" UI="D011485">Protein Binding</DescriptorName>
+            </MeshHeading>
+        </MeshHeadingList>
+    </MedlineCitation>
+    <PubmedData>
+        <History>
+            <PubMedPubDate PubStatus="pubmed">
+                <Year>1977</Year>
+                <Month>8</Month>
+                <Day>10</Day>
+            </PubMedPubDate>
+            <PubMedPubDate PubStatus="medline">
+                <Year>1977</Year>
+                <Month>8</Month>
+                <Day>10</Day>
+                <Hour>0</Hour>
+                <Minute>1</Minute>
+            </PubMedPubDate>
+            <PubMedPubDate PubStatus="entrez">
+                <Year>1977</Year>
+                <Month>8</Month>
+                <Day>10</Day>
+                <Hour>0</Hour>
+                <Minute>0</Minute>
+            </PubMedPubDate>
+        </History>
+        <PublicationStatus>ppublish</PublicationStatus>
+        <ArticleIdList>
+            <ArticleId IdType="pubmed">18463</ArticleId>
+        </ArticleIdList>
+    </PubmedData>
+</PubmedArticle>

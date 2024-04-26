@@ -1,0 +1,163 @@
+<?xml version="1.0"?>
+<!DOCTYPE PubmedArticleSet PUBLIC "-//NLM//DTD PubMedArticle, 1st January 2014//EN" "http://www.ncbi.nlm.nih.gov/corehtml/query/DTD/pubmed_140101.dtd">
+<PubmedArticle>
+    <MedlineCitation Owner="NLM" Status="MEDLINE">
+        <PMID Version="1">19684</PMID>
+        <DateCreated>
+            <Year>1977</Year>
+            <Month>10</Month>
+            <Day>14</Day>
+        </DateCreated>
+        <DateCompleted>
+            <Year>1977</Year>
+            <Month>10</Month>
+            <Day>14</Day>
+        </DateCompleted>
+        <DateRevised>
+            <Year>2013</Year>
+            <Month>11</Month>
+            <Day>21</Day>
+        </DateRevised>
+        <Article PubModel="Print">
+            <Journal>
+                <ISSN IssnType="Print">0026-3656</ISSN>
+                <JournalIssue CitedMedium="Print">
+                    <Volume>46</Volume>
+                    <Issue>3</Issue>
+                    <PubDate>
+                        <MedlineDate>1977 May-Jun</MedlineDate>
+                    </PubDate>
+                </JournalIssue>
+                <Title>Mikrobiologiia</Title>
+                <ISOAbbreviation>Mikrobiologiia</ISOAbbreviation>
+            </Journal>
+            <ArticleTitle>[Constitutive synthesis of cellulase by Trichoderma lignorum].</ArticleTitle>
+            <Pagination>
+                <MedlinePgn>428-32</MedlinePgn>
+            </Pagination>
+            <Abstract>
+                <AbstractText>The induction of cellulase synthesis by lactose was studied in the resting cells of Trichoderma lignorum OM 534. The effect depended on the concentration of lactose, pH, and the age of the mycelium. The induction of the enzyme synthesis by lactose is supressed by glucose and its metabolites. The repression by glucose is partly eliminated by Cyk 3'-5'-AMP, theophylline, and coffeine. The induction of cellulase by lactose is regarded as a derepression of the synthesis of this enzyme as a result of slow assimilation of the disaccharide. The synthesis of cellulase in T. lignorum is presumed to be constitutive.</AbstractText>
+            </Abstract>
+            <AuthorList CompleteYN="Y">
+                <Author ValidYN="Y">
+                    <LastName>Lobanok</LastName>
+                    <ForeName>A G</ForeName>
+                    <Initials>AG</Initials>
+                </Author>
+                <Author ValidYN="Y">
+                    <LastName>Pavlovskaia</LastName>
+                    <ForeName>Zh I</ForeName>
+                    <Initials>ZhI</Initials>
+                </Author>
+            </AuthorList>
+            <Language>rus</Language>
+            <PublicationTypeList>
+                <PublicationType UI="D004740">English Abstract</PublicationType>
+                <PublicationType UI="D016428">Journal Article</PublicationType>
+            </PublicationTypeList>
+            <VernacularTitle>O konstitutivnom sinteze tselliulazy u Trichoderma lignorum.</VernacularTitle>
+        </Article>
+        <MedlineJournalInfo>
+            <Country>USSR</Country>
+            <MedlineTA>Mikrobiologiia</MedlineTA>
+            <NlmUniqueID>0376652</NlmUniqueID>
+            <ISSNLinking>0026-3656</ISSNLinking>
+        </MedlineJournalInfo>
+        <ChemicalList>
+            <Chemical>
+                <RegistryNumber>3G6A5W338E</RegistryNumber>
+                <NameOfSubstance UI="D002110">Caffeine</NameOfSubstance>
+            </Chemical>
+            <Chemical>
+                <RegistryNumber>C137DTR5RG</RegistryNumber>
+                <NameOfSubstance UI="D013806">Theophylline</NameOfSubstance>
+            </Chemical>
+            <Chemical>
+                <RegistryNumber>E0399OZS9N</RegistryNumber>
+                <NameOfSubstance UI="D000242">Cyclic AMP</NameOfSubstance>
+            </Chemical>
+            <Chemical>
+                <RegistryNumber>EC 3.2.1.4</RegistryNumber>
+                <NameOfSubstance UI="D002480">Cellulase</NameOfSubstance>
+            </Chemical>
+            <Chemical>
+                <RegistryNumber>IY9XDZ35W2</RegistryNumber>
+                <NameOfSubstance UI="D005947">Glucose</NameOfSubstance>
+            </Chemical>
+            <Chemical>
+                <RegistryNumber>J2B2A4N98G</RegistryNumber>
+                <NameOfSubstance UI="D007785">Lactose</NameOfSubstance>
+            </Chemical>
+        </ChemicalList>
+        <CitationSubset>IM</CitationSubset>
+        <MeshHeadingList>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N" UI="D002110">Caffeine</DescriptorName>
+                <QualifierName MajorTopicYN="N" UI="Q000494">pharmacology</QualifierName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N" UI="D002480">Cellulase</DescriptorName>
+                <QualifierName MajorTopicYN="Y" UI="Q000096">biosynthesis</QualifierName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N" UI="D000242">Cyclic AMP</DescriptorName>
+                <QualifierName MajorTopicYN="N" UI="Q000494">pharmacology</QualifierName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N" UI="D004790">Enzyme Induction</DescriptorName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N" UI="D005947">Glucose</DescriptorName>
+                <QualifierName MajorTopicYN="N" UI="Q000494">pharmacology</QualifierName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N" UI="D006863">Hydrogen-Ion Concentration</DescriptorName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N" UI="D007785">Lactose</DescriptorName>
+                <QualifierName MajorTopicYN="N" UI="Q000037">antagonists &amp; inhibitors</QualifierName>
+                <QualifierName MajorTopicYN="Y" UI="Q000494">pharmacology</QualifierName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N" UI="D003904">Mitosporic Fungi</DescriptorName>
+                <QualifierName MajorTopicYN="Y" UI="Q000201">enzymology</QualifierName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N" UI="D013806">Theophylline</DescriptorName>
+                <QualifierName MajorTopicYN="N" UI="Q000494">pharmacology</QualifierName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N" UI="D014242">Trichoderma</DescriptorName>
+                <QualifierName MajorTopicYN="Y" UI="Q000201">enzymology</QualifierName>
+                <QualifierName MajorTopicYN="N" UI="Q000254">growth &amp; development</QualifierName>
+            </MeshHeading>
+        </MeshHeadingList>
+    </MedlineCitation>
+    <PubmedData>
+        <History>
+            <PubMedPubDate PubStatus="pubmed">
+                <Year>1977</Year>
+                <Month>5</Month>
+                <Day>1</Day>
+            </PubMedPubDate>
+            <PubMedPubDate PubStatus="medline">
+                <Year>1977</Year>
+                <Month>5</Month>
+                <Day>1</Day>
+                <Hour>0</Hour>
+                <Minute>1</Minute>
+            </PubMedPubDate>
+            <PubMedPubDate PubStatus="entrez">
+                <Year>1977</Year>
+                <Month>5</Month>
+                <Day>1</Day>
+                <Hour>0</Hour>
+                <Minute>0</Minute>
+            </PubMedPubDate>
+        </History>
+        <PublicationStatus>ppublish</PublicationStatus>
+        <ArticleIdList>
+            <ArticleId IdType="pubmed">19684</ArticleId>
+        </ArticleIdList>
+    </PubmedData>
+</PubmedArticle>

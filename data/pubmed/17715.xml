@@ -1,0 +1,140 @@
+<?xml version="1.0"?>
+<!DOCTYPE PubmedArticleSet PUBLIC "-//NLM//DTD PubMedArticle, 1st January 2014//EN" "http://www.ncbi.nlm.nih.gov/corehtml/query/DTD/pubmed_140101.dtd">
+<PubmedArticle>
+    <MedlineCitation Owner="NLM" Status="MEDLINE">
+        <PMID Version="1">17715</PMID>
+        <DateCreated>
+            <Year>1977</Year>
+            <Month>08</Month>
+            <Day>12</Day>
+        </DateCreated>
+        <DateCompleted>
+            <Year>1977</Year>
+            <Month>08</Month>
+            <Day>12</Day>
+        </DateCompleted>
+        <DateRevised>
+            <Year>2000</Year>
+            <Month>12</Month>
+            <Day>18</Day>
+        </DateRevised>
+        <Article PubModel="Print">
+            <Journal>
+                <ISSN IssnType="Print">0022-3549</ISSN>
+                <JournalIssue CitedMedium="Print">
+                    <Volume>66</Volume>
+                    <Issue>5</Issue>
+                    <PubDate>
+                        <Year>1977</Year>
+                        <Month>May</Month>
+                    </PubDate>
+                </JournalIssue>
+                <Title>Journal of pharmaceutical sciences</Title>
+                <ISOAbbreviation>J Pharm Sci</ISOAbbreviation>
+            </Journal>
+            <ArticleTitle>Recording pH method of characterizing composition and monitoring dissolution profile of an anhydride-acid copolymer and its salt derivatives.</ArticleTitle>
+            <Pagination>
+                <MedlinePgn>713-7</MedlinePgn>
+            </Pagination>
+            <Abstract>
+                <AbstractText>A sensitive potentiometric monitoring method was developed that permits the continuous measurement of the disolution profiles of methyl vinyl ether-maleic anhydride-acid copolymers and salt derivatives. Three distinct rate periods were observed in the dissolution rate of the anhydride copolymer, expressed as percent anhydride dissolved, was independent of sample weight over the weight range studied. The acid form of the copolymer showed only one dissolution rate period, with dissolution being very rapid. The rapid initial pH decrease observed during the first stage of dissolution for a series of anhydride-acid copolymer powder samples correlated closely with the anhydride-acid ratio, permitting chemical characterization of the copolymer functionality simultaneously with the analysis of dissolution profiles. Similarly, the extent of copolymer alkaline salt conversion was inversely proportional to the initial maximum pH increase observed during the first stage of dissolution of these salts. Mechanisms of dissolution of copolymer powder materials are discussed and compared to the dissolution of compressed disks and films reported previously.</AbstractText>
+            </Abstract>
+            <AuthorList CompleteYN="Y">
+                <Author ValidYN="Y">
+                    <LastName>Mo</LastName>
+                    <ForeName>Y</ForeName>
+                    <Initials>Y</Initials>
+                </Author>
+                <Author ValidYN="Y">
+                    <LastName>Peck</LastName>
+                    <ForeName>G E</ForeName>
+                    <Initials>GE</Initials>
+                </Author>
+                <Author ValidYN="Y">
+                    <LastName>Heyd</LastName>
+                    <ForeName>A</ForeName>
+                    <Initials>A</Initials>
+                </Author>
+                <Author ValidYN="Y">
+                    <LastName>Banker</LastName>
+                    <ForeName>G S</ForeName>
+                    <Initials>GS</Initials>
+                </Author>
+            </AuthorList>
+            <Language>eng</Language>
+            <PublicationTypeList>
+                <PublicationType UI="D016428">Journal Article</PublicationType>
+            </PublicationTypeList>
+        </Article>
+        <MedlineJournalInfo>
+            <Country>UNITED STATES</Country>
+            <MedlineTA>J Pharm Sci</MedlineTA>
+            <NlmUniqueID>2985195R</NlmUniqueID>
+            <ISSNLinking>0022-3549</ISSNLinking>
+        </MedlineJournalInfo>
+        <ChemicalList>
+            <Chemical>
+                <RegistryNumber>0</RegistryNumber>
+                <NameOfSubstance UI="D011108">Polymers</NameOfSubstance>
+            </Chemical>
+            <Chemical>
+                <RegistryNumber>27100-68-1</RegistryNumber>
+                <NameOfSubstance UI="D011713">Pyran Copolymer</NameOfSubstance>
+            </Chemical>
+        </ChemicalList>
+        <CitationSubset>IM</CitationSubset>
+        <MeshHeadingList>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N" UI="D006863">Hydrogen-Ion Concentration</DescriptorName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N" UI="D008722">Methods</DescriptorName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N" UI="D011108">Polymers</DescriptorName>
+                <QualifierName MajorTopicYN="Y" UI="Q000032">analysis</QualifierName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N" UI="D011199">Potentiometry</DescriptorName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N" UI="D011713">Pyran Copolymer</DescriptorName>
+                <QualifierName MajorTopicYN="N" UI="Q000031">analogs &amp; derivatives</QualifierName>
+                <QualifierName MajorTopicYN="Y" UI="Q000032">analysis</QualifierName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N" UI="D012995">Solubility</DescriptorName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N" UI="D013997">Time Factors</DescriptorName>
+            </MeshHeading>
+        </MeshHeadingList>
+    </MedlineCitation>
+    <PubmedData>
+        <History>
+            <PubMedPubDate PubStatus="pubmed">
+                <Year>1977</Year>
+                <Month>5</Month>
+                <Day>1</Day>
+            </PubMedPubDate>
+            <PubMedPubDate PubStatus="medline">
+                <Year>1977</Year>
+                <Month>5</Month>
+                <Day>1</Day>
+                <Hour>0</Hour>
+                <Minute>1</Minute>
+            </PubMedPubDate>
+            <PubMedPubDate PubStatus="entrez">
+                <Year>1977</Year>
+                <Month>5</Month>
+                <Day>1</Day>
+                <Hour>0</Hour>
+                <Minute>0</Minute>
+            </PubMedPubDate>
+        </History>
+        <PublicationStatus>ppublish</PublicationStatus>
+        <ArticleIdList>
+            <ArticleId IdType="pubmed">17715</ArticleId>
+        </ArticleIdList>
+    </PubmedData>
+</PubmedArticle>

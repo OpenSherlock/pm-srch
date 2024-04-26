@@ -1,0 +1,187 @@
+<?xml version="1.0"?>
+<!DOCTYPE PubmedArticleSet PUBLIC "-//NLM//DTD PubMedArticle, 1st January 2014//EN" "http://www.ncbi.nlm.nih.gov/corehtml/query/DTD/pubmed_140101.dtd">
+<PubmedArticle>
+    <MedlineCitation Owner="NLM" Status="MEDLINE">
+        <PMID Version="1">10176</PMID>
+        <DateCreated>
+            <Year>1977</Year>
+            <Month>01</Month>
+            <Day>03</Day>
+        </DateCreated>
+        <DateCompleted>
+            <Year>1977</Year>
+            <Month>01</Month>
+            <Day>03</Day>
+        </DateCompleted>
+        <DateRevised>
+            <Year>2013</Year>
+            <Month>11</Month>
+            <Day>21</Day>
+        </DateRevised>
+        <Article PubModel="Print">
+            <Journal>
+                <ISSN IssnType="Print">0014-4754</ISSN>
+                <JournalIssue CitedMedium="Print">
+                    <Volume>32</Volume>
+                    <Issue>10</Issue>
+                    <PubDate>
+                        <Year>1976</Year>
+                        <Month>Oct</Month>
+                        <Day>15</Day>
+                    </PubDate>
+                </JournalIssue>
+                <Title>Experientia</Title>
+                <ISOAbbreviation>Experientia</ISOAbbreviation>
+            </Journal>
+            <ArticleTitle>Regulation of enzymes of ethanol metabolism in yeast (Rhodotorula gracilis).</ArticleTitle>
+            <Pagination>
+                <MedlinePgn>1246-9</MedlinePgn>
+            </Pagination>
+            <Abstract>
+                <AbstractText>The three enzymes of ethanol metabolism alcohol dehydrogenase, aldehyde dehydrogenase and acetyl-CoA synthetase in the obligate aerobic yeast Rhodotorula gracilis are repressed by glucose and induced by C2 metabolic fuels with a regulatory pattern indicating a correlation in the control mechanisms. To try an identification of the molecular signals involved in the transmission of the inducing stimulus, experiments were carried out by blocking with 2 mM pyrazole the ethanol acetaldehyde metabolic step. Results indicate that ethanol is not specifically required as a molecular signal for induction.</AbstractText>
+            </Abstract>
+            <AuthorList CompleteYN="Y">
+                <Author ValidYN="Y">
+                    <LastName>Hanozet</LastName>
+                    <ForeName>G M</ForeName>
+                    <Initials>GM</Initials>
+                </Author>
+                <Author ValidYN="Y">
+                    <LastName>Simonetta</LastName>
+                    <ForeName>M</ForeName>
+                    <Initials>M</Initials>
+                </Author>
+                <Author ValidYN="Y">
+                    <LastName>Barisio</LastName>
+                    <ForeName>D</ForeName>
+                    <Initials>D</Initials>
+                </Author>
+                <Author ValidYN="Y">
+                    <LastName>Guerritore</LastName>
+                    <ForeName>A</ForeName>
+                    <Initials>A</Initials>
+                </Author>
+            </AuthorList>
+            <Language>eng</Language>
+            <PublicationTypeList>
+                <PublicationType UI="D016428">Journal Article</PublicationType>
+            </PublicationTypeList>
+        </Article>
+        <MedlineJournalInfo>
+            <Country>SWITZERLAND</Country>
+            <MedlineTA>Experientia</MedlineTA>
+            <NlmUniqueID>0376547</NlmUniqueID>
+            <ISSNLinking>0014-4754</ISSNLinking>
+        </MedlineJournalInfo>
+        <ChemicalList>
+            <Chemical>
+                <RegistryNumber>0</RegistryNumber>
+                <NameOfSubstance UI="D000085">Acetates</NameOfSubstance>
+            </Chemical>
+            <Chemical>
+                <RegistryNumber>0</RegistryNumber>
+                <NameOfSubstance UI="D011720">Pyrazoles</NameOfSubstance>
+            </Chemical>
+            <Chemical>
+                <RegistryNumber>3K9958V90M</RegistryNumber>
+                <NameOfSubstance UI="D000431">Ethanol</NameOfSubstance>
+            </Chemical>
+            <Chemical>
+                <RegistryNumber>EC 1.1.-</RegistryNumber>
+                <NameOfSubstance UI="D000429">Alcohol Oxidoreductases</NameOfSubstance>
+            </Chemical>
+            <Chemical>
+                <RegistryNumber>EC 1.2.-</RegistryNumber>
+                <NameOfSubstance UI="D000445">Aldehyde Oxidoreductases</NameOfSubstance>
+            </Chemical>
+            <Chemical>
+                <RegistryNumber>EC 6.2.1.-</RegistryNumber>
+                <NameOfSubstance UI="D003066">Coenzyme A Ligases</NameOfSubstance>
+            </Chemical>
+            <Chemical>
+                <RegistryNumber>EC 6.2.1.1</RegistryNumber>
+                <NameOfSubstance UI="D000106">Acetate-CoA Ligase</NameOfSubstance>
+            </Chemical>
+            <Chemical>
+                <RegistryNumber>GO1N1ZPR3B</RegistryNumber>
+                <NameOfSubstance UI="D000079">Acetaldehyde</NameOfSubstance>
+            </Chemical>
+        </ChemicalList>
+        <CitationSubset>IM</CitationSubset>
+        <MeshHeadingList>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N" UI="D000079">Acetaldehyde</DescriptorName>
+                <QualifierName MajorTopicYN="N" UI="Q000494">pharmacology</QualifierName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N" UI="D000106">Acetate-CoA Ligase</DescriptorName>
+                <QualifierName MajorTopicYN="Y" UI="Q000096">biosynthesis</QualifierName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N" UI="D000085">Acetates</DescriptorName>
+                <QualifierName MajorTopicYN="N" UI="Q000494">pharmacology</QualifierName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N" UI="D000429">Alcohol Oxidoreductases</DescriptorName>
+                <QualifierName MajorTopicYN="N" UI="Q000037">antagonists &amp; inhibitors</QualifierName>
+                <QualifierName MajorTopicYN="Y" UI="Q000096">biosynthesis</QualifierName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N" UI="D000445">Aldehyde Oxidoreductases</DescriptorName>
+                <QualifierName MajorTopicYN="Y" UI="Q000096">biosynthesis</QualifierName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N" UI="D003066">Coenzyme A Ligases</DescriptorName>
+                <QualifierName MajorTopicYN="Y" UI="Q000096">biosynthesis</QualifierName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N" UI="D004790">Enzyme Induction</DescriptorName>
+                <QualifierName MajorTopicYN="N" UI="Q000187">drug effects</QualifierName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N" UI="D000431">Ethanol</DescriptorName>
+                <QualifierName MajorTopicYN="Y" UI="Q000378">metabolism</QualifierName>
+                <QualifierName MajorTopicYN="N" UI="Q000494">pharmacology</QualifierName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N" UI="D005809">Genes, Regulator</DescriptorName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N" UI="D011720">Pyrazoles</DescriptorName>
+                <QualifierName MajorTopicYN="N" UI="Q000494">pharmacology</QualifierName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N" UI="D015003">Yeasts</DescriptorName>
+                <QualifierName MajorTopicYN="N" UI="Q000201">enzymology</QualifierName>
+                <QualifierName MajorTopicYN="Y" UI="Q000378">metabolism</QualifierName>
+            </MeshHeading>
+        </MeshHeadingList>
+    </MedlineCitation>
+    <PubmedData>
+        <History>
+            <PubMedPubDate PubStatus="pubmed">
+                <Year>1976</Year>
+                <Month>10</Month>
+                <Day>15</Day>
+            </PubMedPubDate>
+            <PubMedPubDate PubStatus="medline">
+                <Year>1976</Year>
+                <Month>10</Month>
+                <Day>15</Day>
+                <Hour>0</Hour>
+                <Minute>1</Minute>
+            </PubMedPubDate>
+            <PubMedPubDate PubStatus="entrez">
+                <Year>1976</Year>
+                <Month>10</Month>
+                <Day>15</Day>
+                <Hour>0</Hour>
+                <Minute>0</Minute>
+            </PubMedPubDate>
+        </History>
+        <PublicationStatus>ppublish</PublicationStatus>
+        <ArticleIdList>
+            <ArticleId IdType="pubmed">10176</ArticleId>
+        </ArticleIdList>
+    </PubmedData>
+</PubmedArticle>

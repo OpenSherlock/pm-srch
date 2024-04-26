@@ -1,0 +1,156 @@
+<?xml version="1.0"?>
+<!DOCTYPE PubmedArticleSet PUBLIC "-//NLM//DTD PubMedArticle, 1st January 2014//EN" "http://www.ncbi.nlm.nih.gov/corehtml/query/DTD/pubmed_140101.dtd">
+<PubmedArticle>
+    <MedlineCitation Owner="NLM" Status="MEDLINE">
+        <PMID Version="1">21932</PMID>
+        <DateCreated>
+            <Year>1978</Year>
+            <Month>01</Month>
+            <Day>27</Day>
+        </DateCreated>
+        <DateCompleted>
+            <Year>1978</Year>
+            <Month>01</Month>
+            <Day>27</Day>
+        </DateCompleted>
+        <DateRevised>
+            <Year>2013</Year>
+            <Month>11</Month>
+            <Day>21</Day>
+        </DateRevised>
+        <Article PubModel="Print">
+            <Journal>
+                <ISSN IssnType="Print">0022-2275</ISSN>
+                <JournalIssue CitedMedium="Print">
+                    <Volume>18</Volume>
+                    <Issue>6</Issue>
+                    <PubDate>
+                        <Year>1977</Year>
+                        <Month>Nov</Month>
+                    </PubDate>
+                </JournalIssue>
+                <Title>Journal of lipid research</Title>
+                <ISOAbbreviation>J. Lipid Res.</ISOAbbreviation>
+            </Journal>
+            <ArticleTitle>pH as an indicator of free fatty acid release from adipocytes.</ArticleTitle>
+            <Pagination>
+                <MedlinePgn>774-6</MedlinePgn>
+            </Pagination>
+            <Abstract>
+                <AbstractText>A convenient method of measuring initial rates of free fatty acid efflux from isolated adipocytes during triglyceride breakdown by hormone-sensitive lipase is described. The procedure is based on the dissociation of protons from carboxyl groups of free fatty acids. A recording pH meter is used to monitor H+ concentration in the medium continuously as an index of free fatty acid release. A stoichiometric relationship was demonstrated between proton release and extracellular free fatty acid concentration as determined by the 63Ni radioassay method of Ho (1970. Anal. Biochem. 36: 105-113). An acid pH (6.8) caused a reduction in proton release, which was immediately and completely reversed by raising the pH to 7.4.</AbstractText>
+            </Abstract>
+            <AuthorList CompleteYN="Y">
+                <Author ValidYN="Y">
+                    <LastName>Meisner</LastName>
+                    <ForeName>H</ForeName>
+                    <Initials>H</Initials>
+                </Author>
+                <Author ValidYN="Y">
+                    <LastName>Tenney</LastName>
+                    <ForeName>K</ForeName>
+                    <Initials>K</Initials>
+                </Author>
+            </AuthorList>
+            <Language>eng</Language>
+            <PublicationTypeList>
+                <PublicationType UI="D003160">Comparative Study</PublicationType>
+                <PublicationType UI="D016428">Journal Article</PublicationType>
+                <PublicationType UI="D013487">Research Support, U.S. Gov't, P.H.S.</PublicationType>
+            </PublicationTypeList>
+        </Article>
+        <MedlineJournalInfo>
+            <Country>UNITED STATES</Country>
+            <MedlineTA>J Lipid Res</MedlineTA>
+            <NlmUniqueID>0376606</NlmUniqueID>
+            <ISSNLinking>0022-2275</ISSNLinking>
+        </MedlineJournalInfo>
+        <ChemicalList>
+            <Chemical>
+                <RegistryNumber>0</RegistryNumber>
+                <NameOfSubstance UI="D005230">Fatty Acids, Nonesterified</NameOfSubstance>
+            </Chemical>
+            <Chemical>
+                <RegistryNumber>63X7MBT2LQ</RegistryNumber>
+                <NameOfSubstance UI="D003994">Bucladesine</NameOfSubstance>
+            </Chemical>
+            <Chemical>
+                <RegistryNumber>9Y8NXQ24VQ</RegistryNumber>
+                <NameOfSubstance UI="D011433">Propranolol</NameOfSubstance>
+            </Chemical>
+            <Chemical>
+                <RegistryNumber>PDC6A3C0OX</RegistryNumber>
+                <NameOfSubstance UI="D005990">Glycerol</NameOfSubstance>
+            </Chemical>
+            <Chemical>
+                <RegistryNumber>YKH834O4BH</RegistryNumber>
+                <NameOfSubstance UI="D004837">Epinephrine</NameOfSubstance>
+            </Chemical>
+        </ChemicalList>
+        <CitationSubset>IM</CitationSubset>
+        <MeshHeadingList>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N" UI="D000273">Adipose Tissue</DescriptorName>
+                <QualifierName MajorTopicYN="Y" UI="Q000378">metabolism</QualifierName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N" UI="D000818">Animals</DescriptorName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N" UI="D003994">Bucladesine</DescriptorName>
+                <QualifierName MajorTopicYN="N" UI="Q000494">pharmacology</QualifierName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N" UI="D004837">Epinephrine</DescriptorName>
+                <QualifierName MajorTopicYN="N" UI="Q000494">pharmacology</QualifierName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N" UI="D005230">Fatty Acids, Nonesterified</DescriptorName>
+                <QualifierName MajorTopicYN="Y" UI="Q000378">metabolism</QualifierName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N" UI="D005990">Glycerol</DescriptorName>
+                <QualifierName MajorTopicYN="N" UI="Q000378">metabolism</QualifierName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N" UI="D006863">Hydrogen-Ion Concentration</DescriptorName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N" UI="D008053">Lipid Mobilization</DescriptorName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N" UI="D011433">Propranolol</DescriptorName>
+                <QualifierName MajorTopicYN="N" UI="Q000494">pharmacology</QualifierName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N" UI="D051381">Rats</DescriptorName>
+            </MeshHeading>
+        </MeshHeadingList>
+    </MedlineCitation>
+    <PubmedData>
+        <History>
+            <PubMedPubDate PubStatus="pubmed">
+                <Year>1977</Year>
+                <Month>11</Month>
+                <Day>1</Day>
+            </PubMedPubDate>
+            <PubMedPubDate PubStatus="medline">
+                <Year>1977</Year>
+                <Month>11</Month>
+                <Day>1</Day>
+                <Hour>0</Hour>
+                <Minute>1</Minute>
+            </PubMedPubDate>
+            <PubMedPubDate PubStatus="entrez">
+                <Year>1977</Year>
+                <Month>11</Month>
+                <Day>1</Day>
+                <Hour>0</Hour>
+                <Minute>0</Minute>
+            </PubMedPubDate>
+        </History>
+        <PublicationStatus>ppublish</PublicationStatus>
+        <ArticleIdList>
+            <ArticleId IdType="pubmed">21932</ArticleId>
+        </ArticleIdList>
+    </PubmedData>
+</PubmedArticle>

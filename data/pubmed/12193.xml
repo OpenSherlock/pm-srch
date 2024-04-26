@@ -1,0 +1,165 @@
+<?xml version="1.0"?>
+<!DOCTYPE PubmedArticleSet PUBLIC "-//NLM//DTD PubMedArticle, 1st January 2014//EN" "http://www.ncbi.nlm.nih.gov/corehtml/query/DTD/pubmed_140101.dtd">
+<PubmedArticle>
+    <MedlineCitation Owner="NLM" Status="MEDLINE">
+        <PMID Version="1">12193</PMID>
+        <DateCreated>
+            <Year>1977</Year>
+            <Month>02</Month>
+            <Day>16</Day>
+        </DateCreated>
+        <DateCompleted>
+            <Year>1977</Year>
+            <Month>02</Month>
+            <Day>16</Day>
+        </DateCompleted>
+        <DateRevised>
+            <Year>2013</Year>
+            <Month>11</Month>
+            <Day>21</Day>
+        </DateRevised>
+        <Article PubModel="Print">
+            <Journal>
+                <ISSN IssnType="Print">0095-1544</ISSN>
+                <JournalIssue CitedMedium="Print">
+                    <Volume>2</Volume>
+                    <Issue>5</Issue>
+                    <PubDate>
+                        <MedlineDate>1976 Sep-Oct</MedlineDate>
+                    </PubDate>
+                </JournalIssue>
+                <Title>Journal of cyclic nucleotide research</Title>
+                <ISOAbbreviation>J Cyclic Nucleotide Res</ISOAbbreviation>
+            </Journal>
+            <ArticleTitle>Inhibition of mammalian soluble guanylate cyclase activity by adenosine 5'-tetraphosphate, guanosine 5'-tetraphosphate and other nucleotides.</ArticleTitle>
+            <Pagination>
+                <MedlinePgn>337-46</MedlinePgn>
+            </Pagination>
+            <Abstract>
+                <AbstractText>The effects of a variety of purine and pyrimidine nucleotides were tested for their capacity to inhibit mammalian soluble guanylate cyclase activity. Adenosine 5'-tetraphosphate (ATetP), ATP, ADP, AMP, guanosine 5'-tetraphosphate (GTetP) and GDP were found to inhibit soluble guanylate cyclase activity from rat lung and other mammalian tissues. The corresponding cytosine and thymine nucleotides showed little or no inhibitory activity, except for thymidine 5'-tetraphosphate, which inhibited glanylate cyclase activity but to a lesser extent than did the purine nucleoside tetraphosphates. ATetP and GTetP were found to be potent inhibitors of soluble guanylate cyclase activity from rat, guinea pig and mouse lung, rat heart and rat brain. Both purine nucleoside tetraphosphates were competitive inhibitors of the rat lung soluble enzyme. ATetP and GTetP had Ki values of 1 muM and 2.5 muM, respectively. The experimental data suggest that purine nucleoside tetraphosphates, and perhaps other purine nucleotides, may play a biologic role in modulating mammalian soluble guanylate cyclase activity.</AbstractText>
+            </Abstract>
+            <AuthorList CompleteYN="Y">
+                <Author ValidYN="Y">
+                    <LastName>Ignarro</LastName>
+                    <ForeName>L J</ForeName>
+                    <Initials>LJ</Initials>
+                </Author>
+                <Author ValidYN="Y">
+                    <LastName>Gross</LastName>
+                    <ForeName>R A</ForeName>
+                    <Initials>RA</Initials>
+                </Author>
+                <Author ValidYN="Y">
+                    <LastName>Gross</LastName>
+                    <ForeName>D M</ForeName>
+                    <Initials>DM</Initials>
+                </Author>
+            </AuthorList>
+            <Language>eng</Language>
+            <PublicationTypeList>
+                <PublicationType UI="D016428">Journal Article</PublicationType>
+                <PublicationType UI="D013487">Research Support, U.S. Gov't, P.H.S.</PublicationType>
+            </PublicationTypeList>
+        </Article>
+        <MedlineJournalInfo>
+            <Country>UNITED STATES</Country>
+            <MedlineTA>J Cyclic Nucleotide Res</MedlineTA>
+            <NlmUniqueID>7511483</NlmUniqueID>
+            <ISSNLinking>0095-1544</ISSNLinking>
+        </MedlineJournalInfo>
+        <ChemicalList>
+            <Chemical>
+                <RegistryNumber>0</RegistryNumber>
+                <NameOfSubstance UI="D000227">Adenine Nucleotides</NameOfSubstance>
+            </Chemical>
+            <Chemical>
+                <RegistryNumber>0</RegistryNumber>
+                <NameOfSubstance UI="D006150">Guanine Nucleotides</NameOfSubstance>
+            </Chemical>
+            <Chemical>
+                <RegistryNumber>42Z2K6ZL8P</RegistryNumber>
+                <NameOfSubstance UI="D008345">Manganese</NameOfSubstance>
+            </Chemical>
+            <Chemical>
+                <RegistryNumber>EC 4.6.1.2</RegistryNumber>
+                <NameOfSubstance UI="D006162">Guanylate Cyclase</NameOfSubstance>
+            </Chemical>
+        </ChemicalList>
+        <CitationSubset>IM</CitationSubset>
+        <MeshHeadingList>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N" UI="D000227">Adenine Nucleotides</DescriptorName>
+                <QualifierName MajorTopicYN="Y" UI="Q000494">pharmacology</QualifierName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N" UI="D000818">Animals</DescriptorName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N" UI="D001921">Brain</DescriptorName>
+                <QualifierName MajorTopicYN="N" UI="Q000201">enzymology</QualifierName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N" UI="D006150">Guanine Nucleotides</DescriptorName>
+                <QualifierName MajorTopicYN="Y" UI="Q000494">pharmacology</QualifierName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N" UI="D006162">Guanylate Cyclase</DescriptorName>
+                <QualifierName MajorTopicYN="Y" UI="Q000037">antagonists &amp; inhibitors</QualifierName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N" UI="D006168">Guinea Pigs</DescriptorName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N" UI="D007700">Kinetics</DescriptorName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N" UI="D008168">Lung</DescriptorName>
+                <QualifierName MajorTopicYN="N" UI="Q000201">enzymology</QualifierName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N" UI="D008345">Manganese</DescriptorName>
+                <QualifierName MajorTopicYN="N" UI="Q000494">pharmacology</QualifierName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N" UI="D051379">Mice</DescriptorName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N" UI="D009206">Myocardium</DescriptorName>
+                <QualifierName MajorTopicYN="N" UI="Q000201">enzymology</QualifierName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N" UI="D051381">Rats</DescriptorName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N" UI="D012995">Solubility</DescriptorName>
+            </MeshHeading>
+        </MeshHeadingList>
+    </MedlineCitation>
+    <PubmedData>
+        <History>
+            <PubMedPubDate PubStatus="pubmed">
+                <Year>1976</Year>
+                <Month>9</Month>
+                <Day>1</Day>
+            </PubMedPubDate>
+            <PubMedPubDate PubStatus="medline">
+                <Year>1976</Year>
+                <Month>9</Month>
+                <Day>1</Day>
+                <Hour>0</Hour>
+                <Minute>1</Minute>
+            </PubMedPubDate>
+            <PubMedPubDate PubStatus="entrez">
+                <Year>1976</Year>
+                <Month>9</Month>
+                <Day>1</Day>
+                <Hour>0</Hour>
+                <Minute>0</Minute>
+            </PubMedPubDate>
+        </History>
+        <PublicationStatus>ppublish</PublicationStatus>
+        <ArticleIdList>
+            <ArticleId IdType="pubmed">12193</ArticleId>
+        </ArticleIdList>
+    </PubmedData>
+</PubmedArticle>

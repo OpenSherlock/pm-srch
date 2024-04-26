@@ -1,0 +1,158 @@
+<?xml version="1.0"?>
+<!DOCTYPE PubmedArticleSet PUBLIC "-//NLM//DTD PubMedArticle, 1st January 2014//EN" "http://www.ncbi.nlm.nih.gov/corehtml/query/DTD/pubmed_140101.dtd">
+<PubmedArticle>
+    <MedlineCitation Owner="NLM" Status="MEDLINE">
+        <PMID Version="1">22442</PMID>
+        <DateCreated>
+            <Year>1978</Year>
+            <Month>02</Month>
+            <Day>23</Day>
+        </DateCreated>
+        <DateCompleted>
+            <Year>1978</Year>
+            <Month>02</Month>
+            <Day>23</Day>
+        </DateCompleted>
+        <DateRevised>
+            <Year>2013</Year>
+            <Month>11</Month>
+            <Day>21</Day>
+        </DateRevised>
+        <Article PubModel="Print">
+            <Journal>
+                <ISSN IssnType="Print">0014-2999</ISSN>
+                <JournalIssue CitedMedium="Print">
+                    <Volume>46</Volume>
+                    <Issue>4</Issue>
+                    <PubDate>
+                        <Year>1977</Year>
+                        <Month>Dec</Month>
+                        <Day>15</Day>
+                    </PubDate>
+                </JournalIssue>
+                <Title>European journal of pharmacology</Title>
+                <ISOAbbreviation>Eur. J. Pharmacol.</ISOAbbreviation>
+            </Journal>
+            <ArticleTitle>Transmitter release and adrenergic mechanical responses in the heart: effect of papaverine and imidazole.</ArticleTitle>
+            <Pagination>
+                <MedlinePgn>371-6</MedlinePgn>
+            </Pagination>
+            <Abstract>
+                <AbstractText>Chronotropic and inotropic responses were elicited in isolated rabbit hearts by stimulation of the sympathetic nerves or by infusion of noradrenaline or adrenaline and the effects of papaverine and imidazole (10(-7)-10(-6) M) on these responses were studied. The outflow of noradrenaline induced by sympathetic nerve stimulation was assayed in the absence and in the presence of papaverine and imidazole (10(-7)-5 X 10(-7) M). Papaverine increased the outflow of transmitter during nerve stimulation by 45% and potentiated both the chronotropic and inotropic responses induced by nerve stimulation and those induced by infusion of catecholamines. Imidazole inhibited the outflow of transmitter during nerve stimulation by 33%. The data indicate that the &quot;second messenger&quot; cyclic AMP is active in more than one step in adrenergic neurotransmission and receptor activation in the heart. Furthermore, tissue cyclic AMP seems to be involved not only in the inotropy induced by circulating catecholamines but also in the more &quot;physiological&quot; inotropy elicited by sympathetic nerve stimulation.</AbstractText>
+            </Abstract>
+            <AuthorList CompleteYN="Y">
+                <Author ValidYN="Y">
+                    <LastName>Pham-Huu-Chanh</LastName>
+                </Author>
+                <Author ValidYN="Y">
+                    <LastName>Wennmalm</LastName>
+                    <ForeName>A</ForeName>
+                    <Initials>A</Initials>
+                </Author>
+            </AuthorList>
+            <Language>eng</Language>
+            <PublicationTypeList>
+                <PublicationType UI="D016428">Journal Article</PublicationType>
+            </PublicationTypeList>
+        </Article>
+        <MedlineJournalInfo>
+            <Country>NETHERLANDS</Country>
+            <MedlineTA>Eur J Pharmacol</MedlineTA>
+            <NlmUniqueID>1254354</NlmUniqueID>
+            <ISSNLinking>0014-2999</ISSNLinking>
+        </MedlineJournalInfo>
+        <ChemicalList>
+            <Chemical>
+                <RegistryNumber>0</RegistryNumber>
+                <NameOfSubstance UI="D007093">Imidazoles</NameOfSubstance>
+            </Chemical>
+            <Chemical>
+                <RegistryNumber>0</RegistryNumber>
+                <NameOfSubstance UI="D018377">Neurotransmitter Agents</NameOfSubstance>
+            </Chemical>
+            <Chemical>
+                <RegistryNumber>DAA13NKG2Q</RegistryNumber>
+                <NameOfSubstance UI="D010208">Papaverine</NameOfSubstance>
+            </Chemical>
+        </ChemicalList>
+        <CitationSubset>IM</CitationSubset>
+        <MeshHeadingList>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N" UI="D000818">Animals</DescriptorName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N" UI="D004558">Electric Stimulation</DescriptorName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N" UI="D005260">Female</DescriptorName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N" UI="D006321">Heart</DescriptorName>
+                <QualifierName MajorTopicYN="Y" UI="Q000187">drug effects</QualifierName>
+                <QualifierName MajorTopicYN="N" UI="Q000294">innervation</QualifierName>
+                <QualifierName MajorTopicYN="N" UI="Q000502">physiology</QualifierName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N" UI="D006339">Heart Rate</DescriptorName>
+                <QualifierName MajorTopicYN="N" UI="Q000187">drug effects</QualifierName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N" UI="D007093">Imidazoles</DescriptorName>
+                <QualifierName MajorTopicYN="Y" UI="Q000494">pharmacology</QualifierName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N" UI="D008297">Male</DescriptorName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N" UI="D009200">Myocardial Contraction</DescriptorName>
+                <QualifierName MajorTopicYN="N" UI="Q000187">drug effects</QualifierName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N" UI="D009206">Myocardium</DescriptorName>
+                <QualifierName MajorTopicYN="Y" UI="Q000378">metabolism</QualifierName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N" UI="D018377">Neurotransmitter Agents</DescriptorName>
+                <QualifierName MajorTopicYN="Y" UI="Q000378">metabolism</QualifierName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N" UI="D010208">Papaverine</DescriptorName>
+                <QualifierName MajorTopicYN="Y" UI="Q000494">pharmacology</QualifierName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N" UI="D011817">Rabbits</DescriptorName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName MajorTopicYN="N" UI="D013564">Sympathetic Nervous System</DescriptorName>
+                <QualifierName MajorTopicYN="Y" UI="Q000502">physiology</QualifierName>
+            </MeshHeading>
+        </MeshHeadingList>
+    </MedlineCitation>
+    <PubmedData>
+        <History>
+            <PubMedPubDate PubStatus="pubmed">
+                <Year>1977</Year>
+                <Month>12</Month>
+                <Day>15</Day>
+            </PubMedPubDate>
+            <PubMedPubDate PubStatus="medline">
+                <Year>1977</Year>
+                <Month>12</Month>
+                <Day>15</Day>
+                <Hour>0</Hour>
+                <Minute>1</Minute>
+            </PubMedPubDate>
+            <PubMedPubDate PubStatus="entrez">
+                <Year>1977</Year>
+                <Month>12</Month>
+                <Day>15</Day>
+                <Hour>0</Hour>
+                <Minute>0</Minute>
+            </PubMedPubDate>
+        </History>
+        <PublicationStatus>ppublish</PublicationStatus>
+        <ArticleIdList>
+            <ArticleId IdType="pubmed">22442</ArticleId>
+        </ArticleIdList>
+    </PubmedData>
+</PubmedArticle>
