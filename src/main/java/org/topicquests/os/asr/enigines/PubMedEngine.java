@@ -10,6 +10,7 @@ import java.util.*;
 import org.topicquests.os.asr.Environment;
 import org.topicquests.os.asr.JSONDocumentObject;
 import org.topicquests.os.asr.RedisClient;
+import org.topicquests.os.asr.api.IDocumentType;
 import org.topicquests.research.carrot2.pubmed.PubMedReportPullParser;
 import org.topicquests.support.api.IResult;
 
@@ -46,6 +47,7 @@ public class PubMedEngine extends AbstractRedisEngine {
 		hasBeenRunning = true;
 		IResult r = parser.parseXML(xml);
 		JSONDocumentObject j = (JSONDocumentObject)r.getResultObject();
+		j.setDocType(IDocumentType.PUBMD);
 		//environment.logDebug("PT+");
 		environment.getAccountant().haveSeen(j.getPMID());
 		redis.add(REDIS_OUT_TOPIC, j.getData().toString());
