@@ -48,7 +48,7 @@ public class PubMedEngine extends AbstractRedisEngine {
 		JSONDocumentObject j = (JSONDocumentObject)r.getResultObject();
 		//environment.logDebug("PT+");
 		environment.getAccountant().haveSeen(j.getPMID());
-		redis.add(REDIS_OUT_TOPIC, j.toString());
+		redis.add(REDIS_OUT_TOPIC, j.getData().toString());
 	}
 }
 
