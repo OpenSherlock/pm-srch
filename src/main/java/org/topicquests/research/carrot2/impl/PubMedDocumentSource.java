@@ -302,12 +302,12 @@ public class PubMedDocumentSource extends SimpleSearchEngine
     	//}
     }
     /**
-     * Gets PubMed abstracts corresponding to the provided ids.
+     * Gets PubMed abstractns corresponding to the provided ids.
      */
     private List<String> getPubMedAbstracts(List<String> ids) throws Exception
     {
     	System.out.println("SER "+ids);
-    	List<String> docs=null;
+    	List<String> docs= new ArrayList<String>();
     	if (ids.isEmpty()) 
         {
             return docs;
