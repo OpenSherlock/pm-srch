@@ -12,6 +12,7 @@ import java.io.ObjectOutputStream;
 import java.io.PrintWriter;
 import java.util.*;
 
+import org.topicquests.os.asr.enigines.PMCEngine;
 import org.topicquests.os.asr.enigines.PubMedEngine;
 import org.topicquests.os.asr.file.FileHandler;
 import org.topicquests.research.carrot2.Accountant;
@@ -36,6 +37,7 @@ public class Environment extends RootEnvironment {
 	private QueryEngine engine;
 	private BatchQueryFileHandler batcher;
 	private PubMedEngine parserThread;
+	private PMCEngine pmcEngine;
 	private Accountant accountant;
 	private FileManager fileManager;
 	private VagabondThread vagabondThread;
@@ -61,7 +63,7 @@ public class Environment extends RootEnvironment {
 		fileManager = new FileManager(this);
 		parserThread = new PubMedEngine(this);
 		engine = new QueryEngine(this);
-		
+		pmcEngine = new PMCEngine(this);
 		STATS_PATH = getStringProperty("StatsPath");
 		logDebug("Environment- "+engine);
 		System.out.println("E1");
@@ -93,7 +95,9 @@ public class Environment extends RootEnvironment {
 	public FileHandler getFileHandler() {
 		return filer;
 	}
-	
+	public PMCEngine getPMCEngine() {
+		return pmcEngine;
+	}
 	public RedisClient getRedis() {
 		return redis;
 	}
@@ -255,6 +259,7 @@ public class Environment extends RootEnvironment {
 		System.out.println("Environment.shutDown");
 		saveInstrumentation();
 		parserThread.shutDown();
+		pmcEngine.shutDown();
 	}
 
 }

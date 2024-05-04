@@ -9,6 +9,8 @@
 	<parameter name="REDIS_DBPED" value="pmQuery" /> 
 	<!-- IN from MYSQL -->
 	<parameter name="REDIS_IN_UMLW" value="umlsIn" /> 
+	<!-- IN from pubget-handler -->
+	<parameter name="REDIS_IN_PMC" value="pmcIn" /> 
 	
 	<parameter name="MAX_COUNT" value="150" />
 	<parameter name="COUNT" value="50" />

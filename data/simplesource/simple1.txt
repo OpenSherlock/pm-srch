@@ -1,5 +1,5 @@
-garlic AND IBS-D
-garlic AND irritable bowel syndrome
+#garlic AND IBS-D
+#garlic AND irritable bowel syndrome
 #Vitamin D AND CKD
 #Vitamin D AND chronic kidney disease
 #resistant starch AND irritable bowel syndrome
@@ -11,3 +11,4 @@ garlic AND irritable bowel syndrome
 #ginger AND IBS-D
 #ginger AND CKD
 #ginger AND chronic kidney disease
+myesthenia gravis
