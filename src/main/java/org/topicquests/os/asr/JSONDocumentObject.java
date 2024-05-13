@@ -292,6 +292,7 @@ public class JSONDocumentObject {
 	 * @param a
 	 */
 	public void addDocAbstract(String a) {
+		if (a.equals("")) return;
 		JsonArray ab = this.listAbstract();
 		if (ab == null)
 			ab = new JsonArray();

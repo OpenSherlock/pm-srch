@@ -14,6 +14,8 @@ import org.topicquests.os.asr.api.IDocumentType;
 import org.topicquests.research.carrot2.pubmed.PubMedReportPullParser;
 import org.topicquests.support.api.IResult;
 
+import com.google.gson.JsonObject;
+
 /**
  * @author jackpark
  *
@@ -50,7 +52,9 @@ public class PubMedEngine extends AbstractRedisEngine {
 		j.setDocType(IDocumentType.PUBMD);
 		//environment.logDebug("PT+");
 		environment.getAccountant().haveSeen(j.getPMID());
-		redis.add(REDIS_OUT_TOPIC, j.getData().toString());
+		JsonObject jo = new JsonObject();
+		jo.addProperty("cargo", j.getData().toString());
+		redis.add(REDIS_OUT_TOPIC, jo.toString());
 	}
 }
 

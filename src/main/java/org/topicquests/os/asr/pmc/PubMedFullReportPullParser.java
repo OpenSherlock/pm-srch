@@ -1,13 +1,19 @@
-/**
- * 
+/*
+ * Copyright 2023 TopicQuests Foundation
+ *  This source code is available under the terms of the Affero General Public License v3.
+ *  Please see LICENSE.txt for full license terms, including the availability of proprietary exceptions.
  */
 package org.topicquests.os.asr.pmc;
 
 import java.io.*;
 import java.util.*;
 
+import org.topicquests.os.asr.AuthorPojo;
 import org.topicquests.os.asr.Environment;
 import org.topicquests.os.asr.JSONDocumentObject;
+import org.topicquests.os.asr.PublicationPojo;
+import org.topicquests.os.asr.api.IAuthor;
+import org.topicquests.os.asr.api.IPublication;
 import org.topicquests.os.asr.file.FileHandler;
 import org.topicquests.os.asr.util.UTF8FileUtil;
 import org.topicquests.support.ResultPojo;
@@ -59,13 +65,13 @@ public class PubMedFullReportPullParser {
 		}
 		//&lt;  and &gt;
 		String foo = buf.toString();
-		foo = cleanXML(foo); //cleanXML(buf.toString());// xmlString.replaceAll("&lt;", "<");
+		String bar = cleanXML(foo); //cleanXML(buf.toString());// xmlString.replaceAll("&lt;", "<");
 		// foo = foo.replaceAll("&gt;", ">"); //&gt;
-		environment.logDebug(foo);
+		environment.logDebug("FOO\n"+bar);
 		IResult result = new ResultPojo();
 		//NOW, parse it
 		try {
-			InputStream ins = new ByteArrayInputStream(foo.getBytes("UTF-8"));
+			InputStream ins = new ByteArrayInputStream(bar.getBytes("UTF-8"));
 			BufferedInputStream bis = new BufferedInputStream(ins);
 			buf = null;
 			foo = null;
@@ -78,45 +84,78 @@ public class PubMedFullReportPullParser {
 		return result;
 	}
 
+	/**
+	 * Returns an instance of {@link JSONDocumentObject}
+	 * @param xmlFile 
+	 * @return
+	 */
+	public IResult parseXML(String xml) {
+//		environment.logDebug("PubMedReportPullParser- "+foo.length());
+		IResult result = new ResultPojo();
+		//NOW, parse it
+		try {
+			InputStream ins = new ByteArrayInputStream(xml.getBytes());
+			BufferedInputStream bis = new BufferedInputStream(ins);
+			
+			parse(bis, result);
+		} catch (Exception e) {
+			e.printStackTrace();
+			result.addErrorString(e.getMessage());
+		}
+//		environment.logDebug("PubMedReportPullParser+ "+result.hasError()+" "+result.getResultObject());
+		return result;
+	}
+	
+	/**
+	 * Remove anything inside "[" and "]" - heuristic
+	 * @param p
+	 * @return
+	 */
+	String cleanP(String p) {
+		StringBuilder buf = new StringBuilder();
+		int len = p.length();
+		char c;
+		boolean isLeft = false;
+		for (int i=0;i<len;i++) {
+			c = p.charAt(i);
+			if (!isLeft && c == '[') {
+				isLeft = true;
+			} else if (!isLeft && c == ']')
+				isLeft = false;
+			else //if (!isLeft)
+				buf.append(c);
+			
+		}
+	//	environment.logDebug("CP:\n"+buf.toString());;
+		return buf.toString().trim();
+	}
+
 	String removeXREFs(String inString) {
 		StringBuilder buf = new StringBuilder();
 		String x = inString;
 		String left;
-		int where = x.indexOf("<p");
+		int where = x.indexOf("<p>");
 		int where2, where3;
+		String para;
 		while (where > -1) {
-			//starting from "<p>"
-			//try to surround "(...)"
+			System.out.println("A "+where);
+			buf.append(x.substring(0, where));
+			where2 = x.indexOf("</p>", where);
+			//now have a <p></p> captured
+			System.out.println("B "+where2);
+			para = x.substring(where, where2+4);
+			// x is what's left - if any
+			x = x.substring(where2+4);
+			System.out.println("X "+where+" "+where2+" "+x.length()+" "+para);
+			// keep the clean para
+			buf.append(cleanP(para));
+			//x = x.substring(para.length());
+		//	environment.logDebug("RX: "+x);
+			// anything left?
+			where = x.indexOf("<p>");
 
-			where = x.indexOf('(', where+3);
-			if (where > -1) {
-				where2 = x.indexOf(')', where+1);
-				if (where2 > -1) {
-					//have surrounded parens
-					// see if there are xrefs in there
-					where3 = x.indexOf("<xref", where);
-					if (where3 == -1) {
-						//nothing inside
-						buf.append(x.substring(0, where2+1));
-						x = x.substring(where2+1);
-					} else {
-						buf.append(x.substring(0, where));
-						x = x.substring(where2+1);
-					}
-					
-				} else {
-					//nothing to surround
-					buf.append(x);
-					x = "";
-				}
-			} else {
-				//nothing surrounded
-				buf.append(x);
-				x="";
-			}
-
-			where = x.indexOf("<p");
 		}
+		buf.append(x);
 		
 		return buf.toString();
 	}
@@ -126,11 +165,12 @@ public class PubMedFullReportPullParser {
 	 * @return instance of {@link JSONDocumentObject}
 	 */
 	String cleanXML(String inString) {
+		//if (true) return inString;
 		String cs = inString;
-		cs = cs.replaceAll("<italic>", " ");
-		cs = cs.replaceAll("</italic>", " ");
-		cs = cs.replaceAll("<sup>", "^");
-		cs = cs.replaceAll("</sup>", " ");
+		//cs = cs.replaceAll("<italic>", " ");
+		//cs = cs.replaceAll("</italic>", " ");
+		//cs = cs.replaceAll("<sup>", "^");
+		//cs = cs.replaceAll("</sup>", " ");
 		cs = removeXREFs(cs);
 		//Unicode characters are a bitch
 		/*		cs = cs.replaceAll("&#x03b1;", "α");
@@ -193,6 +233,7 @@ public class PubMedFullReportPullParser {
 	         StringBuilder content = new StringBuilder();
 	        //the working document
 	         JSONDocumentObject theDocument = new JSONDocumentObject();
+	         result.setResultObject(theDocument);
 	         String temp = null;
 	         String text = null;
 	         String label = null;
@@ -200,15 +241,25 @@ public class PubMedFullReportPullParser {
 	         String refType = null;
 	         String lastName = null, firstName = null, initials = null, affiliation = null;
 	         String grantId=null, agency=null, country = null;
+	         String rid = null;
+	         
+	         String affID = null;
 	         boolean isJournal = false;
 	         boolean isValid = false;
 	         boolean isAuthor = false;
 	         boolean isRefType = false;
 	         
 	         boolean isAbstract = false;
+	         boolean isBody = false;
 	         boolean isKeywordGroup = false;
 	         boolean isPMID = false;
+	         boolean isPMCID = false;
+	         boolean isDOI = false;
+	         boolean isRefList = false; //helps differentiate authors
 	         
+	         IPublication thePub = null;
+	         IAuthor theAuthor = null;
+	         Map<String, IAuthor> _theAuth = null;
 	         
 	         boolean isGrant = true;
 	         HashMap<String,String> props;
@@ -231,16 +282,26 @@ public class PubMedFullReportPullParser {
 	                	isAbstract = true;
 	                } if (temp.equalsIgnoreCase("kwd-group")) {
 	 	                	isKeywordGroup = true;
+	                } else if (temp.equalsIgnoreCase("body")) {
+	                	isBody = true;
 	                } else if (temp.equalsIgnoreCase("article-id")) {
 	                	String t = (String)props.get("pub-id-type");
 	                	if (t.equals("pmid"))
 	                		isPMID = true;
+	                	else if (t.equals("pmc"))
+	                		isPMCID = true;
+	                	else if (t.equals("doi"))
+	                		isDOI = true;
 	                } else if (temp.equalsIgnoreCase("Grant")) {
 	                	isGrant = true;
+	                } else if (temp.equalsIgnoreCase("ref-list")) {
+	                	isRefList = true;
 	                } else if(temp.equalsIgnoreCase("AbstractText")) {
 	                	// <AbstractText Label="BACKGROUND AND OBJECTIVES" NlmCategory="OBJECTIVE">
 	                	label = (String)props.get("Label");
 	                	category = (String)props.get("NlmCategory");
+	                } else if (temp.equalsIgnoreCase("article-meta")) {
+	                	thePub = new PublicationPojo();
 	                } else if(temp.equalsIgnoreCase("CommentsCorrections")) {
 	                	///////////////////////////////////
 	                	//<CommentsCorrections RefType="CommentOn">
@@ -250,6 +311,14 @@ public class PubMedFullReportPullParser {
 	                	///////////////////////////////////
 	                	refType = (String)props.get("RefType");
 	                	isRefType = true;
+	                } else if (temp.equalsIgnoreCase("contrib")) {
+	                	if ("author".equals((String)props.get("contrib-type")))
+	                		theAuthor = new AuthorPojo();
+	                } else if (temp.equals("aff")) {
+	                	affID = (String)props.get("id");
+	                } else if (temp.equalsIgnoreCase("xref")) {
+	                	rid = (String)props.get("rid");
+	                	if (_theAuth == null) _theAuth = new HashMap<String, IAuthor>();
 	                } else if (temp.equalsIgnoreCase("PubmedArticleSet")) {
 	                	if (theDocument == null)
 	                		isStop = true;
@@ -262,26 +331,40 @@ public class PubMedFullReportPullParser {
 	                
 	            } else if(eventType == XmlPullParser.END_TAG) {
 	                System.out.println("PM End tag "+temp+" // "+text);
-	               /* if (temp.equalsIgnoreCase("journal-title")) {
-	                	theDocument.setTitle(text);
-	                	System.out.println(theDocument.toJSONString());
+	                if (temp.equalsIgnoreCase("journal-title")) {
+	                	if (thePub != null)
+	                		thePub.setTitle(text);
+	                	//System.out.println(theDocument.toJSONString());
 	                } else if (temp.equalsIgnoreCase("p")) {
-	                	this.addContent(text, content);
+	                	if (isAbstract)
+	                		theDocument.addDocAbstract(text);
+	                	else if (isBody) {
+	                		this.addContent(text, content);
+	                		System.out.println("P: "+text);
+	                	}
 	                } else if (temp.equalsIgnoreCase("title")) {
 	                	if (!isKeywordGroup)
 	                		this.addContent(text, content);
+	                } else if (temp.equalsIgnoreCase("article-meta")) {
+	                	theDocument.setPublication(thePub);
+	                	//thePub = null;
 	                } else if (temp.equalsIgnoreCase("body")) {
 	                	theDocument.setContent(content.toString(), "en");
+	                	isBody = false;
 	                } else if(temp.equalsIgnoreCase("abstract")) {
 	                	theDocument.addDocAbstract(text);
 	                	isAbstract = false;
+	                } else if(temp.equalsIgnoreCase("title")) {
+	                	this.addContent(text, content);
 	                } else if(temp.equalsIgnoreCase("article-title")) {
 	                	theDocument.setTitle(text);
-	                } /*else if (temp.equalsIgnoreCase("issue")) {
-	                	theDocument.setPublicationNumber(text);
+	                } else if (temp.equalsIgnoreCase("issue")) {
+	                	if (thePub != null)
+	                		thePub.setPublicationNumber(text);
 	                } else if (temp.equalsIgnoreCase("volume")) {
 	                //	if (isJournal)
-	                		theDocument.setPublicationVolume(text);
+	                	if (thePub != null)
+	                		thePub.setPubicationVolume(text);
 	                } if (temp.equalsIgnoreCase("kwd-group")) {
  	                	isKeywordGroup = false;
 	                } if (temp.equalsIgnoreCase("kwd")) {
@@ -291,49 +374,31 @@ public class PubMedFullReportPullParser {
 	                		theDocument.setPMID(text);
 	                		isPMID = false;
 	                		System.out.println("SettingPMID "+text);
+	                	} else if (isPMCID) {
+	                		theDocument.setPMCID(text);
+	                		isPMCID = false;
+	                	} else if (isDOI) {
+	                		thePub.setDOI(text);
+	                		isDOI = false;
 	                	}
-	                } else if (temp.equalsIgnoreCase("MedlinePgn")) {
-	                	theDocument.setPages(text);
+	                //} else if (temp.equalsIgnoreCase("MedlinePgn")) {
+	                //	theDocument.setPages(text);
 	                } else if (temp.equalsIgnoreCase("Year")) {
-	                	if (isJournal)
-	                		theDocument.setPublicationYear(text);
+	                	if (thePub != null)
+	                		thePub.setPublicationYear(text);
 	                } else if (temp.equalsIgnoreCase("PMID")) {
-	                	if (!isRefType) {
-	                		theDocument.addCommentCorrectionPMID(text, refType);
-	                		//have we seen this before?
-	                		//if (pubMedEnvironment.pmidIsVisited(text)) {
-	                		//	result.setResultObjectA(PubMedEnvironment.PMID_IS_VISITED);
-	                		//	break;
-	                		//}
-	                		//we are seeing it now
-	                		//pubMedEnvironment.visitingPMID(text);
-	                		//theDocument = new JSONDocumentObject(IHarvestingOntology.CARROT2_AGENT_USER);
-	                		//theDocument.setPMID(text);
-	                		//theDocument.setPublicationType("JournalArticle"); //just in case it's not set later
-	                		//result.setResultObject(theDocument);
-	              //  		environment.logDebug("PMID "+text+" "+theDocument);
-	                	} else if (refType.equals("Cites"))
-	                		theDocument.addCitation(text);
+	                
 	                } else if (temp.equalsIgnoreCase("Month")) {
 	                	if (isJournal)
-	                		theDocument.setPublicationMonth(text);
+	                		thePub.setMonth(text);
 	               // } else if (temp.equalsIgnoreCase("Title")) {
 	               // 	if (isJournal)
 	                		//theDocument.setPublicationTitle(text);
-	                } else if (temp.equalsIgnoreCase("Author")) {
-	                	if (isValid) {
-	                		theDocument.addAuthor(lastName+", "+firstName, lastName, initials, affiliation);
-	                	}
-	                	lastName = null;
-	                	firstName = null;
-	                	initials = null;
-	                	affiliation = null;
 	                } else if (temp.equalsIgnoreCase("PublicationType")) {
-	                	//TODO
-	                	theDocument.setPublicationType(makePublicationType(text));
+	                	thePub.setPublicationType(makePublicationType(text));
 	                } else if (temp.equalsIgnoreCase("NameOfSubstance")) {
 	                	theDocument.addTag(text);
-	                	theDocument.addSubstance(text);
+	                	//theDocument.addSubstance(text);
 	                } else if (temp.equalsIgnoreCase("DescriptorName")) {
 	                	theDocument.addTag(text);
 	                } else if (temp.equalsIgnoreCase("QualifierName")) {
@@ -349,14 +414,14 @@ public class PubMedFullReportPullParser {
 	                	if (isAuthor)
 	                		firstName = text;
 	                } else if (temp.equalsIgnoreCase("MedlineTA")) {
-	                	theDocument.setPublisher(text);
+	                	//theDocument.setPublisher(text);
 	                } else if (temp.equalsIgnoreCase("Country")) {
-	                	if (!isGrant)
-	                		theDocument.setPublisherLocation(text);
-	                	else
+	                	//if (!isGrant)
+	                	//	theDocument.setPublisherLocation(text);
+	                	//else
 	                		country = text;
 	                } else if (temp.equalsIgnoreCase("ISSNLinking")) {
-	                	theDocument.setISSN(text);
+	                	thePub.setISSN(text);
 	                } else if (temp.equalsIgnoreCase("Affiliation")) {
 	                	affiliation = text;
 	                } else if (temp.equalsIgnoreCase("Initials")) {
@@ -374,19 +439,39 @@ public class PubMedFullReportPullParser {
 	                    //<Country>United States</Country>
 	                	//</Grant>
 	                	//////////////////////////////////////////
-	                	theDocument.addGrant(grantId, agency, country);
+	                	//theDocument.addGrant(grantId, agency, country);
 	                	grantId = null;
 	                	agency = null;
 	                	country = null;
 	                	isGrant = false;
 	                } else if (temp.equalsIgnoreCase("CopyrightInformation")) {
 	                	theDocument.setCopyright(text);
+	                } else if (temp.equalsIgnoreCase("contrib")) {
+	                	theDocument.addAuthor(theAuthor);
+	                	theAuthor = null;
+	                } else if (temp.equalsIgnoreCase("surname")) {
+	                	theAuthor.setAuthorLastName(text);
+	                } else if (temp.equalsIgnoreCase("given-names")) {
+	                	theAuthor.setAuthorInitials(text);
+	                } else if (temp.equalsIgnoreCase("xref")) {
+	                	_theAuth.put(rid, theAuthor);
+	                	//_theAuth = null;
+	                	rid = null;
+	                } else if (temp.equals("aff")) {
+	                	System.out.println("AAA "+affID+" "+_theAuth);
+	                	theAuthor = _theAuth.get(affID);
+	                	System.out.println("AAA "+affID+" "+theAuthor);
+	                	theAuthor.addAffiliationName(text);
 	                } else if (temp.equalsIgnoreCase("Article")) {
+	                	System.out.println("DID\n"+theDocument.getData().toString());
 	                	//We are done here!
-	                	host.parserCallback(theDocument);
+	                	if (host != null)
+	                		host.parserCallback(theDocument);
+	                } else if (temp.equalsIgnoreCase("ref-list")) {
+	                	isRefList = false;
 	                } else {
 	                	unusedTags.add(temp);
-	                }*/
+	                }
 	            } else if(eventType == XmlPullParser.TEXT) {
 	                text = xpp.getText().trim();
 	             } else if(eventType == XmlPullParser.CDSECT) {
