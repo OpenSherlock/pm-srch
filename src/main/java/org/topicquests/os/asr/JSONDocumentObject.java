@@ -262,7 +262,7 @@ public class JSONDocumentObject {
 	 * The full text to harvest
 	 * @param content
 	 * @param language defaults to "en"
-	 */
+	 * /
 	public void setContent(String content, String language) {
 		data.addProperty(_CONTENT, content);
 		if (language != null)
@@ -271,7 +271,19 @@ public class JSONDocumentObject {
 			data.addProperty(_LANGUAGE, "en");
 
 	}
-	
+	*/
+	public void addContentParagraph(String paragraph) {
+		JsonArray ja = listContentParagraphs();
+		if (ja == null) {
+			ja = new JsonArray();
+			data.add(_CONTENT, ja);
+		}
+		ja.add(paragraph);;
+	}
+	public JsonArray listContentParagraphs() {
+		return getArray(_CONTENT);
+	}
+
 	public void setTitle(String title) {
 		data.addProperty(_TITLE, title);
 	}
@@ -292,7 +304,6 @@ public class JSONDocumentObject {
 	 * @param a
 	 */
 	public void addDocAbstract(String a) {
-		if (a.equals("")) return;
 		JsonArray ab = this.listAbstract();
 		if (ab == null)
 			ab = new JsonArray();

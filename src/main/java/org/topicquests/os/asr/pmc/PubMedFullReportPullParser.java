@@ -112,21 +112,22 @@ public class PubMedFullReportPullParser {
 	 * @return
 	 */
 	String cleanP(String p) {
+		environment.logDebug("CP-1\n"+p);
 		StringBuilder buf = new StringBuilder();
 		int len = p.length();
 		char c;
 		boolean isLeft = false;
 		for (int i=0;i<len;i++) {
 			c = p.charAt(i);
-			if (!isLeft && c == '[') {
+			if (!isLeft && c == '[')
 				isLeft = true;
-			} else if (!isLeft && c == ']')
+			else if (isLeft && c == ']')
 				isLeft = false;
-			else //if (!isLeft)
+			else if (!isLeft)
 				buf.append(c);
 			
 		}
-	//	environment.logDebug("CP:\n"+buf.toString());;
+		environment.logDebug("CP-2:\n"+buf.toString());;
 		return buf.toString().trim();
 	}
 
@@ -136,7 +137,7 @@ public class PubMedFullReportPullParser {
 		String left;
 		int where = x.indexOf("<p>");
 		int where2, where3;
-		String para;
+		String para, px;
 		while (where > -1) {
 			System.out.println("A "+where);
 			buf.append(x.substring(0, where));
@@ -148,7 +149,9 @@ public class PubMedFullReportPullParser {
 			x = x.substring(where2+4);
 			System.out.println("X "+where+" "+where2+" "+x.length()+" "+para);
 			// keep the clean para
-			buf.append(cleanP(para));
+			px = cleanP(para);
+			environment.logDebug("PX:\n"+px);
+			buf.append(px);
 			//x = x.substring(para.length());
 		//	environment.logDebug("RX: "+x);
 			// anything left?
@@ -167,10 +170,10 @@ public class PubMedFullReportPullParser {
 	String cleanXML(String inString) {
 		//if (true) return inString;
 		String cs = inString;
-		//cs = cs.replaceAll("<italic>", " ");
-		//cs = cs.replaceAll("</italic>", " ");
-		//cs = cs.replaceAll("<sup>", "^");
-		//cs = cs.replaceAll("</sup>", " ");
+		cs = cs.replaceAll("<italic>", " ");
+		cs = cs.replaceAll("</italic>", " ");
+		cs = cs.replaceAll("<sup>", "^");
+		cs = cs.replaceAll("</sup>", " ");
 		cs = removeXREFs(cs);
 		//Unicode characters are a bitch
 		/*		cs = cs.replaceAll("&#x03b1;", "α");
@@ -339,17 +342,22 @@ public class PubMedFullReportPullParser {
 	                	if (isAbstract)
 	                		theDocument.addDocAbstract(text);
 	                	else if (isBody) {
-	                		this.addContent(text, content);
+	                		environment.logDebug("P:\n"+text);
+	                		if (text.startsWith("].")) {
+	                			text = text.substring(2).trim();
+	                		}
+	                		if (text.length() > 2)
+	                			theDocument.addContentParagraph(text);
 	                		System.out.println("P: "+text);
 	                	}
 	                } else if (temp.equalsIgnoreCase("title")) {
 	                	if (!isKeywordGroup)
-	                		this.addContent(text, content);
+	                		theDocument.addContentParagraph(text);
 	                } else if (temp.equalsIgnoreCase("article-meta")) {
 	                	theDocument.setPublication(thePub);
 	                	//thePub = null;
 	                } else if (temp.equalsIgnoreCase("body")) {
-	                	theDocument.setContent(content.toString(), "en");
+	                	//theDocument.setContent(content.toString(), "en");
 	                	isBody = false;
 	                } else if(temp.equalsIgnoreCase("abstract")) {
 	                	theDocument.addDocAbstract(text);
