@@ -24,6 +24,7 @@ public class JSONDocumentObject {
 	public static final String
 		_PMID				= "pmid", //
 		_PMCID				= "pmcid",
+		_DOC_ID				= "docId",
 		_PUBMED_PREFIX 		= "PubMed",
 		_TITLE				= "title",
 		_CITATIONS			= "citations",
@@ -114,6 +115,14 @@ public class JSONDocumentObject {
 	public String getPMCID() {
 		return get(_PMCID);
 	}
+	
+	public void setDocID(String t) {
+		data.addProperty(_DOC_ID, t);
+	}
+	public String getDocID() {
+		return get(_DOC_ID);
+	}
+
 	/**
 	 * Set the document's topic <em>locator</em>
 	 * @param locator
